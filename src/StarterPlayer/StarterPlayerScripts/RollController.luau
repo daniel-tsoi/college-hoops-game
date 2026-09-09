@@ -13,6 +13,7 @@ function Controller.attach(ui)
  end)
  local shared=game:GetService("ReplicatedStorage"):WaitForChild("Shared")
  local Portrait=require(shared:WaitForChild("CardPortrait"))
+ local sounds=require(script.Parent:WaitForChild("RollSounds")).mount(ui.gui)
  local Chemistry=require(shared:WaitForChild("TeamChemistry"))
  local hover=require(script.Parent:WaitForChild("ChemistryHover")).mount(ui.canvas)
  local positions=Chemistry.Positions
@@ -100,16 +101,18 @@ function Controller.attach(ui)
   ui.canvas.Overall.Text=filled>0 and string.format("TEAM OVR: %d +%d = %d",chemistry.baseOverall,chemistry.bonus,chemistry.overall) or "TEAM OVR: —"
   ui.lineup.Text=string.format("ROLLED SQUAD  |  %d / 5",filled)
   ui.counters.Text=state and string.format("Rerolls: %d free + %d quest\nRefreshes: %d free + %d quest",state.freeRollRerolls,state.rerolls,state.freeRollRefreshes,state.refreshes) or "Loading…"
-  ui.buttons.Reroll.Text=filled==5 and (draft.finished and "FINISHED" or "FINISH") or "REROLL TEAM"
+  ui.buttons.Reroll.Text="REROLL TEAM"
   local card=draft and selected and (draft.squad[selected] or draft.candidates[selected])
   ui.reveal.Text=card and (card.name.."\n"..(card.school or "Non-college").." "..(card.season or "")) or "Select a prospect"
   ui.status.Text=message
   wheel.render(draft,pending)
   for name,button in pairs(ui.buttons) do
    button.Active=not pending or name=="Exit"
-   if name=="Reroll" and filled<5 then
+   if name=="Reroll" then
     button.Active=not pending and draft~=nil and draft.pickAvailable and not draft.finished
      and (state.freeRollRerolls+state.rerolls>0)
+   elseif name=="Roll" then
+    button.Active=not pending and (not draft or not draft.finished)
    elseif name=="Refresh" then
     button.Active=not pending and draft~=nil and draft.pickAvailable and not draft.finished
      and (state.freeRollRefreshes+state.refreshes>0)
@@ -137,6 +140,7 @@ function Controller.attach(ui)
   pending=false
   if ok and result.ready then
    state=result
+   sounds.play(action,result.code)
    local messages={READY="Choose one player or a rare hit. A rare pick replaces its position; Refresh keeps the wheel.",ROLLED="Player saved! Press Roll for another college team and choose one player.",
     LOCKED="Buy this player in the Shop before rolling them.",
     ROLL_REQUIRED="Press Roll before choosing another player.",CHOOSE_FIRST="Choose one player from this roll first.",
@@ -159,14 +163,14 @@ function Controller.attach(ui)
   local draft=state and state.rollState
   if not draft then request("RollState"); return end
   for _,pos in ipairs(positions) do if not draft.squad[pos] then selected=nil; request("NextRoll"); return end end
-  message="All five slots are filled. Press Finish."; render()
+  message="Squad complete and saved. Press Restart to build another."; render()
  end)
  ui.buttons.Reroll.Activated:Connect(function()
   local draft=state and state.rollState
   if not draft then return end
   local filled=0
   for _ in pairs(draft.squad) do filled+=1 end
-  if filled==5 then request("FinishRoll")
+  if filled==5 or draft.finished then return
   elseif draft.pickAvailable then selected=nil; request("RerollPlayer")
   else message="Player already saved. Press Roll for another team before rerolling choices."; render() end
  end)

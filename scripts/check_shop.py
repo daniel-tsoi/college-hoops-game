@@ -20,7 +20,9 @@ subprocess.run([args.luau, str(ROOT / 'tests/roll.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/rare_wheel.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/rare_reveal.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/chemistry.spec.luau')], check=True)
+subprocess.run([args.luau, str(ROOT / 'tests/auto_finish.spec.luau')], check=True)
 paths = [ROOT / p for p in [
+    'src/StarterPlayer/StarterPlayerScripts/RollSounds.luau',
     'src/ServerScriptService/Roll/RareReveal.luau',
     'src/StarterPlayer/StarterPlayerScripts/RareRevealFX.client.luau',
     'src/ServerScriptService/Roll/RareWheel.luau',

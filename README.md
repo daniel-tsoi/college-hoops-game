@@ -95,6 +95,8 @@ Run `python3 scripts/check_shop.py --luau /path/to/luau --compiler /path/to/luau
 and `python3 scripts/check_player_database.py --luau /path/to/luau`.
 Tests cover exact tier/gold ticket counts, eligibility gating, ownership migration,
 roll saves, retries, positions, prospect IDs, bonuses, quests and leaderboard rules.
+Run `lune run tests/player_titles.spec.luau` for title boundaries, role priority,
+chat prefixes, and title/card script compilation.
 Live DataStore/cross-server validation remains separate from Studio tests.
 
 Player data includes 25,393 college base cards, All-Star/HOF variants and four
@@ -120,3 +122,18 @@ refresh on equipment changes and respawns and are removed when players leave. No
 face/hair assets or image uploads are required. Roll-card headers show only the
 position; prospect numbers remain internal identifiers. Rebuild jersey metadata
 with `python3 scripts/build_card_appearance.py`.
+
+## Player jerseys and settings
+
+The gear button opens a rounded two-column settings panel. Choose one of eight
+jersey colors and a number from 00–99; the back uses the Roblox username.
+Sleeveless scoop-neck jerseys include contrasting neck/arm piping and matching
+shorts with trimmed hems. The front shows a centered number; the back shows the
+username and number. Server-built uniforms replicate and reapply on respawn
+for R6 and R15 avatars. Bulky layered clothing may cover the fitted torso shell.
+HOF and non-college VFX can be disabled independently for rare-pull celebrations
+(including other players’ bursts); chat announcements and card art remain visible.
+Five SFX bars control roll/refresh sound volume, with 0 for mute. Press Save changes
+to apply. Live preferences save separately in HoopsPlayerSettings_v1; Studio
+preferences last for the current play session. Failed saves can be retried.
+Run `lune run tests/player_settings.spec.luau` for validation and compilation checks.

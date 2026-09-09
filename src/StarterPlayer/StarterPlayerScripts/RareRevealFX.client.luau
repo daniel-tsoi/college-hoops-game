@@ -6,6 +6,7 @@ local RunService=game:GetService("RunService")
 local Debris=game:GetService("Debris")
 local TextChatService=game:GetService("TextChatService")
 local localPlayer=Players.LocalPlayer
+local SettingsState=require(script.Parent:WaitForChild("SettingsState"))
 local random=Random.new()
 local queue={}
 local playing=false
@@ -87,7 +88,7 @@ local function localReveal(hit,color)
  RunService:BindToRenderStep(binding,Enum.RenderPriority.Camera.Value+1,function(dt)
   elapsed+=dt
   camera=workspace.CurrentCamera
-  if camera and elapsed<.8 then
+  if camera and elapsed<.8 and SettingsState.vfx(hit.kind) then
    local strength=(1-elapsed/.8)*(hit.kind=="HOF" and .45 or .3)
    offset=CFrame.new(random:NextNumber(-strength,strength),random:NextNumber(-strength,strength),0)
    camera.CFrame=camera.CFrame*offset
@@ -101,6 +102,7 @@ end
 ReplicatedStorage:WaitForChild("HoopsRareReveal").OnClientEvent:Connect(function(hit)
  local color=hit.kind=="HOF" and Color3.fromRGB(186,65,255) or Color3.fromRGB(255,45,65)
  announce(hit,color)
+ if not SettingsState.vfx(hit.kind) then return end
  if hit.userId~=localPlayer.UserId then burst(hit,color); return end
  table.insert(queue,{hit=hit,color=color})
  if playing then return end
@@ -108,8 +110,10 @@ ReplicatedStorage:WaitForChild("HoopsRareReveal").OnClientEvent:Connect(function
  task.spawn(function()
   while #queue>0 do
    local nextHit=table.remove(queue,1)
-   burst(nextHit.hit,nextHit.color)
-   localReveal(nextHit.hit,nextHit.color)
+   if SettingsState.vfx(nextHit.hit.kind) then
+    burst(nextHit.hit,nextHit.color)
+    localReveal(nextHit.hit,nextHit.color)
+   end
   end
   playing=false
  end)

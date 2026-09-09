@@ -68,8 +68,7 @@ for i,pos in ipairs(Config.Positions) do
  if i>1 then p=T.rollAction(p,"NextRoll",nil,draws) end
  p=T.rollAction(p,"RollPlayer",pos)
 end
-p=T.rollAction(p,"FinishRoll")
-assert(p.rollDraft.finished)
+assert(p.rollDraft.finished and not p.rollDraft.pickAvailable, "Fifth pick automatically finishes")
 local db={ById={}}
 for _,pos in ipairs(Config.Positions) do db.ById[pos]={id=pos,position=pos,name="Real "..pos,rarity="Common",sourceType="COLLEGE"} end
 db.ById.hof={id="hof",position="PG",name="Legend",rarity="HOF"}

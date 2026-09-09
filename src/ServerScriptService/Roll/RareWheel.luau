@@ -1,7 +1,7 @@
 -- Independent server-only draws. Exact odds; only shop-purchased players are eligible.
 local RareWheel = {}
--- Test override disabled: HOF uses its normal 0.125% chance.
-RareWheel.HOFTest100 = false
+-- Temporary user-requested 100% HOF test. Disable only when the user requests restoration.
+RareWheel.HOFTest100 = true
 RareWheel.Denominator = 200000
 RareWheel.Tickets = { HOF = 250, NonCollege = 260 }
 function RareWheel.hit(kind, ticket)

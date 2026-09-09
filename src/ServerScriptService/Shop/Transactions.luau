@@ -137,6 +137,14 @@ function Transactions.equip(profile, id)
 	return updated, "EQUIPPED"
 end
 -- Roll state and ownership are saved atomically. Draws are supplied by trusted server code.
+local function finishIfFull(profile)
+ for _,pos in ipairs({"PG","SG","SF","PF","C"}) do
+  if not profile.rollDraft.squad[pos] then return profile,"ROLLED" end
+ end
+ profile.rollDraft.finished=true
+ profile.rollDraft.pickAvailable=false
+ return profile,"FINISHED"
+end
 function Transactions.rollAction(profile, action, position, draws, team, rare)
 	local draft = profile.rollDraft
 	if action == "RollState" and draft and draft.team then return profile, "READY" end
@@ -191,7 +199,7 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
   updated=Transactions.unlock(updated,candidate.id,candidate.goldRoll)
   updated.rollDraft.squad[candidate.position]=candidate
   updated.rollDraft.pickAvailable=false
-  return updated,"ROLLED"
+  return finishIfFull(updated)
  end
  if action=="RerollPlayer" then
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
@@ -211,6 +219,6 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
 	updated = Transactions.unlock(updated,candidate.id,candidate.goldRoll)
 	updated.rollDraft.squad[position]=candidate
  if action=="RollPlayer" then updated.rollDraft.pickAvailable=false end
-	return updated,"ROLLED"
+	return finishIfFull(updated)
 end
 return Transactions

@@ -22,7 +22,7 @@ function View.mount(canvas, decorate, choose)
   local stroke=Instance.new("UIStroke"); stroke.Thickness=2; stroke.Color=color; stroke.Parent=disc
   local rotor=Instance.new("Frame"); rotor.Size=UDim2.fromScale(1,1); rotor.BackgroundTransparency=1; rotor.Parent=disc
   local pointer=label(rotor,"▼",22,-6,16,20,18); pointer.TextColor3=color
-  label(disc,i==1 and "HOF\n0.125%" or "NON-COL\n0.13%",2,12,56,38,10)
+  label(disc,i==1 and "HOF\n100% TEST" or "NON-COL\n0.13%",2,12,56,38,10)
   local button=Instance.new("TextButton"); button.Name=kind.."Result"
   button.Position=UDim2.fromOffset(x,94); button.Size=UDim2.fromOffset(72,98)
   button.BackgroundColor3=Color3.fromRGB(25,33,46); button.TextColor3=color
