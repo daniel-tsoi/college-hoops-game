@@ -1,7 +1,10 @@
 -- Pure transaction rules. Caller commits wallet and ownership together.
 local Transactions = {}
+-- Bounded so a long-lived profile cannot grow its saved history without limit.
+local MAX_HISTORY = 10
 function Transactions.newProfile(balance)
-	return { version = 5, balance = balance, owned = {}, goldOwned = {}, shopUnlocked = {}, shopOwnershipMigrated = true }
+	return { version = 6, balance = balance, owned = {}, goldOwned = {}, shopUnlocked = {}, shopOwnershipMigrated = true,
+		logins = 0, sessionHistory = {} }
 end
 -- Caller samples once before an UpdateAsync callback, never inside its retries.
 function Transactions.isGoldRoll(roll)
@@ -59,7 +62,7 @@ end
 -- Migration preserves existing cash and owned shop cards.
 function Transactions.migrate(profile)
 	local updated = table.clone(profile)
-	updated.version = 5
+	updated.version = 6
 	updated.shopUnlocked = table.clone(profile.shopUnlocked or {})
 	updated.goldOwned = table.clone(profile.goldOwned or {})
 	updated.playSeconds = profile.playSeconds or 0
@@ -72,15 +75,48 @@ function Transactions.migrate(profile)
 	updated.previewFreeRerolls = profile.previewFreeRerolls or 0
 	updated.freeRollRerolls = profile.freeRollRerolls == nil and 1 or profile.freeRollRerolls
 	updated.freeRollRefreshes = profile.freeRollRefreshes == nil and 1 or profile.freeRollRefreshes
+	updated.logins = profile.logins or 0
+	updated.sessionCash = profile.sessionCash or 0
+	updated.sessionHistory = table.clone(profile.sessionHistory or {})
 	return updated
 end
-function Transactions.startSession(profile, sessionId)
+-- What the player did in the session that is ending, taken from the loaded
+-- profile before the counters reset. A session with no time and no activity is
+-- not recorded, so repeated instant rejoins cannot flush the bounded history.
+local function summarize(profile)
+	local claims = 0
+	for _ in pairs(profile.sessionClaimed or {}) do claims += 1 end
+	local seconds = profile.sessionSeconds or 0
+	local unlocks = profile.sessionUnlocks or 0
+	local rerolls = profile.sessionRerolls or 0
+	local cash = profile.sessionCash or 0
+	if seconds == 0 and unlocks == 0 and rerolls == 0 and cash == 0 and claims == 0 then return nil end
+	local startedAt = profile.sessionStartedAt
+	return { startedAt = startedAt, endedAt = startedAt and startedAt + seconds or nil,
+		seconds = seconds, unlocks = unlocks, rerolls = rerolls, claims = claims, cash = cash }
+end
+-- Each login archives the previous session, counts the login, and clears every
+-- per-session counter, so all rewards become earnable again. `at` is a UTC
+-- timestamp the caller samples once before an UpdateAsync callback; every field
+-- here derives from `profile` and `at`, so a retried callback recomputes the
+-- same result rather than counting the login twice.
+function Transactions.startSession(profile, sessionId, at)
 	local updated = Transactions.migrate(profile)
+	local previous = summarize(profile)
+	if previous then
+		table.insert(updated.sessionHistory, 1, previous)
+		while #updated.sessionHistory > MAX_HISTORY do table.remove(updated.sessionHistory) end
+	end
+	updated.logins += 1
+	updated.lastLoginAt = at
+	updated.firstLoginAt = updated.firstLoginAt or at
+	updated.sessionStartedAt = at
 	updated.clockSession = sessionId
 	updated.sessionSeconds = 0
 	updated.sessionClaimed = {}
 	updated.sessionUnlocks = 0
 	updated.sessionRerolls = 0
+	updated.sessionCash = 0
 	updated.previewFreeRerolls = 1
 	return updated
 end
@@ -103,6 +139,7 @@ function Transactions.claim(profile, quest)
 	updated.balance += quest.cash
 	updated.rerolls += quest.rerolls
 	updated.refreshes += quest.refreshes
+	updated.sessionCash += quest.cash
 	claimed[quest.id] = true
 	return updated, "REWARDED"
 end

@@ -47,8 +47,9 @@ local page = make("Frame", gui, { Name = "QuestsPage", Size = UDim2.fromScale(1,
 text(page, "QUESTS", UDim2.fromOffset(18, 14), UDim2.new(1, -100, 0, 40), 25, red)
 local close = button(page, "Close", "X", UDim2.new(1, -62, 0, 12), UDim2.fromOffset(44, 44), muted)
 local timer = text(page, "Loading playtime…", UDim2.fromOffset(18, 61), UDim2.new(1, -36, 0, 27), 18, gold)
-text(page, "Playtime: permanent milestones. Unlocks & rerolls: reset each login.", UDim2.fromOffset(18, 91), UDim2.new(1, -36, 0, 38), 13)
-local balances = text(page, "", UDim2.fromOffset(18, 133), UDim2.new(1, -36, 0, 30), 14, green)
+text(page, "Every reward resets each login. Play the hours again to re-earn them.", UDim2.fromOffset(18, 88), UDim2.new(1, -36, 0, 22), 13)
+local balances = text(page, "", UDim2.fromOffset(18, 112), UDim2.new(1, -36, 0, 22), 14, green)
+local summary = text(page, "", UDim2.fromOffset(18, 136), UDim2.new(1, -36, 0, 36), 13, gold)
 local scroll = make("ScrollingFrame", page, { Name = "Milestones", Position = UDim2.fromOffset(18, 176),
 	Size = UDim2.new(1, -36, 1, -258), BackgroundTransparency = 1, BorderSizePixel = 0,
 	AutomaticCanvasSize = Enum.AutomaticSize.Y, CanvasSize = UDim2.new(), ScrollBarThickness = 5,
@@ -56,26 +57,39 @@ local scroll = make("ScrollingFrame", page, { Name = "Milestones", Position = UD
 make("UIPadding", scroll, { PaddingTop = UDim.new(0, 4), PaddingLeft = UDim.new(0, 4), PaddingRight = UDim.new(0, 12), PaddingBottom = UDim.new(0, 8) })
 make("UIListLayout", scroll, { Padding = UDim.new(0, 16), SortOrder = Enum.SortOrder.LayoutOrder })
 local status = text(page, "Play to earn cash, rerolls, and refreshes.", UDim2.new(0, 18, 1, -70), UDim2.new(1, -36, 0, 58), 14)
-local state = { ready = false, playSeconds = 0, claimedQuests = {}, rerolls = 0, refreshes = 0 }
+local state = { ready = false, playSeconds = 0, sessionSeconds = 0, claimedQuests = {}, rerolls = 0, refreshes = 0,
+	logins = 0, sessionCash = 0, sessionHistory = {} }
 local receivedAt, pending = os.clock(), false
 local cards = {}
 local request
+local renderHistory
 local function render()
-	local seconds = state.playSeconds + (state.ready and os.clock() - receivedAt or 0)
-	timer.Text = state.ready and ("TIME PLAYED  " .. duration(seconds)) or "Loading playtime…"
+	-- Both clocks tick locally between server checkpoints.
+	local drift = state.ready and os.clock() - receivedAt or 0
+	local seconds = state.playSeconds + drift
+	local sessionSeconds = (state.sessionSeconds or 0) + drift
+	timer.Text = state.ready and string.format("THIS LOGIN  %s   ·   ALL TIME  %s", duration(sessionSeconds), duration(seconds))
+		or "Loading playtime…"
 	balances.Text = string.format("Quest rewards left: %d rerolls  ·  %d refreshes", state.rerolls, state.refreshes)
+	if state.ready then
+		summary.Text = string.format("Login #%d  ·  this login: %s earned, %d cards, %d rerolls used",
+			state.logins or 0, cash(state.sessionCash or 0), state.sessionUnlocks or 0, state.sessionRerolls or 0)
+	else
+		summary.Text = ""
+	end
+	renderHistory()
 	for _, item in ipairs(cards) do
 		local quest = item.quest
-		local sessionQuest = quest.scope == "SESSION"
-		local claimedFlags = sessionQuest and (state.sessionClaimed or {}) or state.claimedQuests
-		local claimed = claimedFlags[quest.id] == true
-		local progress = sessionQuest and (state[quest.metric] or 0) or seconds
-		local target = sessionQuest and quest.target or quest.seconds
+		-- Every quest is per-login now; time quests read the session clock.
+		local timeQuest = quest.hours ~= nil
+		local claimed = (state.sessionClaimed or {})[quest.id] == true
+		local progress = timeQuest and sessionSeconds or (state[quest.metric] or 0)
+		local target = quest.target
 		local ready = state.ready and progress >= target
 		item.fill.Size = UDim2.fromScale(math.clamp(progress / target, 0, 1), 1)
-		local remaining = sessionQuest and string.format("%d / %d this login", math.min(progress, target), target)
-			or (duration(target - progress) .. " remaining")
-		item.progress.Text = claimed and "Reward collected" or (ready and "Ready to claim!" or remaining)
+		local remaining = timeQuest and (duration(math.max(0, target - progress)) .. " left this login")
+			or string.format("%d / %d this login", math.min(progress, target), target)
+		item.progress.Text = claimed and "Collected — resets next login" or (ready and "Ready to claim!" or remaining)
 		item.claim.Text = claimed and "CLAIMED" or (ready and "CLAIM" or "LOCKED")
 		item.claim.TextColor3 = (ready or claimed) and green or muted
 		item.claim.Active = ready and not claimed and not pending
@@ -88,9 +102,9 @@ for index, quest in ipairs(Quests) do
 		BackgroundColor3 = Color3.fromRGB(22, 30, 44), BorderSizePixel = 0 })
 	outline(card, red)
 	text(card, (quest.title or string.format("PLAY %d %s", quest.hours or 0, quest.hours == 1 and "HOUR" or "HOURS")), UDim2.fromOffset(12, 8), UDim2.new(1, -24, 0, 30), 21, Color3.new(1, 1, 1))
-	local rewards = quest.scope == "SESSION"
-		and { cash(quest.cash) .. "\nCASH", "RESETS EACH\nLOGIN", "CLAIM ONCE\nPER LOGIN" }
-		or { cash(quest.cash) .. "\nCASH", quest.rerolls .. "\nREROLLS", quest.refreshes .. "\nREFRESHES" }
+	local rewards = quest.rerolls > 0
+		and { cash(quest.cash) .. "\nCASH", quest.rerolls .. "\nREROLLS", quest.refreshes .. "\nREFRESHES" }
+		or { cash(quest.cash) .. "\nCASH", "RESETS EACH\nLOGIN", "CLAIM ONCE\nPER LOGIN" }
 	for col, reward in ipairs(rewards) do
 		text(card, reward, UDim2.new((col - 1) / 3, 4, 0, 46), UDim2.new(1 / 3, -8, 0, 48), 16, col == 1 and gold or green)
 	end
@@ -104,6 +118,41 @@ for index, quest in ipairs(Quests) do
 		if not claim.Active or pending then return end
 		request("ClaimQuest", quest.id)
 	end)
+end
+-- The saved record of recent logins: what the player did in each past session.
+local historyPanel = make("Frame", scroll, { Name = "History", LayoutOrder = 100,
+	Size = UDim2.new(1, 0, 0, 40), BackgroundTransparency = 1, AutomaticSize = Enum.AutomaticSize.Y })
+make("UIListLayout", historyPanel, { Padding = UDim.new(0, 6), SortOrder = Enum.SortOrder.LayoutOrder })
+local historyTitle = text(historyPanel, "RECENT LOGINS", UDim2.new(), UDim2.new(1, 0, 0, 30), 18, red)
+historyTitle.LayoutOrder = 1
+historyTitle.TextXAlignment = Enum.TextXAlignment.Left
+local historyRows, historySignature = {}, nil
+local function historyRow(value, order, color)
+	local row = text(historyPanel, value, UDim2.new(), UDim2.new(1, 0, 0, 26), 13, color)
+	row.LayoutOrder = order
+	row.TextXAlignment = Enum.TextXAlignment.Left
+	-- Grow instead of clipping when the line wraps on a narrow screen.
+	row.AutomaticSize = Enum.AutomaticSize.Y
+	table.insert(historyRows, row)
+end
+-- Rebuilt only when the saved history actually changes, not every render tick.
+renderHistory = function()
+	local entries = state.sessionHistory or {}
+	local signature = string.format("%d:%s:%s", #entries, tostring(entries[1] and entries[1].startedAt), tostring(state.logins))
+	if signature == historySignature then return end
+	historySignature = signature
+	for _, row in ipairs(historyRows) do row:Destroy() end
+	historyRows = {}
+	if #entries == 0 then
+		historyRow(state.ready and "No earlier sessions saved yet — this is your first login." or "", 2)
+		return
+	end
+	for index, entry in ipairs(entries) do
+		local when = entry.startedAt and os.date("!%b %d  %H:%M", entry.startedAt) or "earlier session"
+		historyRow(string.format("%s   ·   %s played   ·   %d cards   ·   %d rerolls   ·   %s earned",
+			when, duration(entry.seconds or 0), entry.unlocks or 0, entry.rerolls or 0, cash(entry.cash or 0)),
+			index + 1, index == 1 and green or muted)
+	end
 end
 request = function(action, id)
 	if pending then return end
@@ -119,9 +168,9 @@ request = function(action, id)
 	if ok and type(result) == "table" then
 		state, receivedAt = result, os.clock()
 		local messages = {
-			READY = result.preview and "Studio trial: real-time timer; progress resets when Play stops." or "Playtime saves across visits. Activity quests start fresh each login.",
+			READY = result.preview and "Studio trial: real-time timer; progress resets when Play stops." or "Cards and cash are saved forever. Every reward resets each login.",
 			REWARDED = "Reward claimed and added to your balance!",
-			CLAIMED = "You already collected this reward.", NOT_READY = "Keep playing! This milestone is not ready yet.",
+			CLAIMED = "Already collected this login. Rejoin to earn it again.", NOT_READY = "Keep playing! This reward is not ready yet.",
 			STALE_SESSION = "A newer login is active. Rejoin to continue here.",
 			BUSY = "Please wait a moment, then try again.", INVALID = "This quest is unavailable.",
 			UNAVAILABLE = "Could not save rewards. Refreshing will check whether your claim was saved.",

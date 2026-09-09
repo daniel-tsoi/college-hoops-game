@@ -1,2 +1,4 @@
 [tools]
 rojo = "rojo-rbx/rojo@7.6.1"
+# Declared so the documented `lune run tests/...` commands work from the project root.
+lune = "lune-org/lune@0.8.9"

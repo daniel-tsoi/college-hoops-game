@@ -99,20 +99,28 @@ local function response(player, code)
 		sessionClaimed = profile and profile.sessionClaimed or {},
 		sessionUnlocks = profile and profile.sessionUnlocks or 0,
 		sessionRerolls = profile and profile.sessionRerolls or 0,
-		previewFreeRerolls = profile and profile.previewFreeRerolls or 0 }
+		previewFreeRerolls = profile and profile.previewFreeRerolls or 0,
+		sessionSeconds = profile and profile.sessionSeconds or 0,
+		sessionCash = profile and profile.sessionCash or 0,
+		logins = profile and profile.logins or 0,
+		firstLoginAt = profile and profile.firstLoginAt or nil,
+		lastLoginAt = profile and profile.lastLoginAt or nil,
+		sessionHistory = profile and profile.sessionHistory or {} }
 end
 local function load(player)
 	local sessionId = HttpService:GenerateGUID(false)
+	-- Sampled once here so a retried UpdateAsync callback stamps the same login time.
+	local loginAt = os.time()
 	local profile
 	if preview then
-		profile = Transactions.startSession(Transactions.newProfile(1000000), sessionId)
+		profile = Transactions.startSession(Transactions.newProfile(1000000), sessionId, loginAt)
 	else
 		profile = store:UpdateAsync(key(player), function(current)
-			return Transactions.startSession(Transactions.migrateShopOwnership(current or Transactions.newProfile(0), Catalog.ById), sessionId)
+			return Transactions.startSession(Transactions.migrateShopOwnership(current or Transactions.newProfile(0), Catalog.ById), sessionId, loginAt)
 		end)
 	end
 	profiles[player] = profile
-	sessions[player] = { id = sessionId, started = os.clock() }
+	sessions[player] = { id = sessionId, started = os.clock(), startedAt = loginAt }
 	publish(player)
 end
 -- Every wallet mutation includes the current online-time checkpoint in the same save.
@@ -120,6 +128,7 @@ end
 local function commit(player, mutate)
 	local session = sessions[player]
 	local seconds = elapsed(player)
+	local startedAt = session.startedAt
 	local code = "READY"
 	local function transform(current)
 		if current.clockSession ~= session.id then
@@ -134,7 +143,7 @@ local function commit(player, mutate)
 		profiles[player] = transform(profiles[player])
 	else
 		profiles[player] = store:UpdateAsync(key(player), function(current)
-			return transform(current or Transactions.startSession(Transactions.newProfile(0), session.id))
+			return transform(current or Transactions.startSession(Transactions.newProfile(0), session.id, startedAt))
 		end)
 	end
 	publish(player)

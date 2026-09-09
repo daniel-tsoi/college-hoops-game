@@ -71,8 +71,34 @@ rolled players. A complete five-player team qualifies for the global top 50.
 The current player's ranking row is highlighted. Studio rankings are local and
 do not touch live data stores; global read caching refreshes every 30 seconds.
 
-Playtime and activity quest cash, rerolls and refreshes remain saved. Only new
+Cash, rerolls and refreshes already earned remain saved. Only new
 rolled ownership advances unique-player quests; eligibility purchases do not.
+
+## Logins, saved progress, and reward resets
+
+Logging in is itself a save. Joining runs one `UpdateAsync` that archives the
+session that just ended, counts the login, and stamps `lastLoginAt`, so the
+record of a session is written at the start of the next one rather than relying
+on the player's disconnect. `firstLoginAt` is stamped once. The login timestamp
+is sampled before the callback, and every field derives from the stored value, so
+a retried save counts the login once.
+
+Each archived entry records what the player did that session: when it started and
+ended, seconds played, cards unlocked, rerolls used, rewards claimed, and cash
+earned. `sessionHistory` keeps the ten most recent, newest first. A join with no
+time and no activity counts as a login but is not archived, so repeated instant
+rejoins cannot flush real sessions out of the record. The Quests panel shows the
+login number, the current session's activity, and a RECENT LOGINS list.
+
+Every quest reward resets on each new connection. The 1/2/4 hour milestones
+measure the current session's clock, not lifetime `playSeconds`, so those hours
+must be played again to re-earn the reward — reconnecting alone grants nothing.
+Lifetime `playSeconds` is still accumulated and shown as an all-time statistic.
+Cash, cards, gold and reward stock already earned are never taken back. Profiles
+saved before login tracking migrate with `logins` at 0 and an empty history;
+their old lifetime `claimedQuests` flags are kept for reference and no longer
+block a new login's rewards. Studio builds a disposable profile on each Play, so
+they always report login #1 with no history; only live profiles accumulate it.
 
 ## Overhead titles
 
@@ -97,6 +123,9 @@ Tests cover exact tier/gold ticket counts, eligibility gating, ownership migrati
 roll saves, retries, positions, prospect IDs, bonuses, quests and leaderboard rules.
 Run `lune run tests/player_titles.spec.luau` for title boundaries, role priority,
 chat prefixes, and title/card script compilation.
+Run `lune run tests/login_history.spec.luau` for login counting, save-retry
+idempotence, archived session activity, history bounding, and the full reward
+reset. `lune` is declared in `aftman.toml`, so these run from the project root.
 Live DataStore/cross-server validation remains separate from Studio tests.
 
 Player data includes 25,393 college base cards, All-Star/HOF variants and four
