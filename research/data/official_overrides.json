@@ -1,0 +1,18 @@
+{
+  "college-5041935-150-2026": {
+    "stats": {
+      "turnovers": 95
+    },
+    "sourceUrl": "https://goduke.com/sports/mens-basketball/stats/2025-26",
+    "note": "Current cumulative page lists 95; game feed/PDF list 96. Use current school table."
+  },
+  "college-5041939-150-2025": {
+    "stats": {
+      "minutes": 1130,
+      "defensiveRebounds": 229,
+      "rebounds": 278
+    },
+    "sourceUrl": "https://goduke.com/sports/mens-basketball/stats/2024-25",
+    "note": "Current cumulative page also lists 156 assists; recap narrative says 155. Keep current tabular value 156."
+  }
+}

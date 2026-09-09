@@ -1,0 +1,252 @@
+[
+  {
+    "claimFamily": "SportsDataverse player-box release",
+    "sourceTitle": "SportsDataverse player-box release",
+    "url": "https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_mens_college_basketball_player_boxscores",
+    "publisher": "github.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "data license is CC BY 4.0",
+    "sourceTitle": "data license is CC BY 4.0",
+    "url": "https://raw.githubusercontent.com/sportsdataverse/hoopR-mbb-data/main/LICENSE.md",
+    "publisher": "raw.githubusercontent.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "sport sponsorship table",
+    "sourceTitle": "sport sponsorship table",
+    "url": "https://www.ncaa.org/about-us/membership-directory/membership-composition-and-sport-sponsorship/",
+    "publisher": "www.ncaa.org",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "New Haven's announcement",
+    "sourceTitle": "New Haven's announcement",
+    "url": "https://www.newhaven.edu/news/releases/2025/northeast-conference-invitation.php",
+    "publisher": "www.newhaven.edu",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Mercyhurst's announcement",
+    "sourceTitle": "Mercyhurst's announcement",
+    "url": "https://www.mercyhurst.edu/news/mercyhurst-university-marks-new-era-athletics-move-division-I",
+    "publisher": "www.mercyhurst.edu",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Hartford's 2023\u201324 schedule announcement",
+    "sourceTitle": "Hartford's 2023\u201324 schedule announcement",
+    "url": "https://hartfordhawks.com/story.aspx?file_date=10%2F13%2F2023&filename=mens-basketball-toomey-announces-2023-24-schedule",
+    "publisher": "hartfordhawks.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "official roster archive",
+    "sourceTitle": "official roster archive",
+    "url": "https://goduke.com/sports/mens-basketball/roster/2021-22",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Duke's cumulative table",
+    "sourceTitle": "Duke's cumulative table",
+    "url": "https://goduke.com/sports/mens-basketball/stats/2021-22",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Purdue's player biography",
+    "sourceTitle": "Purdue's player biography",
+    "url": "https://purduesports.com/sports/mens-basketball/roster/edey-zach/12351",
+    "publisher": "purduesports.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Duke's current 2024\u201325 cumulative table",
+    "sourceTitle": "Duke's current 2024\u201325 cumulative table",
+    "url": "https://goduke.com/sports/mens-basketball/stats/2024-25",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "season recap",
+    "sourceTitle": "season recap",
+    "url": "https://goduke.com/documents/download/2025/8/7/Season_Recap__2024-25_.pdf",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Duke's 2025\u201326 table",
+    "sourceTitle": "Duke's 2025\u201326 table",
+    "url": "https://goduke.com/sports/mens-basketball/stats/2025-26",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "BYU's season review",
+    "sourceTitle": "BYU's season review",
+    "url": "https://byucougars.com/news/2026/04/17/byu-mens-basketball-25-26-season-recap",
+    "publisher": "byucougars.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "MSU's record book",
+    "sourceTitle": "MSU's record book",
+    "url": "https://msuspartans.com/documents/download/2015/4/30/_msu_m_baskbl__0910MBBRecords.pdf",
+    "publisher": "msuspartans.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "UNC's record book",
+    "sourceTitle": "UNC's record book",
+    "url": "https://goheels.com/documents/download/2025/12/30/25-26_M-Basketball_Record_Book.pdf",
+    "publisher": "goheels.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "LSU's Shaq record",
+    "sourceTitle": "LSU's Shaq record",
+    "url": "https://lsusports.net/sports/mb/roster/player/shaquille-oneal",
+    "publisher": "lsusports.net",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Cincinnati's Oscar record",
+    "sourceTitle": "Cincinnati's Oscar record",
+    "url": "https://gobearcats.com/oscar-robertson-1",
+    "publisher": "gobearcats.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "LSU's Maravich record",
+    "sourceTitle": "LSU's Maravich record",
+    "url": "https://lsusports.net/sports/mb/roster/season/1969-70/player/pete-maravich",
+    "publisher": "lsusports.net",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Duke's Tatum season",
+    "sourceTitle": "Duke's Tatum season",
+    "url": "https://goduke.com/documents/download/2022/8/15/2016-17_Stats.pdf",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Memphis's Rose guide",
+    "sourceTitle": "Memphis's Rose guide",
+    "url": "https://gotigersgo.com/documents/download/2015/5/27/_m_baskbl__2008-09CompleteGuide.pdf",
+    "publisher": "gotigersgo.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Duke's Irving season",
+    "sourceTitle": "Duke's Irving season",
+    "url": "https://goduke.com/documents/download/2022/8/15/2010-11_Stats.pdf",
+    "publisher": "goduke.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "NBA's Kobe profile",
+    "sourceTitle": "NBA's Kobe profile",
+    "url": "https://jr.nba.com/player-profile-kobe-bryant/",
+    "publisher": "jr.nba.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "LeBron's NBA bio",
+    "sourceTitle": "LeBron's NBA bio",
+    "url": "https://www.nba.com/player/2544/lebron-james/bio",
+    "publisher": "www.nba.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Real Madrid's Luka history",
+    "sourceTitle": "Real Madrid's Luka history",
+    "url": "https://www.realmadrid.com/en-US/the-club/history/basketball-legends/luka-doncic/",
+    "publisher": "www.realmadrid.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  },
+  {
+    "claimFamily": "Jokic's NBA bio",
+    "sourceTitle": "Jokic's NBA bio",
+    "url": "https://www.nba.com/player/203999/nikola-jokic/bio",
+    "publisher": "www.nba.com",
+    "accessDateUTC": "2026-09-05",
+    "publicationDate": "See source; not uniformly available",
+    "confidence": "Primary source or dataset publisher; scope limited to cited claim",
+    "accessNotes": "Web research, delegated primary-source extraction, or direct public dataset retrieval; see report for contradictions"
+  }
+]

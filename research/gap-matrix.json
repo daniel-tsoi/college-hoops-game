@@ -1,0 +1,44 @@
+[
+  {
+    "claim": "Five-season names and box-score statistics",
+    "evidence": "25,393 player-school-season aggregates; pinned five-season input hashes; 14/14 Duke2022 roster match",
+    "confidence": "Bulk sourced, sampled independent verification",
+    "gap": "Every school roster and all final totals not independently checked",
+    "nextStep": "Reconcile official cumulative pages school by school"
+  },
+  {
+    "claim": "Individual speed and dribbling skill",
+    "evidence": "Box-score handling proxies; explicit position speed priors",
+    "confidence": "Estimated; speed unmeasured",
+    "gap": "Tracking, sprint tests and film unavailable in bulk inputs",
+    "nextStep": "Add sourced film/tracking profiles; preserve missing values"
+  },
+  {
+    "claim": "HOF identities and historical seasons",
+    "evidence": "Eight official school primary sources linked per card",
+    "confidence": "High for observed facts, manual for game ratings",
+    "gap": "Some historical statistics unavailable",
+    "nextStep": "Historical manual balance calibration"
+  },
+  {
+    "claim": "D1 team universe",
+    "evidence": "Season-length schedule threshold yields358/363/362/364/365, transitions checked and NCAA2026projected365",
+    "confidence": "Candidate membership with corroboration",
+    "gap": "Not independently verified for every institution-season",
+    "nextStep": "Full official membership/standings crosswalk"
+  },
+  {
+    "claim": "Exact HOF/All-Star odds",
+    "evidence": "800 enumerated tickets, counts1/8/791, tests pass",
+    "confidence": "Exact configuration",
+    "gap": "No executable summon service; 1,013 school-seasons have no eligible All-Star",
+    "nextStep": "Resolve eligibility and build server-only draw system"
+  },
+  {
+    "claim": "Non-college purchase-only",
+    "evidence": "Four catalog entries locked, purchase-only, excluded from allrandompools; tests pass",
+    "confidence": "Exact data policy",
+    "gap": "No productIDs or purchase handler",
+    "nextStep": "Configure actual products and verified server entitlements"
+  }
+]

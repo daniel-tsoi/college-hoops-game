@@ -1,0 +1,1684 @@
+[
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2001,
+    "season": "2000-01",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2000-01",
+    "status": "verified-season-page",
+    "title": "2000-01 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Drew Gooden",
+        "jersey": "0",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "230 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/drew-gooden/1317"
+      },
+      {
+        "name": "Lewis Harrison",
+        "jersey": "2",
+        "position": null,
+        "height": "6' 0''",
+        "weight": "165 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/lewis-harrison/1319"
+      },
+      {
+        "name": "Brett Ballard",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 0''",
+        "weight": "175 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brett-ballard/1320"
+      },
+      {
+        "name": "Nick Collison",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "250 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/nick-collison/1306"
+      },
+      {
+        "name": "Kirk Hinrich",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "180 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kirk-hinrich/1308"
+      },
+      {
+        "name": "John Crider",
+        "jersey": "12",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "190 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/john-crider/1337"
+      },
+      {
+        "name": "Jeff Boschee",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "185 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-boschee/1325"
+      },
+      {
+        "name": "Bryant Nash",
+        "jersey": "15",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "200 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/bryant-nash/1299"
+      },
+      {
+        "name": "Mario Kinsey",
+        "jersey": "17",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "195 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/mario-kinsey/1340"
+      },
+      {
+        "name": "Kenny Gregory",
+        "jersey": "20",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "208 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kenny-gregory/1341"
+      },
+      {
+        "name": "Jeff Carey",
+        "jersey": "22",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "250 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-carey/1327"
+      },
+      {
+        "name": "Luke Axtell",
+        "jersey": "33",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "220 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/luke-axtell/1343"
+      },
+      {
+        "name": "Chris Zerbe",
+        "jersey": "34",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "230 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/chris-zerbe/1330"
+      },
+      {
+        "name": "Eric Chenowith",
+        "jersey": "44",
+        "position": null,
+        "height": "7' 1''",
+        "weight": "270 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/eric-chenowith/1345"
+      },
+      {
+        "name": "Todd Kappelmann",
+        "jersey": "50",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "230 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/todd-kappelmann/1331"
+      }
+    ],
+    "count": 15,
+    "sha256": "0e88f5991f0daa8b3b3fe7e40934c3ff41e97419ccf8597af7639d55dc993cc4"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2002,
+    "season": "2001-02",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2001-02",
+    "status": "verified-season-page",
+    "title": "2001-02 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Drew Gooden",
+        "jersey": "0",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "230 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/drew-gooden/1317"
+      },
+      {
+        "name": "Jeff Hawkins",
+        "jersey": "1",
+        "position": null,
+        "height": "5' 11''",
+        "weight": "175 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-hawkins/1260"
+      },
+      {
+        "name": "Lewis Harrison",
+        "jersey": "2",
+        "position": null,
+        "height": "6' 0''",
+        "weight": "180 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/lewis-harrison/1319"
+      },
+      {
+        "name": "Brett Ballard",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 0''",
+        "weight": "175 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brett-ballard/1320"
+      },
+      {
+        "name": "Nick Collison",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "255 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/nick-collison/1306"
+      },
+      {
+        "name": "Keith Langford",
+        "jersey": "5",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "200 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/keith-langford/1276"
+      },
+      {
+        "name": "Kirk Hinrich",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "190 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kirk-hinrich/1308"
+      },
+      {
+        "name": "Aaron Miles",
+        "jersey": "11",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "175 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/aaron-miles/1277"
+      },
+      {
+        "name": "Jeff Boschee",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "185 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-boschee/1325"
+      },
+      {
+        "name": "Bryant Nash",
+        "jersey": "15",
+        "position": null,
+        "height": "6' 6''",
+        "weight": "205 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/bryant-nash/1299"
+      },
+      {
+        "name": "Jeff Carey",
+        "jersey": "22",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "250 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-carey/1327"
+      },
+      {
+        "name": "Wayne Simien",
+        "jersey": "23",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "245 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/wayne-simien/1281"
+      },
+      {
+        "name": "Michael Lee",
+        "jersey": "25",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "210 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/michael-lee/1283"
+      },
+      {
+        "name": "Chris Zerbe",
+        "jersey": "34",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "235 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/chris-zerbe/1330"
+      },
+      {
+        "name": "Todd Kappelmann",
+        "jersey": "50",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "230 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/todd-kappelmann/1331"
+      }
+    ],
+    "count": 15,
+    "sha256": "9f2155b434a4321644787bccd8e42549e5329e4b934e138f708a2488b62d7579"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2003,
+    "season": "2002-03",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2002-03",
+    "status": "verified-season-page",
+    "title": "2002-03 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Jeff Hawkins",
+        "jersey": "1",
+        "position": null,
+        "height": "5' 11''",
+        "weight": "175 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-hawkins/1260"
+      },
+      {
+        "name": "Brett Olson",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "213 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brett-olson/1290"
+      },
+      {
+        "name": "Nick Collison",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "255 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/nick-collison/1306"
+      },
+      {
+        "name": "Keith Langford",
+        "jersey": "5",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "205 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/keith-langford/1276"
+      },
+      {
+        "name": "Kirk Hinrich",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "190 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kirk-hinrich/1308"
+      },
+      {
+        "name": "Aaron Miles",
+        "jersey": "11",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "175 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/aaron-miles/1277"
+      },
+      {
+        "name": "Stephen Vinson",
+        "jersey": "20",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "185 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/stephen-vinson/1265"
+      },
+      {
+        "name": "Wayne Simien",
+        "jersey": "23",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "255 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/wayne-simien/1281"
+      },
+      {
+        "name": "Michael Lee",
+        "jersey": "25",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "215 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/michael-lee/1283"
+      },
+      {
+        "name": "Bryant Nash",
+        "jersey": "33",
+        "position": null,
+        "height": "6' 6''",
+        "weight": "205 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/bryant-nash/1299"
+      },
+      {
+        "name": "Christian Moody",
+        "jersey": "34",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "205 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/christian-moody/1271"
+      },
+      {
+        "name": "Jeff Graves",
+        "jersey": "42",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "275 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeff-graves/1301"
+      },
+      {
+        "name": "Moulaye Niang",
+        "jersey": "55",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "215 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/moulaye-niang/1287"
+      }
+    ],
+    "count": 13,
+    "sha256": "c78aafeee024e8e632bfd6d6d48f3b29d78a6c15028ead0bc0d90e304f81bd38"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2007,
+    "season": "2006-07",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2006-07",
+    "status": "verified-season-page",
+    "title": "2006-07 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Darrell Arthur",
+        "jersey": "00",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "225 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/darrell-arthur/1228"
+      },
+      {
+        "name": "Russell Robinson",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "205 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/russell-robinson/1230"
+      },
+      {
+        "name": "Sherron Collins",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "205 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/sherron-collins/1196"
+      },
+      {
+        "name": "Rodrick Stewart",
+        "jersey": "5",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "200 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/rodrick-stewart/1232"
+      },
+      {
+        "name": "Jeremy Case",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "190 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jeremy-case/1233"
+      },
+      {
+        "name": "Brennan Bechard",
+        "jersey": "11",
+        "position": null,
+        "height": "6' 0''",
+        "weight": "183 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brennan-bechard/1214"
+      },
+      {
+        "name": "Brady Morningstar",
+        "jersey": "12",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "185 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brady-morningstar/1182"
+      },
+      {
+        "name": "Mario Chalmers",
+        "jersey": "15",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "190 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/mario-chalmers/1237"
+      },
+      {
+        "name": "Sasha Kaun",
+        "jersey": "24",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "250 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/sasha-kaun/1239"
+      },
+      {
+        "name": "Brandon Rush",
+        "jersey": "25",
+        "position": null,
+        "height": "6' 6''",
+        "weight": "210 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brandon-rush/1240"
+      },
+      {
+        "name": "Julian Wright",
+        "jersey": "30",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "225 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/julian-wright/1255"
+      },
+      {
+        "name": "Darnell Jackson",
+        "jersey": "32",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "250 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/darnell-jackson/1241"
+      },
+      {
+        "name": "C.J. Giles",
+        "jersey": "33",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "240 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/cj-giles/1257"
+      },
+      {
+        "name": "Brad Witherspoon",
+        "jersey": "40",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "190 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brad-witherspoon/1242"
+      },
+      {
+        "name": "Matt Kleinmann",
+        "jersey": "54",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "250 lbs",
+        "academicYear": "R-Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/matt-kleinmann/1227"
+      }
+    ],
+    "count": 15,
+    "sha256": "34356af3f303423a413d8d14170d4fd051a790e0e4c12e829f1d7d217f3b0caf"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2016,
+    "season": "2015-16",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2015-16",
+    "status": "verified-season-page",
+    "title": "2015-16 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Frank Mason III",
+        "jersey": "0",
+        "position": null,
+        "height": "5' 11''",
+        "weight": "185 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/frank-mason-iii/1082"
+      },
+      {
+        "name": "Wayne Selden Jr.",
+        "jersey": "1",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "230 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/wayne-selden-jr/1098"
+      },
+      {
+        "name": "Lagerald Vick",
+        "jersey": "2",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "175 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/lagerald-vick/1060"
+      },
+      {
+        "name": "Devonte' Graham",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "175 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/devonte-graham/1069"
+      },
+      {
+        "name": "Evan Manning",
+        "jersey": "5",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "170 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/evan-manning/1101"
+      },
+      {
+        "name": "Sviatoslav Mykhailiuk",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "195 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/sviatoslav-mykhailiuk/1071"
+      },
+      {
+        "name": "Tyler Self",
+        "jersey": "11",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "165 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/tyler-self/1091"
+      },
+      {
+        "name": "Cheick Diallo",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "220 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/cheick-diallo/1104"
+      },
+      {
+        "name": "Brannen Greene",
+        "jersey": "14",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "215 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/brannen-greene/1105"
+      },
+      {
+        "name": "Carlton Bragg Jr.",
+        "jersey": "15",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "220 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/carlton-bragg-jr/1090"
+      },
+      {
+        "name": "Clay Young",
+        "jersey": "21",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "205 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/clay-young/1075"
+      },
+      {
+        "name": "Dwight Coleby Jr.",
+        "jersey": "22",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "240 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dwight-coleby-jr/1093"
+      },
+      {
+        "name": "Jamari Traylor",
+        "jersey": "31",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "220 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jamari-traylor/1109"
+      },
+      {
+        "name": "Landen Lucas",
+        "jersey": "33",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "240 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/landen-lucas/1094"
+      },
+      {
+        "name": "Perry Ellis",
+        "jersey": "34",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "225 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/perry-ellis/1111"
+      },
+      {
+        "name": "Hunter Mickelson",
+        "jersey": "42",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "245 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/hunter-mickelson/1112"
+      }
+    ],
+    "count": 16,
+    "sha256": "2a1dd971da7ea01e7126dc1e0c29f8587851a57e306aa6be0acc4894410ced4b"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2018,
+    "season": "2017-18",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2017-18",
+    "status": "verified-season-page",
+    "title": "2017-18 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Marcus Garrett",
+        "jersey": "0",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "180 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/marcus-garrett/1022"
+      },
+      {
+        "name": "Dedric Lawson",
+        "jersey": "1",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "230 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dedric-lawson/1051"
+      },
+      {
+        "name": "Lagerald Vick",
+        "jersey": "2",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "175 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/lagerald-vick/1060"
+      },
+      {
+        "name": "Sam Cunliffe",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 6''",
+        "weight": "200 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/sam-cunliffe/1068"
+      },
+      {
+        "name": "Devonte' Graham",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "185 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/devonte-graham/1069"
+      },
+      {
+        "name": "Charlie Moore",
+        "jersey": "5",
+        "position": null,
+        "height": "5' 11''",
+        "weight": "170 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/charlie-moore/1052"
+      },
+      {
+        "name": "Sviatoslav Mykhailiuk",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "205 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/sviatoslav-mykhailiuk/1071"
+      },
+      {
+        "name": "Chris Teahan",
+        "jersey": "12",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "175 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/chris-teahan/1011"
+      },
+      {
+        "name": "K.J. Lawson",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "205 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kj-lawson/1057"
+      },
+      {
+        "name": "Malik Newman",
+        "jersey": "14",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "190 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/malik-newman/1074"
+      },
+      {
+        "name": "Clay Young",
+        "jersey": "21",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "205 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/clay-young/1075"
+      },
+      {
+        "name": "Silvio De Sousa",
+        "jersey": "22",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "245 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/silvio-de-sousa/1045"
+      },
+      {
+        "name": "Billy Preston",
+        "jersey": "23",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "240 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/billy-preston/1077"
+      },
+      {
+        "name": "Udoka Azubuike",
+        "jersey": "35",
+        "position": null,
+        "height": "7' 0''",
+        "weight": "280 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/udoka-azubuike/1048"
+      },
+      {
+        "name": "Jack Whitman",
+        "jersey": "41",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "235 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jack-whitman/1079"
+      },
+      {
+        "name": "Mitch Lightfoot",
+        "jersey": "44",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "210 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/mitch-lightfoot/1020"
+      },
+      {
+        "name": "James Sosinski",
+        "jersey": "82",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "260 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/james-sosinski/1081"
+      }
+    ],
+    "count": 17,
+    "sha256": "2de39ca94bbca73da9de9b65c63b3183dfd8aa93cb840fcc2d2fdedeef4d7d85"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2020,
+    "season": "2019-20",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2019-20",
+    "status": "verified-season-page",
+    "title": "2019-20 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Marcus Garrett",
+        "jersey": "0",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "205 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/marcus-garrett/1022"
+      },
+      {
+        "name": "Devon Dotson",
+        "jersey": "1",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "185 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/devon-dotson/1036"
+      },
+      {
+        "name": "Christian Braun",
+        "jersey": "2",
+        "position": null,
+        "height": "6' 6''",
+        "weight": "205 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/christian-braun/1006"
+      },
+      {
+        "name": "Dajuan Harris Jr.",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "170 lbs",
+        "academicYear": "R-Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dajuan-harris-jr/15490"
+      },
+      {
+        "name": "Isaiah Moss",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "208 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/isaiah-moss/1039"
+      },
+      {
+        "name": "Elijah Elliott",
+        "jersey": "5",
+        "position": null,
+        "height": "6' 3''",
+        "weight": "185 lbs",
+        "academicYear": "R-Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/elijah-elliott/1040"
+      },
+      {
+        "name": "Jalen Wilson",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "215 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jalen-wilson/992"
+      },
+      {
+        "name": "Chris Teahan",
+        "jersey": "12",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "195 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/chris-teahan/1011"
+      },
+      {
+        "name": "Tristan Enaruna",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "215 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/tristan-enaruna/1029"
+      },
+      {
+        "name": "Michael Jankovich",
+        "jersey": "20",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "190 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/michael-jankovich/980"
+      },
+      {
+        "name": "Silvio De Sousa",
+        "jersey": "22",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "245 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/silvio-de-sousa/1045"
+      },
+      {
+        "name": "Ochai Agbaji",
+        "jersey": "30",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "215 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/ochai-agbaji/1017"
+      },
+      {
+        "name": "David McCormack",
+        "jersey": "33",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "265 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/david-mccormack/1019"
+      },
+      {
+        "name": "Udoka Azubuike",
+        "jersey": "35",
+        "position": null,
+        "height": "7' 0''",
+        "weight": "270 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/udoka-azubuike/1048"
+      },
+      {
+        "name": "Mitch Lightfoot",
+        "jersey": "44",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "225 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/mitch-lightfoot/1020"
+      }
+    ],
+    "count": 15,
+    "sha256": "85d93c7675e247c931ba91928fefe9e6ac03063b50aea249e151edfb69037479"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2021,
+    "season": "2020-21",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2020-21",
+    "status": "verified-season-page",
+    "title": "2020-21 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Marcus Garrett",
+        "jersey": "0",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "205 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/marcus-garrett/1022"
+      },
+      {
+        "name": "Tyon Grant-Foster",
+        "jersey": "1",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "205 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/tyon-grantfoster/1023"
+      },
+      {
+        "name": "Christian Braun",
+        "jersey": "2",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "218 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/christian-braun/1006"
+      },
+      {
+        "name": "Dajuan Harris Jr.",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "170 lbs",
+        "academicYear": "R-Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dajuan-harris-jr/15490"
+      },
+      {
+        "name": "Latrell Jossell",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "160 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/latrell-jossell/1026"
+      },
+      {
+        "name": "Jalen Wilson",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "225 lbs",
+        "academicYear": "R-Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jalen-wilson/992"
+      },
+      {
+        "name": "Chris Teahan",
+        "jersey": "12",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "195 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/chris-teahan/1011"
+      },
+      {
+        "name": "Tristan Enaruna",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "215 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/tristan-enaruna/1029"
+      },
+      {
+        "name": "Michael Jankovich",
+        "jersey": "20",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "190 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/michael-jankovich/980"
+      },
+      {
+        "name": "Ochai Agbaji",
+        "jersey": "30",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "215 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/ochai-agbaji/1017"
+      },
+      {
+        "name": "David McCormack",
+        "jersey": "33",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "250 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/david-mccormack/1019"
+      },
+      {
+        "name": "Gethro Muscadin",
+        "jersey": "35",
+        "position": null,
+        "height": "6' 10''",
+        "weight": "220 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/gethro-muscadin/1031"
+      },
+      {
+        "name": "Mitch Lightfoot",
+        "jersey": "44",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "225 lbs",
+        "academicYear": "R-Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/mitch-lightfoot/1020"
+      }
+    ],
+    "count": 13,
+    "sha256": "05eacf05d08e15a54591adf2e21605fe73075c30e10fc4e53e626e672eecf352"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2023,
+    "season": "2022-23",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2022-23",
+    "status": "verified-season-page",
+    "title": "2022-23 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Bobby Pettiford Jr.",
+        "jersey": "0",
+        "position": null,
+        "height": "6' 1''",
+        "weight": "190 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/bobby-pettiford-jr/987"
+      },
+      {
+        "name": "Joseph Yesufu",
+        "jersey": "1",
+        "position": null,
+        "height": "6' 0''",
+        "weight": "180 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/joseph-yesufu/988"
+      },
+      {
+        "name": "Dajuan Harris Jr.",
+        "jersey": "3",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "170 lbs",
+        "academicYear": "R-Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dajuan-harris-jr/15490"
+      },
+      {
+        "name": "Gradey Dick",
+        "jersey": "4",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "205 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/gradey-dick/990"
+      },
+      {
+        "name": "Kyle Cuffe Jr.",
+        "jersey": "5",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "185 lbs",
+        "academicYear": "R-Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kyle-cuffe-jr/991"
+      },
+      {
+        "name": "Jalen Wilson",
+        "jersey": "10",
+        "position": null,
+        "height": "6' 8''",
+        "weight": "225 lbs",
+        "academicYear": "R-Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jalen-wilson/992"
+      },
+      {
+        "name": "MJ Rice",
+        "jersey": "11",
+        "position": null,
+        "height": "6' 5''",
+        "weight": "215 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/mj-rice/993"
+      },
+      {
+        "name": "Wilder Evers",
+        "jersey": "12",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "185 lbs",
+        "academicYear": "R-Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/wilder-evers/16507"
+      },
+      {
+        "name": "Charlie McCarthy",
+        "jersey": "13",
+        "position": null,
+        "height": "6' 2''",
+        "weight": "195 lbs",
+        "academicYear": "R-So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/charlie-mccarthy/986"
+      },
+      {
+        "name": "Kevin McCullar Jr.",
+        "jersey": "15",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "212 lbs",
+        "academicYear": "Gr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kevin-mccullar-jr/979"
+      },
+      {
+        "name": "Michael Jankovich",
+        "jersey": "20",
+        "position": null,
+        "height": "6' 4''",
+        "weight": "190 lbs",
+        "academicYear": "Gr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/michael-jankovich/980"
+      },
+      {
+        "name": "Zach Clemence",
+        "jersey": "21",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "230 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/zach-clemence/15486"
+      },
+      {
+        "name": "Dillon Wilhite",
+        "jersey": "22",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "240 lbs",
+        "academicYear": "R-So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dillon-wilhite/15493"
+      },
+      {
+        "name": "Ernest Udeh Jr.",
+        "jersey": "23",
+        "position": null,
+        "height": "6' 11''",
+        "weight": "250 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/ernest-udeh-jr/1000"
+      },
+      {
+        "name": "KJ Adams",
+        "jersey": "24",
+        "position": null,
+        "height": "6' 7''",
+        "weight": "235 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kj-adams/15494"
+      },
+      {
+        "name": "Cam Martin",
+        "jersey": "31",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "230 lbs",
+        "academicYear": "5th",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/cam-martin/1002"
+      },
+      {
+        "name": "Zuby Ejiofor",
+        "jersey": "35",
+        "position": null,
+        "height": "6' 9''",
+        "weight": "240 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/zuby-ejiofor/1003"
+      }
+    ],
+    "count": 17,
+    "sha256": "b9cefa0bfd4ded1519693180b976b5a71dff1121733eef27e0930379cb001d03"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2025,
+    "season": "2024-25",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2024-25",
+    "status": "verified-season-page",
+    "title": "2024-25 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Shakeel Moore",
+        "jersey": "0",
+        "position": "G",
+        "height": "6' 1''",
+        "weight": "190 lbs",
+        "academicYear": "Gr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/shakeel-moore/15495"
+      },
+      {
+        "name": "Hunter Dickinson",
+        "jersey": "1",
+        "position": "C",
+        "height": "7' 2''",
+        "weight": "265 lbs",
+        "academicYear": "Gr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/hunter-dickinson/15488"
+      },
+      {
+        "name": "AJ Storr",
+        "jersey": "2",
+        "position": "G",
+        "height": "6' 7''",
+        "weight": "205 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/aj-storr/15496"
+      },
+      {
+        "name": "Dajuan Harris Jr.",
+        "jersey": "3",
+        "position": "G",
+        "height": "6' 2''",
+        "weight": "175 lbs",
+        "academicYear": "Gr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dajuan-harris-jr/15490"
+      },
+      {
+        "name": "Rakease Passmore",
+        "jersey": "4",
+        "position": "G",
+        "height": "6' 5''",
+        "weight": "185 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/rakease-passmore/15497"
+      },
+      {
+        "name": "Zeke Mayo",
+        "jersey": "5",
+        "position": "G",
+        "height": "6' 4''",
+        "weight": "185 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/zeke-mayo/15498"
+      },
+      {
+        "name": "Rylan Griffen",
+        "jersey": "6",
+        "position": "G",
+        "height": "6' 6''",
+        "weight": "190 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/rylan-griffen/15499"
+      },
+      {
+        "name": "Noah Shelby",
+        "jersey": "7",
+        "position": "G",
+        "height": "6' 3''",
+        "weight": "185 lbs",
+        "academicYear": "Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/noah-shelby/15500"
+      },
+      {
+        "name": "David Coit",
+        "jersey": "8",
+        "position": "G",
+        "height": "5' 11''",
+        "weight": "175 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/david-coit/15715"
+      },
+      {
+        "name": "Jamari McDowell",
+        "jersey": "11",
+        "position": "G",
+        "height": "6' 4''",
+        "weight": "180 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jamari-mcdowell/16509"
+      },
+      {
+        "name": "Wilder Evers",
+        "jersey": "12",
+        "position": "G",
+        "height": "6' 4''",
+        "weight": "195 lbs",
+        "academicYear": "R-So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/wilder-evers/16507"
+      },
+      {
+        "name": "Elmarko Jackson",
+        "jersey": "13",
+        "position": "G",
+        "height": "6' 3''",
+        "weight": "195 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/elmarko-jackson/16508"
+      },
+      {
+        "name": "Patrick Cassidy",
+        "jersey": "14",
+        "position": "G",
+        "height": "6' 1''",
+        "weight": "185 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/patrick-cassidy/15485"
+      },
+      {
+        "name": "Will Thengvall",
+        "jersey": "15",
+        "position": "G",
+        "height": "6' 3''",
+        "weight": "185 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/will-thengvall/17957"
+      },
+      {
+        "name": "Dillon Wilhite",
+        "jersey": "22",
+        "position": "F",
+        "height": "6' 9''",
+        "weight": "240 lbs",
+        "academicYear": "R-Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/dillon-wilhite/15493"
+      },
+      {
+        "name": "KJ Adams",
+        "jersey": "24",
+        "position": "F",
+        "height": "6' 7''",
+        "weight": "235 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kj-adams/15494"
+      },
+      {
+        "name": "Justin Cross",
+        "jersey": "25",
+        "position": "F",
+        "height": "6' 8''",
+        "weight": "200 lbs",
+        "academicYear": "R-Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/justin-cross/16506"
+      },
+      {
+        "name": "Flory Bidunga",
+        "jersey": "40",
+        "position": "F",
+        "height": "6' 9''",
+        "weight": "220 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/flory-bidunga/16505"
+      },
+      {
+        "name": "Zach Clemence",
+        "jersey": "41",
+        "position": "F",
+        "height": "6' 11''",
+        "weight": "230 lbs",
+        "academicYear": "R-Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/zach-clemence/15486"
+      }
+    ],
+    "count": 19,
+    "sha256": "f0ce22222a3ecac885ef536bb99507030fae0920c007e2d8503a423cd79bd889"
+  },
+  {
+    "school": "Kansas",
+    "schoolId": "2305",
+    "year": 2026,
+    "season": "2025-26",
+    "url": "https://kuathletics.com/sports/mens-basketball/roster/2025-26",
+    "status": "verified-season-page",
+    "title": "2025-26 Men's Basketball Roster - University of Kansas",
+    "players": [
+      {
+        "name": "Nginyu Ngala",
+        "jersey": "0",
+        "position": "G",
+        "height": "5' 10''",
+        "weight": "175 lbs",
+        "academicYear": "Gr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/nginyu-ngala/16551"
+      },
+      {
+        "name": "Jayden Dawson",
+        "jersey": "1",
+        "position": "G",
+        "height": "6' 5''",
+        "weight": "205 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jayden-dawson/16512"
+      },
+      {
+        "name": "Corbin Allen",
+        "jersey": "2",
+        "position": "G",
+        "height": "6' 5''",
+        "weight": "175 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/corbin-allen/16513"
+      },
+      {
+        "name": "Tre White",
+        "jersey": "3",
+        "position": "G",
+        "height": "6' 7''",
+        "weight": "215 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/tre-white/16514"
+      },
+      {
+        "name": "Samis Calderon",
+        "jersey": "6",
+        "position": "F",
+        "height": "6' 8''",
+        "weight": "200 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/samis-calderon/16515"
+      },
+      {
+        "name": "Kohl Rosario",
+        "jersey": "7",
+        "position": "G",
+        "height": "6' 6''",
+        "weight": "200 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/kohl-rosario/17956"
+      },
+      {
+        "name": "Jamari McDowell",
+        "jersey": "11",
+        "position": "G",
+        "height": "6' 5''",
+        "weight": "200 lbs",
+        "academicYear": "R-So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/jamari-mcdowell/16509"
+      },
+      {
+        "name": "Wilder Evers",
+        "jersey": "12",
+        "position": "G",
+        "height": "6' 4''",
+        "weight": "195 lbs",
+        "academicYear": "R-Jr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/wilder-evers/16507"
+      },
+      {
+        "name": "Elmarko Jackson",
+        "jersey": "13",
+        "position": "G",
+        "height": "6' 3''",
+        "weight": "195 lbs",
+        "academicYear": "R-So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/elmarko-jackson/16508"
+      },
+      {
+        "name": "Melvin Council Jr.",
+        "jersey": "14",
+        "position": "G",
+        "height": "6' 4''",
+        "weight": "180 lbs",
+        "academicYear": "Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/melvin-council-jr/16516"
+      },
+      {
+        "name": "Bryson Tiller",
+        "jersey": "15",
+        "position": "F",
+        "height": "6' 11''",
+        "weight": "240 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/bryson-tiller/16517"
+      },
+      {
+        "name": "Will Thengvall",
+        "jersey": "21",
+        "position": "G",
+        "height": "6' 4''",
+        "weight": "190 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/will-thengvall/17957"
+      },
+      {
+        "name": "Darryn Peterson",
+        "jersey": "22",
+        "position": "G",
+        "height": "6' 6''",
+        "weight": "205 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/darryn-peterson/16518"
+      },
+      {
+        "name": "Justin Cross",
+        "jersey": "25",
+        "position": "F",
+        "height": "6' 8''",
+        "weight": "200 lbs",
+        "academicYear": "R-Sr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/justin-cross/16506"
+      },
+      {
+        "name": "Paul Mbiya",
+        "jersey": "34",
+        "position": "C",
+        "height": "7' 0''",
+        "weight": "245 lbs",
+        "academicYear": "Fr.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/paul-mbiya/17955"
+      },
+      {
+        "name": "Flory Bidunga",
+        "jersey": "40",
+        "position": "F",
+        "height": "6' 10''",
+        "weight": "235 lbs",
+        "academicYear": "So.",
+        "bioUrl": "https://kuathletics.com/sports/mens-basketball/roster/flory-bidunga/16505"
+      }
+    ],
+    "count": 16,
+    "sha256": "5f9c5bdb95244071becdbc688cca7b5a29d02d988cecb120e87e784fe213f093"
+  }
+]

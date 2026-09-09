@@ -1,0 +1,3274 @@
+{
+  "status": "INCOMPLETE_RESEARCH_NOT_A_HISTORICAL_ROSTER_DATABASE",
+  "retrievedDate": "2026-09-04",
+  "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams?limit=1000",
+  "licenseStatus": "Not assessed for redistribution; source discovery only",
+  "requestedSeasons": [
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "verifiedSchoolSeasons": 0,
+  "teams": [
+    {
+      "sourceId": "2000",
+      "school": "Abilene Christian",
+      "teamName": "Abilene Christian Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2000",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2000"
+      }
+    },
+    {
+      "sourceId": "2005",
+      "school": "Air Force",
+      "teamName": "Air Force Falcons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2005",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2005"
+      }
+    },
+    {
+      "sourceId": "2006",
+      "school": "Akron",
+      "teamName": "Akron Zips",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2006",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2006"
+      }
+    },
+    {
+      "sourceId": "2010",
+      "school": "Alabama A&M",
+      "teamName": "Alabama A&M Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2010",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2010"
+      }
+    },
+    {
+      "sourceId": "333",
+      "school": "Alabama",
+      "teamName": "Alabama Crimson Tide",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/333",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/333"
+      }
+    },
+    {
+      "sourceId": "2011",
+      "school": "Alabama State",
+      "teamName": "Alabama State Hornets",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2011",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2011"
+      }
+    },
+    {
+      "sourceId": "2016",
+      "school": "Alcorn State",
+      "teamName": "Alcorn State Braves",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2016",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2016"
+      }
+    },
+    {
+      "sourceId": "44",
+      "school": "American University",
+      "teamName": "American University Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/44",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/44"
+      }
+    },
+    {
+      "sourceId": "2026",
+      "school": "App State",
+      "teamName": "App State Mountaineers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2026",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2026"
+      }
+    },
+    {
+      "sourceId": "9",
+      "school": "Arizona State",
+      "teamName": "Arizona State Sun Devils",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/9",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/9"
+      }
+    },
+    {
+      "sourceId": "12",
+      "school": "Arizona",
+      "teamName": "Arizona Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/12",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/12"
+      }
+    },
+    {
+      "sourceId": "8",
+      "school": "Arkansas",
+      "teamName": "Arkansas Razorbacks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/8",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/8"
+      }
+    },
+    {
+      "sourceId": "2032",
+      "school": "Arkansas State",
+      "teamName": "Arkansas State Red Wolves",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2032",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2032"
+      }
+    },
+    {
+      "sourceId": "2029",
+      "school": "Arkansas-Pine Bluff",
+      "teamName": "Arkansas-Pine Bluff Golden Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2029",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2029"
+      }
+    },
+    {
+      "sourceId": "349",
+      "school": "Army",
+      "teamName": "Army Black Knights",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/349",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/349"
+      }
+    },
+    {
+      "sourceId": "2",
+      "school": "Auburn",
+      "teamName": "Auburn Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2"
+      }
+    },
+    {
+      "sourceId": "2046",
+      "school": "Austin Peay",
+      "teamName": "Austin Peay Governors",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2046",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2046"
+      }
+    },
+    {
+      "sourceId": "252",
+      "school": "BYU",
+      "teamName": "BYU Cougars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/252",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/252"
+      }
+    },
+    {
+      "sourceId": "2050",
+      "school": "Ball State",
+      "teamName": "Ball State Cardinals",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2050",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2050"
+      }
+    },
+    {
+      "sourceId": "239",
+      "school": "Baylor",
+      "teamName": "Baylor Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/239",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/239"
+      }
+    },
+    {
+      "sourceId": "91",
+      "school": "Bellarmine",
+      "teamName": "Bellarmine Knights",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/91",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/91"
+      }
+    },
+    {
+      "sourceId": "2057",
+      "school": "Belmont",
+      "teamName": "Belmont Bruins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2057",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2057"
+      }
+    },
+    {
+      "sourceId": "2065",
+      "school": "Bethune-Cookman",
+      "teamName": "Bethune-Cookman Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2065",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2065"
+      }
+    },
+    {
+      "sourceId": "2066",
+      "school": "Binghamton",
+      "teamName": "Binghamton Bearcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2066",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2066"
+      }
+    },
+    {
+      "sourceId": "68",
+      "school": "Boise State",
+      "teamName": "Boise State Broncos",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/68",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/68"
+      }
+    },
+    {
+      "sourceId": "103",
+      "school": "Boston College",
+      "teamName": "Boston College Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/103",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/103"
+      }
+    },
+    {
+      "sourceId": "104",
+      "school": "Boston University",
+      "teamName": "Boston University Terriers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/104",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/104"
+      }
+    },
+    {
+      "sourceId": "189",
+      "school": "Bowling Green",
+      "teamName": "Bowling Green Falcons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/189",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/189"
+      }
+    },
+    {
+      "sourceId": "71",
+      "school": "Bradley",
+      "teamName": "Bradley Braves",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/71",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/71"
+      }
+    },
+    {
+      "sourceId": "225",
+      "school": "Brown",
+      "teamName": "Brown Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/225",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/225"
+      }
+    },
+    {
+      "sourceId": "2803",
+      "school": "Bryant",
+      "teamName": "Bryant Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2803",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2803"
+      }
+    },
+    {
+      "sourceId": "2083",
+      "school": "Bucknell",
+      "teamName": "Bucknell Bison",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2083",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2083"
+      }
+    },
+    {
+      "sourceId": "2084",
+      "school": "Buffalo",
+      "teamName": "Buffalo Bulls",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2084",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2084"
+      }
+    },
+    {
+      "sourceId": "2086",
+      "school": "Butler",
+      "teamName": "Butler Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2086",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2086"
+      }
+    },
+    {
+      "sourceId": "13",
+      "school": "Cal Poly",
+      "teamName": "Cal Poly Mustangs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/13",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/13"
+      }
+    },
+    {
+      "sourceId": "2934",
+      "school": "Cal State Bakersfield",
+      "teamName": "Cal State Bakersfield Roadrunners",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2934",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2934"
+      }
+    },
+    {
+      "sourceId": "2239",
+      "school": "Cal State Fullerton",
+      "teamName": "Cal State Fullerton Titans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2239",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2239"
+      }
+    },
+    {
+      "sourceId": "2463",
+      "school": "Cal State Northridge",
+      "teamName": "Cal State Northridge Matadors",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2463",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2463"
+      }
+    },
+    {
+      "sourceId": "2856",
+      "school": "California Baptist",
+      "teamName": "California Baptist Lancers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2856",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2856"
+      }
+    },
+    {
+      "sourceId": "25",
+      "school": "California",
+      "teamName": "California Golden Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/25",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/25"
+      }
+    },
+    {
+      "sourceId": "2097",
+      "school": "Campbell",
+      "teamName": "Campbell Fighting Camels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2097",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2097"
+      }
+    },
+    {
+      "sourceId": "2099",
+      "school": "Canisius",
+      "teamName": "Canisius Golden Griffins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2099",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2099"
+      }
+    },
+    {
+      "sourceId": "2110",
+      "school": "Central Arkansas",
+      "teamName": "Central Arkansas Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2110",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2110"
+      }
+    },
+    {
+      "sourceId": "2115",
+      "school": "Central Connecticut",
+      "teamName": "Central Connecticut Blue Devils",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2115",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2115"
+      }
+    },
+    {
+      "sourceId": "2117",
+      "school": "Central Michigan",
+      "teamName": "Central Michigan Chippewas",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2117",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2117"
+      }
+    },
+    {
+      "sourceId": "232",
+      "school": "Charleston",
+      "teamName": "Charleston Cougars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/232",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/232"
+      }
+    },
+    {
+      "sourceId": "2127",
+      "school": "Charleston Southern",
+      "teamName": "Charleston Southern Buccaneers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2127",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2127"
+      }
+    },
+    {
+      "sourceId": "2429",
+      "school": "Charlotte",
+      "teamName": "Charlotte 49ers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2429",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2429"
+      }
+    },
+    {
+      "sourceId": "236",
+      "school": "Chattanooga",
+      "teamName": "Chattanooga Mocs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/236",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/236"
+      }
+    },
+    {
+      "sourceId": "2130",
+      "school": "Chicago State",
+      "teamName": "Chicago State Cougars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2130",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2130"
+      }
+    },
+    {
+      "sourceId": "2132",
+      "school": "Cincinnati",
+      "teamName": "Cincinnati Bearcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2132",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2132"
+      }
+    },
+    {
+      "sourceId": "228",
+      "school": "Clemson",
+      "teamName": "Clemson Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/228",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/228"
+      }
+    },
+    {
+      "sourceId": "325",
+      "school": "Cleveland State",
+      "teamName": "Cleveland State Vikings",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/325",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/325"
+      }
+    },
+    {
+      "sourceId": "324",
+      "school": "Coastal Carolina",
+      "teamName": "Coastal Carolina Chanticleers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/324",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/324"
+      }
+    },
+    {
+      "sourceId": "2142",
+      "school": "Colgate",
+      "teamName": "Colgate Raiders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2142",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2142"
+      }
+    },
+    {
+      "sourceId": "38",
+      "school": "Colorado",
+      "teamName": "Colorado Buffaloes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/38",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/38"
+      }
+    },
+    {
+      "sourceId": "36",
+      "school": "Colorado State",
+      "teamName": "Colorado State Rams",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/36",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/36"
+      }
+    },
+    {
+      "sourceId": "171",
+      "school": "Columbia",
+      "teamName": "Columbia Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/171",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/171"
+      }
+    },
+    {
+      "sourceId": "2154",
+      "school": "Coppin State",
+      "teamName": "Coppin State Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2154",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2154"
+      }
+    },
+    {
+      "sourceId": "172",
+      "school": "Cornell",
+      "teamName": "Cornell Big Red",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/172",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/172"
+      }
+    },
+    {
+      "sourceId": "156",
+      "school": "Creighton",
+      "teamName": "Creighton Bluejays",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/156",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/156"
+      }
+    },
+    {
+      "sourceId": "159",
+      "school": "Dartmouth",
+      "teamName": "Dartmouth Big Green",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/159",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/159"
+      }
+    },
+    {
+      "sourceId": "2166",
+      "school": "Davidson",
+      "teamName": "Davidson Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2166",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2166"
+      }
+    },
+    {
+      "sourceId": "2168",
+      "school": "Dayton",
+      "teamName": "Dayton Flyers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2168",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2168"
+      }
+    },
+    {
+      "sourceId": "305",
+      "school": "DePaul",
+      "teamName": "DePaul Blue Demons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/305",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/305"
+      }
+    },
+    {
+      "sourceId": "48",
+      "school": "Delaware",
+      "teamName": "Delaware Blue Hens",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/48",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/48"
+      }
+    },
+    {
+      "sourceId": "2169",
+      "school": "Delaware State",
+      "teamName": "Delaware State Hornets",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2169",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2169"
+      }
+    },
+    {
+      "sourceId": "2172",
+      "school": "Denver",
+      "teamName": "Denver Pioneers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2172",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2172"
+      }
+    },
+    {
+      "sourceId": "2174",
+      "school": "Detroit Mercy",
+      "teamName": "Detroit Mercy Titans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2174",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2174"
+      }
+    },
+    {
+      "sourceId": "2181",
+      "school": "Drake",
+      "teamName": "Drake Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2181",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2181"
+      }
+    },
+    {
+      "sourceId": "2182",
+      "school": "Drexel",
+      "teamName": "Drexel Dragons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2182",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2182"
+      }
+    },
+    {
+      "sourceId": "150",
+      "school": "Duke",
+      "teamName": "Duke Blue Devils",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/150",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/150"
+      }
+    },
+    {
+      "sourceId": "2184",
+      "school": "Duquesne",
+      "teamName": "Duquesne Dukes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2184",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2184"
+      }
+    },
+    {
+      "sourceId": "151",
+      "school": "East Carolina",
+      "teamName": "East Carolina Pirates",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/151",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/151"
+      }
+    },
+    {
+      "sourceId": "2193",
+      "school": "East Tennessee State",
+      "teamName": "East Tennessee State Buccaneers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2193",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2193"
+      }
+    },
+    {
+      "sourceId": "2837",
+      "school": "East Texas A&M",
+      "teamName": "East Texas A&M Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2837",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2837"
+      }
+    },
+    {
+      "sourceId": "2197",
+      "school": "Eastern Illinois",
+      "teamName": "Eastern Illinois Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2197",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2197"
+      }
+    },
+    {
+      "sourceId": "2198",
+      "school": "Eastern Kentucky",
+      "teamName": "Eastern Kentucky Colonels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2198",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2198"
+      }
+    },
+    {
+      "sourceId": "2199",
+      "school": "Eastern Michigan",
+      "teamName": "Eastern Michigan Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2199",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2199"
+      }
+    },
+    {
+      "sourceId": "331",
+      "school": "Eastern Washington",
+      "teamName": "Eastern Washington Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/331",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/331"
+      }
+    },
+    {
+      "sourceId": "2210",
+      "school": "Elon",
+      "teamName": "Elon Phoenix",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2210",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2210"
+      }
+    },
+    {
+      "sourceId": "339",
+      "school": "Evansville",
+      "teamName": "Evansville Purple Aces",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/339",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/339"
+      }
+    },
+    {
+      "sourceId": "2217",
+      "school": "Fairfield",
+      "teamName": "Fairfield Stags",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2217",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2217"
+      }
+    },
+    {
+      "sourceId": "161",
+      "school": "Fairleigh Dickinson",
+      "teamName": "Fairleigh Dickinson Knights",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/161",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/161"
+      }
+    },
+    {
+      "sourceId": "50",
+      "school": "Florida A&M",
+      "teamName": "Florida A&M Rattlers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/50",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/50"
+      }
+    },
+    {
+      "sourceId": "2226",
+      "school": "Florida Atlantic",
+      "teamName": "Florida Atlantic Owls",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2226",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2226"
+      }
+    },
+    {
+      "sourceId": "57",
+      "school": "Florida",
+      "teamName": "Florida Gators",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/57",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/57"
+      }
+    },
+    {
+      "sourceId": "526",
+      "school": "Florida Gulf Coast",
+      "teamName": "Florida Gulf Coast Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/526",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/526"
+      }
+    },
+    {
+      "sourceId": "2229",
+      "school": "Florida International",
+      "teamName": "Florida International Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2229",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2229"
+      }
+    },
+    {
+      "sourceId": "52",
+      "school": "Florida State",
+      "teamName": "Florida State Seminoles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/52",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/52"
+      }
+    },
+    {
+      "sourceId": "2230",
+      "school": "Fordham",
+      "teamName": "Fordham Rams",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2230",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2230"
+      }
+    },
+    {
+      "sourceId": "278",
+      "school": "Fresno State",
+      "teamName": "Fresno State Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/278",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/278"
+      }
+    },
+    {
+      "sourceId": "231",
+      "school": "Furman",
+      "teamName": "Furman Paladins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/231",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/231"
+      }
+    },
+    {
+      "sourceId": "2241",
+      "school": "Gardner-Webb",
+      "teamName": "Gardner-Webb Runnin' Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2241",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2241"
+      }
+    },
+    {
+      "sourceId": "2244",
+      "school": "George Mason",
+      "teamName": "George Mason Patriots",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2244",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2244"
+      }
+    },
+    {
+      "sourceId": "45",
+      "school": "George Washington",
+      "teamName": "George Washington Revolutionaries",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/45",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/45"
+      }
+    },
+    {
+      "sourceId": "46",
+      "school": "Georgetown",
+      "teamName": "Georgetown Hoyas",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/46",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/46"
+      }
+    },
+    {
+      "sourceId": "61",
+      "school": "Georgia",
+      "teamName": "Georgia Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/61",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/61"
+      }
+    },
+    {
+      "sourceId": "290",
+      "school": "Georgia Southern",
+      "teamName": "Georgia Southern Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/290",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/290"
+      }
+    },
+    {
+      "sourceId": "2247",
+      "school": "Georgia State",
+      "teamName": "Georgia State Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2247",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2247"
+      }
+    },
+    {
+      "sourceId": "59",
+      "school": "Georgia Tech",
+      "teamName": "Georgia Tech Yellow Jackets",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/59",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/59"
+      }
+    },
+    {
+      "sourceId": "2250",
+      "school": "Gonzaga",
+      "teamName": "Gonzaga Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2250",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2250"
+      }
+    },
+    {
+      "sourceId": "2755",
+      "school": "Grambling",
+      "teamName": "Grambling Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2755",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2755"
+      }
+    },
+    {
+      "sourceId": "2253",
+      "school": "Grand Canyon",
+      "teamName": "Grand Canyon Lopes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2253",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2253"
+      }
+    },
+    {
+      "sourceId": "2739",
+      "school": "Green Bay",
+      "teamName": "Green Bay Phoenix",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2739",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2739"
+      }
+    },
+    {
+      "sourceId": "2261",
+      "school": "Hampton",
+      "teamName": "Hampton Pirates",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2261",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2261"
+      }
+    },
+    {
+      "sourceId": "108",
+      "school": "Harvard",
+      "teamName": "Harvard Crimson",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/108",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/108"
+      }
+    },
+    {
+      "sourceId": "62",
+      "school": "Hawai'i",
+      "teamName": "Hawai'i Rainbow Warriors",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/62",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/62"
+      }
+    },
+    {
+      "sourceId": "2272",
+      "school": "High Point",
+      "teamName": "High Point Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2272",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2272"
+      }
+    },
+    {
+      "sourceId": "2275",
+      "school": "Hofstra",
+      "teamName": "Hofstra Pride",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2275",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2275"
+      }
+    },
+    {
+      "sourceId": "107",
+      "school": "Holy Cross",
+      "teamName": "Holy Cross Crusaders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/107",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/107"
+      }
+    },
+    {
+      "sourceId": "2277",
+      "school": "Houston Christian",
+      "teamName": "Houston Christian Huskies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2277",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2277"
+      }
+    },
+    {
+      "sourceId": "248",
+      "school": "Houston",
+      "teamName": "Houston Cougars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/248",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/248"
+      }
+    },
+    {
+      "sourceId": "47",
+      "school": "Howard",
+      "teamName": "Howard Bison",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/47",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/47"
+      }
+    },
+    {
+      "sourceId": "85",
+      "school": "IU Indianapolis",
+      "teamName": "IU Indianapolis Jaguars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/85",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/85"
+      }
+    },
+    {
+      "sourceId": "304",
+      "school": "Idaho State",
+      "teamName": "Idaho State Bengals",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/304",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/304"
+      }
+    },
+    {
+      "sourceId": "70",
+      "school": "Idaho",
+      "teamName": "Idaho Vandals",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/70",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/70"
+      }
+    },
+    {
+      "sourceId": "356",
+      "school": "Illinois",
+      "teamName": "Illinois Fighting Illini",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/356",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/356"
+      }
+    },
+    {
+      "sourceId": "2287",
+      "school": "Illinois State",
+      "teamName": "Illinois State Redbirds",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2287",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2287"
+      }
+    },
+    {
+      "sourceId": "2916",
+      "school": "Incarnate Word",
+      "teamName": "Incarnate Word Cardinals",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2916",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2916"
+      }
+    },
+    {
+      "sourceId": "84",
+      "school": "Indiana",
+      "teamName": "Indiana Hoosiers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/84",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/84"
+      }
+    },
+    {
+      "sourceId": "282",
+      "school": "Indiana State",
+      "teamName": "Indiana State Sycamores",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/282",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/282"
+      }
+    },
+    {
+      "sourceId": "314",
+      "school": "Iona",
+      "teamName": "Iona Gaels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/314",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/314"
+      }
+    },
+    {
+      "sourceId": "2294",
+      "school": "Iowa",
+      "teamName": "Iowa Hawkeyes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2294",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2294"
+      }
+    },
+    {
+      "sourceId": "66",
+      "school": "Iowa State",
+      "teamName": "Iowa State Cyclones",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/66",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/66"
+      }
+    },
+    {
+      "sourceId": "2296",
+      "school": "Jackson State",
+      "teamName": "Jackson State Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2296",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2296"
+      }
+    },
+    {
+      "sourceId": "294",
+      "school": "Jacksonville",
+      "teamName": "Jacksonville Dolphins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/294",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/294"
+      }
+    },
+    {
+      "sourceId": "55",
+      "school": "Jacksonville State",
+      "teamName": "Jacksonville State Gamecocks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/55",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/55"
+      }
+    },
+    {
+      "sourceId": "256",
+      "school": "James Madison",
+      "teamName": "James Madison Dukes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/256",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/256"
+      }
+    },
+    {
+      "sourceId": "140",
+      "school": "Kansas City",
+      "teamName": "Kansas City Roos",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/140",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/140"
+      }
+    },
+    {
+      "sourceId": "2305",
+      "school": "Kansas",
+      "teamName": "Kansas Jayhawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2305",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2305"
+      }
+    },
+    {
+      "sourceId": "2306",
+      "school": "Kansas State",
+      "teamName": "Kansas State Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2306",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2306"
+      }
+    },
+    {
+      "sourceId": "338",
+      "school": "Kennesaw State",
+      "teamName": "Kennesaw State Owls",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/338",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/338"
+      }
+    },
+    {
+      "sourceId": "2309",
+      "school": "Kent State",
+      "teamName": "Kent State Golden Flashes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2309",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2309"
+      }
+    },
+    {
+      "sourceId": "96",
+      "school": "Kentucky",
+      "teamName": "Kentucky Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/96",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/96"
+      }
+    },
+    {
+      "sourceId": "2443",
+      "school": "LSU New Orleans",
+      "teamName": "LSU New Orleans Privateers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2443",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2443"
+      }
+    },
+    {
+      "sourceId": "99",
+      "school": "LSU",
+      "teamName": "LSU Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/99",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/99"
+      }
+    },
+    {
+      "sourceId": "2325",
+      "school": "La Salle",
+      "teamName": "La Salle Explorers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2325",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2325"
+      }
+    },
+    {
+      "sourceId": "322",
+      "school": "Lafayette",
+      "teamName": "Lafayette Leopards",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/322",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/322"
+      }
+    },
+    {
+      "sourceId": "2320",
+      "school": "Lamar",
+      "teamName": "Lamar Cardinals",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2320",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2320"
+      }
+    },
+    {
+      "sourceId": "2330",
+      "school": "Le Moyne",
+      "teamName": "Le Moyne Dolphins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2330",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2330"
+      }
+    },
+    {
+      "sourceId": "2329",
+      "school": "Lehigh",
+      "teamName": "Lehigh Mountain Hawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2329",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2329"
+      }
+    },
+    {
+      "sourceId": "2335",
+      "school": "Liberty",
+      "teamName": "Liberty Flames",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2335",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2335"
+      }
+    },
+    {
+      "sourceId": "288",
+      "school": "Lipscomb",
+      "teamName": "Lipscomb Bisons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/288",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/288"
+      }
+    },
+    {
+      "sourceId": "2031",
+      "school": "Little Rock",
+      "teamName": "Little Rock Trojans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2031",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2031"
+      }
+    },
+    {
+      "sourceId": "299",
+      "school": "Long Beach State",
+      "teamName": "Long Beach State Beach",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/299",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/299"
+      }
+    },
+    {
+      "sourceId": "112358",
+      "school": "Long Island University",
+      "teamName": "Long Island University Sharks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/112358",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/112358"
+      }
+    },
+    {
+      "sourceId": "2344",
+      "school": "Longwood",
+      "teamName": "Longwood Lancers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2344",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2344"
+      }
+    },
+    {
+      "sourceId": "309",
+      "school": "Louisiana",
+      "teamName": "Louisiana Ragin' Cajuns",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/309",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/309"
+      }
+    },
+    {
+      "sourceId": "2348",
+      "school": "Louisiana Tech",
+      "teamName": "Louisiana Tech Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2348",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2348"
+      }
+    },
+    {
+      "sourceId": "97",
+      "school": "Louisville",
+      "teamName": "Louisville Cardinals",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/97",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/97"
+      }
+    },
+    {
+      "sourceId": "2350",
+      "school": "Loyola Chicago",
+      "teamName": "Loyola Chicago Ramblers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2350",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2350"
+      }
+    },
+    {
+      "sourceId": "2352",
+      "school": "Loyola Maryland",
+      "teamName": "Loyola Maryland Greyhounds",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2352",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2352"
+      }
+    },
+    {
+      "sourceId": "2351",
+      "school": "Loyola Marymount",
+      "teamName": "Loyola Marymount Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2351",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2351"
+      }
+    },
+    {
+      "sourceId": "311",
+      "school": "Maine",
+      "teamName": "Maine Black Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/311",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/311"
+      }
+    },
+    {
+      "sourceId": "2363",
+      "school": "Manhattan",
+      "teamName": "Manhattan Jaspers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2363",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2363"
+      }
+    },
+    {
+      "sourceId": "2368",
+      "school": "Marist",
+      "teamName": "Marist Red Foxes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2368",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2368"
+      }
+    },
+    {
+      "sourceId": "269",
+      "school": "Marquette",
+      "teamName": "Marquette Golden Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/269",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/269"
+      }
+    },
+    {
+      "sourceId": "276",
+      "school": "Marshall",
+      "teamName": "Marshall Thundering Herd",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/276",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/276"
+      }
+    },
+    {
+      "sourceId": "2379",
+      "school": "Maryland Eastern Shore",
+      "teamName": "Maryland Eastern Shore Hawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2379",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2379"
+      }
+    },
+    {
+      "sourceId": "120",
+      "school": "Maryland",
+      "teamName": "Maryland Terrapins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/120",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/120"
+      }
+    },
+    {
+      "sourceId": "113",
+      "school": "Massachusetts",
+      "teamName": "Massachusetts Minutemen",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/113",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/113"
+      }
+    },
+    {
+      "sourceId": "2377",
+      "school": "McNeese",
+      "teamName": "McNeese Cowboys",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2377",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2377"
+      }
+    },
+    {
+      "sourceId": "235",
+      "school": "Memphis",
+      "teamName": "Memphis Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/235",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/235"
+      }
+    },
+    {
+      "sourceId": "2382",
+      "school": "Mercer",
+      "teamName": "Mercer Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2382",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2382"
+      }
+    },
+    {
+      "sourceId": "2385",
+      "school": "Mercyhurst",
+      "teamName": "Mercyhurst Lakers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2385",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2385"
+      }
+    },
+    {
+      "sourceId": "2771",
+      "school": "Merrimack",
+      "teamName": "Merrimack Warriors",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2771",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2771"
+      }
+    },
+    {
+      "sourceId": "193",
+      "school": "Miami (OH)",
+      "teamName": "Miami (OH) RedHawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/193",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/193"
+      }
+    },
+    {
+      "sourceId": "2390",
+      "school": "Miami",
+      "teamName": "Miami Hurricanes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2390",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2390"
+      }
+    },
+    {
+      "sourceId": "127",
+      "school": "Michigan State",
+      "teamName": "Michigan State Spartans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/127",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/127"
+      }
+    },
+    {
+      "sourceId": "130",
+      "school": "Michigan",
+      "teamName": "Michigan Wolverines",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/130",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/130"
+      }
+    },
+    {
+      "sourceId": "2393",
+      "school": "Middle Tennessee",
+      "teamName": "Middle Tennessee Blue Raiders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2393",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2393"
+      }
+    },
+    {
+      "sourceId": "270",
+      "school": "Milwaukee",
+      "teamName": "Milwaukee Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/270",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/270"
+      }
+    },
+    {
+      "sourceId": "135",
+      "school": "Minnesota",
+      "teamName": "Minnesota Golden Gophers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/135",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/135"
+      }
+    },
+    {
+      "sourceId": "344",
+      "school": "Mississippi State",
+      "teamName": "Mississippi State Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/344",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/344"
+      }
+    },
+    {
+      "sourceId": "2400",
+      "school": "Mississippi Valley State",
+      "teamName": "Mississippi Valley State Delta Devils",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2400",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2400"
+      }
+    },
+    {
+      "sourceId": "2623",
+      "school": "Missouri State",
+      "teamName": "Missouri State Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2623",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2623"
+      }
+    },
+    {
+      "sourceId": "142",
+      "school": "Missouri",
+      "teamName": "Missouri Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/142",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/142"
+      }
+    },
+    {
+      "sourceId": "2405",
+      "school": "Monmouth",
+      "teamName": "Monmouth Hawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2405",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2405"
+      }
+    },
+    {
+      "sourceId": "149",
+      "school": "Montana",
+      "teamName": "Montana Grizzlies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/149",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/149"
+      }
+    },
+    {
+      "sourceId": "147",
+      "school": "Montana State",
+      "teamName": "Montana State Bobcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/147",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/147"
+      }
+    },
+    {
+      "sourceId": "2413",
+      "school": "Morehead State",
+      "teamName": "Morehead State Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2413",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2413"
+      }
+    },
+    {
+      "sourceId": "2415",
+      "school": "Morgan State",
+      "teamName": "Morgan State Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2415",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2415"
+      }
+    },
+    {
+      "sourceId": "116",
+      "school": "Mount St. Mary's",
+      "teamName": "Mount St. Mary's Mountaineers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/116",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/116"
+      }
+    },
+    {
+      "sourceId": "93",
+      "school": "Murray State",
+      "teamName": "Murray State Racers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/93",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/93"
+      }
+    },
+    {
+      "sourceId": "152",
+      "school": "NC State",
+      "teamName": "NC State Wolfpack",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/152",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/152"
+      }
+    },
+    {
+      "sourceId": "2885",
+      "school": "NJIT",
+      "teamName": "NJIT Highlanders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2885",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2885"
+      }
+    },
+    {
+      "sourceId": "2426",
+      "school": "Navy",
+      "teamName": "Navy Midshipmen",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2426",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2426"
+      }
+    },
+    {
+      "sourceId": "158",
+      "school": "Nebraska",
+      "teamName": "Nebraska Cornhuskers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/158",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/158"
+      }
+    },
+    {
+      "sourceId": "2440",
+      "school": "Nevada",
+      "teamName": "Nevada Wolf Pack",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2440",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2440"
+      }
+    },
+    {
+      "sourceId": "160",
+      "school": "New Hampshire",
+      "teamName": "New Hampshire Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/160",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/160"
+      }
+    },
+    {
+      "sourceId": "2441",
+      "school": "New Haven",
+      "teamName": "New Haven Chargers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2441",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2441"
+      }
+    },
+    {
+      "sourceId": "167",
+      "school": "New Mexico",
+      "teamName": "New Mexico Lobos",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/167",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/167"
+      }
+    },
+    {
+      "sourceId": "166",
+      "school": "New Mexico State",
+      "teamName": "New Mexico State Aggies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/166",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/166"
+      }
+    },
+    {
+      "sourceId": "315",
+      "school": "Niagara",
+      "teamName": "Niagara Purple Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/315",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/315"
+      }
+    },
+    {
+      "sourceId": "2447",
+      "school": "Nicholls",
+      "teamName": "Nicholls Colonels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2447",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2447"
+      }
+    },
+    {
+      "sourceId": "2450",
+      "school": "Norfolk State",
+      "teamName": "Norfolk State Spartans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2450",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2450"
+      }
+    },
+    {
+      "sourceId": "2453",
+      "school": "North Alabama",
+      "teamName": "North Alabama Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2453",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2453"
+      }
+    },
+    {
+      "sourceId": "2448",
+      "school": "North Carolina A&T",
+      "teamName": "North Carolina A&T Aggies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2448",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2448"
+      }
+    },
+    {
+      "sourceId": "2428",
+      "school": "North Carolina Central",
+      "teamName": "North Carolina Central Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2428",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2428"
+      }
+    },
+    {
+      "sourceId": "153",
+      "school": "North Carolina",
+      "teamName": "North Carolina Tar Heels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/153",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/153"
+      }
+    },
+    {
+      "sourceId": "155",
+      "school": "North Dakota",
+      "teamName": "North Dakota Fighting Hawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/155",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/155"
+      }
+    },
+    {
+      "sourceId": "2449",
+      "school": "North Dakota State",
+      "teamName": "North Dakota State Bison",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2449",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2449"
+      }
+    },
+    {
+      "sourceId": "2454",
+      "school": "North Florida",
+      "teamName": "North Florida Ospreys",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2454",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2454"
+      }
+    },
+    {
+      "sourceId": "249",
+      "school": "North Texas",
+      "teamName": "North Texas Mean Green",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/249",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/249"
+      }
+    },
+    {
+      "sourceId": "111",
+      "school": "Northeastern",
+      "teamName": "Northeastern Huskies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/111",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/111"
+      }
+    },
+    {
+      "sourceId": "2464",
+      "school": "Northern Arizona",
+      "teamName": "Northern Arizona Lumberjacks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2464",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2464"
+      }
+    },
+    {
+      "sourceId": "2458",
+      "school": "Northern Colorado",
+      "teamName": "Northern Colorado Bears",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2458",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2458"
+      }
+    },
+    {
+      "sourceId": "2459",
+      "school": "Northern Illinois",
+      "teamName": "Northern Illinois Huskies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2459",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2459"
+      }
+    },
+    {
+      "sourceId": "2460",
+      "school": "Northern Iowa",
+      "teamName": "Northern Iowa Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2460",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2460"
+      }
+    },
+    {
+      "sourceId": "94",
+      "school": "Northern Kentucky",
+      "teamName": "Northern Kentucky Norse",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/94",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/94"
+      }
+    },
+    {
+      "sourceId": "2466",
+      "school": "Northwestern State",
+      "teamName": "Northwestern State Demons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2466",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2466"
+      }
+    },
+    {
+      "sourceId": "77",
+      "school": "Northwestern",
+      "teamName": "Northwestern Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/77",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/77"
+      }
+    },
+    {
+      "sourceId": "87",
+      "school": "Notre Dame",
+      "teamName": "Notre Dame Fighting Irish",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/87",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/87"
+      }
+    },
+    {
+      "sourceId": "2473",
+      "school": "Oakland",
+      "teamName": "Oakland Golden Grizzlies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2473",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2473"
+      }
+    },
+    {
+      "sourceId": "195",
+      "school": "Ohio",
+      "teamName": "Ohio Bobcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/195",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/195"
+      }
+    },
+    {
+      "sourceId": "194",
+      "school": "Ohio State",
+      "teamName": "Ohio State Buckeyes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/194",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/194"
+      }
+    },
+    {
+      "sourceId": "201",
+      "school": "Oklahoma",
+      "teamName": "Oklahoma Sooners",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/201",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/201"
+      }
+    },
+    {
+      "sourceId": "197",
+      "school": "Oklahoma State",
+      "teamName": "Oklahoma State Cowboys",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/197",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/197"
+      }
+    },
+    {
+      "sourceId": "295",
+      "school": "Old Dominion",
+      "teamName": "Old Dominion Monarchs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/295",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/295"
+      }
+    },
+    {
+      "sourceId": "145",
+      "school": "Ole Miss",
+      "teamName": "Ole Miss Rebels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/145",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/145"
+      }
+    },
+    {
+      "sourceId": "2437",
+      "school": "Omaha",
+      "teamName": "Omaha Mavericks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2437",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2437"
+      }
+    },
+    {
+      "sourceId": "198",
+      "school": "Oral Roberts",
+      "teamName": "Oral Roberts Golden Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/198",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/198"
+      }
+    },
+    {
+      "sourceId": "2483",
+      "school": "Oregon",
+      "teamName": "Oregon Ducks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2483",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2483"
+      }
+    },
+    {
+      "sourceId": "204",
+      "school": "Oregon State",
+      "teamName": "Oregon State Beavers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/204",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/204"
+      }
+    },
+    {
+      "sourceId": "279",
+      "school": "Pacific",
+      "teamName": "Pacific Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/279",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/279"
+      }
+    },
+    {
+      "sourceId": "213",
+      "school": "Penn State",
+      "teamName": "Penn State Nittany Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/213",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/213"
+      }
+    },
+    {
+      "sourceId": "219",
+      "school": "Pennsylvania",
+      "teamName": "Pennsylvania Quakers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/219",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/219"
+      }
+    },
+    {
+      "sourceId": "2492",
+      "school": "Pepperdine",
+      "teamName": "Pepperdine Waves",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2492",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2492"
+      }
+    },
+    {
+      "sourceId": "221",
+      "school": "Pittsburgh",
+      "teamName": "Pittsburgh Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/221",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/221"
+      }
+    },
+    {
+      "sourceId": "2501",
+      "school": "Portland",
+      "teamName": "Portland Pilots",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2501",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2501"
+      }
+    },
+    {
+      "sourceId": "2502",
+      "school": "Portland State",
+      "teamName": "Portland State Vikings",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2502",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2502"
+      }
+    },
+    {
+      "sourceId": "2504",
+      "school": "Prairie View A&M",
+      "teamName": "Prairie View A&M Panthers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2504",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2504"
+      }
+    },
+    {
+      "sourceId": "2506",
+      "school": "Presbyterian",
+      "teamName": "Presbyterian Blue Hose",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2506",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2506"
+      }
+    },
+    {
+      "sourceId": "163",
+      "school": "Princeton",
+      "teamName": "Princeton Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/163",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/163"
+      }
+    },
+    {
+      "sourceId": "2507",
+      "school": "Providence",
+      "teamName": "Providence Friars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2507",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2507"
+      }
+    },
+    {
+      "sourceId": "2509",
+      "school": "Purdue",
+      "teamName": "Purdue Boilermakers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2509",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2509"
+      }
+    },
+    {
+      "sourceId": "2870",
+      "school": "Purdue Fort Wayne",
+      "teamName": "Purdue Fort Wayne Mastodons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2870",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2870"
+      }
+    },
+    {
+      "sourceId": "2514",
+      "school": "Quinnipiac",
+      "teamName": "Quinnipiac Bobcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2514",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2514"
+      }
+    },
+    {
+      "sourceId": "2515",
+      "school": "Radford",
+      "teamName": "Radford Highlanders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2515",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2515"
+      }
+    },
+    {
+      "sourceId": "227",
+      "school": "Rhode Island",
+      "teamName": "Rhode Island Rams",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/227",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/227"
+      }
+    },
+    {
+      "sourceId": "242",
+      "school": "Rice",
+      "teamName": "Rice Owls",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/242",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/242"
+      }
+    },
+    {
+      "sourceId": "257",
+      "school": "Richmond",
+      "teamName": "Richmond Spiders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/257",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/257"
+      }
+    },
+    {
+      "sourceId": "2520",
+      "school": "Rider",
+      "teamName": "Rider Broncs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2520",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2520"
+      }
+    },
+    {
+      "sourceId": "2523",
+      "school": "Robert Morris",
+      "teamName": "Robert Morris Colonials",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2523",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2523"
+      }
+    },
+    {
+      "sourceId": "164",
+      "school": "Rutgers",
+      "teamName": "Rutgers Scarlet Knights",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/164",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/164"
+      }
+    },
+    {
+      "sourceId": "2545",
+      "school": "SE Louisiana",
+      "teamName": "SE Louisiana Lions",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2545",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2545"
+      }
+    },
+    {
+      "sourceId": "2565",
+      "school": "SIU Edwardsville",
+      "teamName": "SIU Edwardsville Cougars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2565",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2565"
+      }
+    },
+    {
+      "sourceId": "2567",
+      "school": "SMU",
+      "teamName": "SMU Mustangs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2567",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2567"
+      }
+    },
+    {
+      "sourceId": "16",
+      "school": "Sacramento State",
+      "teamName": "Sacramento State Hornets",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/16",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/16"
+      }
+    },
+    {
+      "sourceId": "2529",
+      "school": "Sacred Heart",
+      "teamName": "Sacred Heart Pioneers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2529",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2529"
+      }
+    },
+    {
+      "sourceId": "2603",
+      "school": "Saint Joseph's",
+      "teamName": "Saint Joseph's Hawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2603",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2603"
+      }
+    },
+    {
+      "sourceId": "139",
+      "school": "Saint Louis",
+      "teamName": "Saint Louis Billikens",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/139",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/139"
+      }
+    },
+    {
+      "sourceId": "2608",
+      "school": "Saint Mary's",
+      "teamName": "Saint Mary's Gaels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2608",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2608"
+      }
+    },
+    {
+      "sourceId": "2612",
+      "school": "Saint Peter's",
+      "teamName": "Saint Peter's Peacocks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2612",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2612"
+      }
+    },
+    {
+      "sourceId": "2534",
+      "school": "Sam Houston",
+      "teamName": "Sam Houston Bearkats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2534",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2534"
+      }
+    },
+    {
+      "sourceId": "2535",
+      "school": "Samford",
+      "teamName": "Samford Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2535",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2535"
+      }
+    },
+    {
+      "sourceId": "21",
+      "school": "San Diego State",
+      "teamName": "San Diego State Aztecs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/21",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/21"
+      }
+    },
+    {
+      "sourceId": "301",
+      "school": "San Diego",
+      "teamName": "San Diego Toreros",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/301",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/301"
+      }
+    },
+    {
+      "sourceId": "2539",
+      "school": "San Francisco",
+      "teamName": "San Francisco Dons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2539",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2539"
+      }
+    },
+    {
+      "sourceId": "23",
+      "school": "San Jos\u00e9 State",
+      "teamName": "San Jos\u00e9 State Spartans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/23",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/23"
+      }
+    },
+    {
+      "sourceId": "2541",
+      "school": "Santa Clara",
+      "teamName": "Santa Clara Broncos",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2541",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2541"
+      }
+    },
+    {
+      "sourceId": "2547",
+      "school": "Seattle U",
+      "teamName": "Seattle U Redhawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2547",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2547"
+      }
+    },
+    {
+      "sourceId": "2550",
+      "school": "Seton Hall",
+      "teamName": "Seton Hall Pirates",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2550",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2550"
+      }
+    },
+    {
+      "sourceId": "2561",
+      "school": "Siena",
+      "teamName": "Siena Saints",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2561",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2561"
+      }
+    },
+    {
+      "sourceId": "6",
+      "school": "South Alabama",
+      "teamName": "South Alabama Jaguars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/6",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/6"
+      }
+    },
+    {
+      "sourceId": "2579",
+      "school": "South Carolina",
+      "teamName": "South Carolina Gamecocks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2579",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2579"
+      }
+    },
+    {
+      "sourceId": "2569",
+      "school": "South Carolina State",
+      "teamName": "South Carolina State Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2569",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2569"
+      }
+    },
+    {
+      "sourceId": "2908",
+      "school": "South Carolina Upstate",
+      "teamName": "South Carolina Upstate Spartans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2908",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2908"
+      }
+    },
+    {
+      "sourceId": "233",
+      "school": "South Dakota",
+      "teamName": "South Dakota Coyotes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/233",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/233"
+      }
+    },
+    {
+      "sourceId": "2571",
+      "school": "South Dakota State",
+      "teamName": "South Dakota State Jackrabbits",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2571",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2571"
+      }
+    },
+    {
+      "sourceId": "58",
+      "school": "South Florida",
+      "teamName": "South Florida Bulls",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/58",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/58"
+      }
+    },
+    {
+      "sourceId": "2546",
+      "school": "Southeast Missouri State",
+      "teamName": "Southeast Missouri State Redhawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2546",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2546"
+      }
+    },
+    {
+      "sourceId": "79",
+      "school": "Southern Illinois",
+      "teamName": "Southern Illinois Salukis",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/79",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/79"
+      }
+    },
+    {
+      "sourceId": "2582",
+      "school": "Southern",
+      "teamName": "Southern Jaguars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2582",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2582"
+      }
+    },
+    {
+      "sourceId": "2572",
+      "school": "Southern Miss",
+      "teamName": "Southern Miss Golden Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2572",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2572"
+      }
+    },
+    {
+      "sourceId": "253",
+      "school": "Southern Utah",
+      "teamName": "Southern Utah Thunderbirds",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/253",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/253"
+      }
+    },
+    {
+      "sourceId": "179",
+      "school": "St. Bonaventure",
+      "teamName": "St. Bonaventure Bonnies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/179",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/179"
+      }
+    },
+    {
+      "sourceId": "2599",
+      "school": "St. John's",
+      "teamName": "St. John's Red Storm",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2599",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2599"
+      }
+    },
+    {
+      "sourceId": "2900",
+      "school": "St. Thomas",
+      "teamName": "St. Thomas Tommies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2900",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2900"
+      }
+    },
+    {
+      "sourceId": "24",
+      "school": "Stanford",
+      "teamName": "Stanford Cardinal",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/24",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/24"
+      }
+    },
+    {
+      "sourceId": "2617",
+      "school": "Stephen F. Austin",
+      "teamName": "Stephen F. Austin Lumberjacks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2617",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2617"
+      }
+    },
+    {
+      "sourceId": "56",
+      "school": "Stetson",
+      "teamName": "Stetson Hatters",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/56",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/56"
+      }
+    },
+    {
+      "sourceId": "284",
+      "school": "Stonehill",
+      "teamName": "Stonehill Skyhawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/284",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/284"
+      }
+    },
+    {
+      "sourceId": "2619",
+      "school": "Stony Brook",
+      "teamName": "Stony Brook Seawolves",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2619",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2619"
+      }
+    },
+    {
+      "sourceId": "183",
+      "school": "Syracuse",
+      "teamName": "Syracuse Orange",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/183",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/183"
+      }
+    },
+    {
+      "sourceId": "2628",
+      "school": "TCU",
+      "teamName": "TCU Horned Frogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2628",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2628"
+      }
+    },
+    {
+      "sourceId": "2627",
+      "school": "Tarleton State",
+      "teamName": "Tarleton State Texans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2627",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2627"
+      }
+    },
+    {
+      "sourceId": "218",
+      "school": "Temple",
+      "teamName": "Temple Owls",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/218",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/218"
+      }
+    },
+    {
+      "sourceId": "2634",
+      "school": "Tennessee State",
+      "teamName": "Tennessee State Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2634",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2634"
+      }
+    },
+    {
+      "sourceId": "2635",
+      "school": "Tennessee Tech",
+      "teamName": "Tennessee Tech Golden Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2635",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2635"
+      }
+    },
+    {
+      "sourceId": "2633",
+      "school": "Tennessee",
+      "teamName": "Tennessee Volunteers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2633",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2633"
+      }
+    },
+    {
+      "sourceId": "245",
+      "school": "Texas A&M",
+      "teamName": "Texas A&M Aggies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/245",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/245"
+      }
+    },
+    {
+      "sourceId": "357",
+      "school": "Texas A&M-Corpus Christi",
+      "teamName": "Texas A&M-Corpus Christi Islanders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/357",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/357"
+      }
+    },
+    {
+      "sourceId": "251",
+      "school": "Texas",
+      "teamName": "Texas Longhorns",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/251",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/251"
+      }
+    },
+    {
+      "sourceId": "2640",
+      "school": "Texas Southern",
+      "teamName": "Texas Southern Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2640",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2640"
+      }
+    },
+    {
+      "sourceId": "326",
+      "school": "Texas State",
+      "teamName": "Texas State Bobcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/326",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/326"
+      }
+    },
+    {
+      "sourceId": "2641",
+      "school": "Texas Tech",
+      "teamName": "Texas Tech Red Raiders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2641",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2641"
+      }
+    },
+    {
+      "sourceId": "2643",
+      "school": "The Citadel",
+      "teamName": "The Citadel Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2643",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2643"
+      }
+    },
+    {
+      "sourceId": "2649",
+      "school": "Toledo",
+      "teamName": "Toledo Rockets",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2649",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2649"
+      }
+    },
+    {
+      "sourceId": "119",
+      "school": "Towson",
+      "teamName": "Towson Tigers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/119",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/119"
+      }
+    },
+    {
+      "sourceId": "2653",
+      "school": "Troy",
+      "teamName": "Troy Trojans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2653",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2653"
+      }
+    },
+    {
+      "sourceId": "2655",
+      "school": "Tulane",
+      "teamName": "Tulane Green Wave",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2655",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2655"
+      }
+    },
+    {
+      "sourceId": "202",
+      "school": "Tulsa",
+      "teamName": "Tulsa Golden Hurricane",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/202",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/202"
+      }
+    },
+    {
+      "sourceId": "5",
+      "school": "UAB",
+      "teamName": "UAB Blazers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/5",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/5"
+      }
+    },
+    {
+      "sourceId": "399",
+      "school": "UAlbany",
+      "teamName": "UAlbany Great Danes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/399",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/399"
+      }
+    },
+    {
+      "sourceId": "302",
+      "school": "UC Davis",
+      "teamName": "UC Davis Aggies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/302",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/302"
+      }
+    },
+    {
+      "sourceId": "300",
+      "school": "UC Irvine",
+      "teamName": "UC Irvine Anteaters",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/300",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/300"
+      }
+    },
+    {
+      "sourceId": "27",
+      "school": "UC Riverside",
+      "teamName": "UC Riverside Highlanders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/27",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/27"
+      }
+    },
+    {
+      "sourceId": "28",
+      "school": "UC San Diego",
+      "teamName": "UC San Diego Tritons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/28",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/28"
+      }
+    },
+    {
+      "sourceId": "2540",
+      "school": "UC Santa Barbara",
+      "teamName": "UC Santa Barbara Gauchos",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2540",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2540"
+      }
+    },
+    {
+      "sourceId": "2116",
+      "school": "UCF",
+      "teamName": "UCF Knights",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2116",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2116"
+      }
+    },
+    {
+      "sourceId": "26",
+      "school": "UCLA",
+      "teamName": "UCLA Bruins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/26",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/26"
+      }
+    },
+    {
+      "sourceId": "41",
+      "school": "UConn",
+      "teamName": "UConn Huskies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/41",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/41"
+      }
+    },
+    {
+      "sourceId": "82",
+      "school": "UIC",
+      "teamName": "UIC Flames",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/82",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/82"
+      }
+    },
+    {
+      "sourceId": "2433",
+      "school": "UL Monroe",
+      "teamName": "UL Monroe Warhawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2433",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2433"
+      }
+    },
+    {
+      "sourceId": "2378",
+      "school": "UMBC",
+      "teamName": "UMBC Retrievers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2378",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2378"
+      }
+    },
+    {
+      "sourceId": "2349",
+      "school": "UMass Lowell",
+      "teamName": "UMass Lowell River Hawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2349",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2349"
+      }
+    },
+    {
+      "sourceId": "2427",
+      "school": "UNC Asheville",
+      "teamName": "UNC Asheville Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2427",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2427"
+      }
+    },
+    {
+      "sourceId": "2430",
+      "school": "UNC Greensboro",
+      "teamName": "UNC Greensboro Spartans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2430",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2430"
+      }
+    },
+    {
+      "sourceId": "350",
+      "school": "UNC Wilmington",
+      "teamName": "UNC Wilmington Seahawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/350",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/350"
+      }
+    },
+    {
+      "sourceId": "2439",
+      "school": "UNLV",
+      "teamName": "UNLV Rebels",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2439",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2439"
+      }
+    },
+    {
+      "sourceId": "30",
+      "school": "USC",
+      "teamName": "USC Trojans",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/30",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/30"
+      }
+    },
+    {
+      "sourceId": "250",
+      "school": "UT Arlington",
+      "teamName": "UT Arlington Mavericks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/250",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/250"
+      }
+    },
+    {
+      "sourceId": "2630",
+      "school": "UT Martin",
+      "teamName": "UT Martin Skyhawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2630",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2630"
+      }
+    },
+    {
+      "sourceId": "292",
+      "school": "UT Rio Grande Valley",
+      "teamName": "UT Rio Grande Valley Vaqueros",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/292",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/292"
+      }
+    },
+    {
+      "sourceId": "2638",
+      "school": "UTEP",
+      "teamName": "UTEP Miners",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2638",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2638"
+      }
+    },
+    {
+      "sourceId": "2636",
+      "school": "UTSA",
+      "teamName": "UTSA Roadrunners",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2636",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2636"
+      }
+    },
+    {
+      "sourceId": "328",
+      "school": "Utah State",
+      "teamName": "Utah State Aggies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/328",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/328"
+      }
+    },
+    {
+      "sourceId": "3101",
+      "school": "Utah Tech",
+      "teamName": "Utah Tech Trailblazers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/3101",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/3101"
+      }
+    },
+    {
+      "sourceId": "254",
+      "school": "Utah",
+      "teamName": "Utah Utes",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/254",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/254"
+      }
+    },
+    {
+      "sourceId": "3084",
+      "school": "Utah Valley",
+      "teamName": "Utah Valley Wolverines",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/3084",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/3084"
+      }
+    },
+    {
+      "sourceId": "2670",
+      "school": "VCU",
+      "teamName": "VCU Rams",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2670",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2670"
+      }
+    },
+    {
+      "sourceId": "2678",
+      "school": "VMI",
+      "teamName": "VMI Keydets",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2678",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2678"
+      }
+    },
+    {
+      "sourceId": "2674",
+      "school": "Valparaiso",
+      "teamName": "Valparaiso Beacons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2674",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2674"
+      }
+    },
+    {
+      "sourceId": "238",
+      "school": "Vanderbilt",
+      "teamName": "Vanderbilt Commodores",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/238",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/238"
+      }
+    },
+    {
+      "sourceId": "261",
+      "school": "Vermont",
+      "teamName": "Vermont Catamounts",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/261",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/261"
+      }
+    },
+    {
+      "sourceId": "222",
+      "school": "Villanova",
+      "teamName": "Villanova Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/222",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/222"
+      }
+    },
+    {
+      "sourceId": "258",
+      "school": "Virginia",
+      "teamName": "Virginia Cavaliers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/258",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/258"
+      }
+    },
+    {
+      "sourceId": "259",
+      "school": "Virginia Tech",
+      "teamName": "Virginia Tech Hokies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/259",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/259"
+      }
+    },
+    {
+      "sourceId": "2681",
+      "school": "Wagner",
+      "teamName": "Wagner Seahawks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2681",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2681"
+      }
+    },
+    {
+      "sourceId": "154",
+      "school": "Wake Forest",
+      "teamName": "Wake Forest Demon Deacons",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/154",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/154"
+      }
+    },
+    {
+      "sourceId": "264",
+      "school": "Washington",
+      "teamName": "Washington Huskies",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/264",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/264"
+      }
+    },
+    {
+      "sourceId": "265",
+      "school": "Washington State",
+      "teamName": "Washington State Cougars",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/265",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/265"
+      }
+    },
+    {
+      "sourceId": "2692",
+      "school": "Weber State",
+      "teamName": "Weber State Wildcats",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2692",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2692"
+      }
+    },
+    {
+      "sourceId": "2697",
+      "school": "West Florida",
+      "teamName": "West Florida Argonauts",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2697",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2697"
+      }
+    },
+    {
+      "sourceId": "2698",
+      "school": "West Georgia",
+      "teamName": "West Georgia Wolves",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2698",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2698"
+      }
+    },
+    {
+      "sourceId": "277",
+      "school": "West Virginia",
+      "teamName": "West Virginia Mountaineers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/277",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/277"
+      }
+    },
+    {
+      "sourceId": "2717",
+      "school": "Western Carolina",
+      "teamName": "Western Carolina Catamounts",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2717",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2717"
+      }
+    },
+    {
+      "sourceId": "2710",
+      "school": "Western Illinois",
+      "teamName": "Western Illinois Leathernecks",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2710",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2710"
+      }
+    },
+    {
+      "sourceId": "98",
+      "school": "Western Kentucky",
+      "teamName": "Western Kentucky Hilltoppers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/98",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/98"
+      }
+    },
+    {
+      "sourceId": "2711",
+      "school": "Western Michigan",
+      "teamName": "Western Michigan Broncos",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2711",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2711"
+      }
+    },
+    {
+      "sourceId": "2724",
+      "school": "Wichita State",
+      "teamName": "Wichita State Shockers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2724",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2724"
+      }
+    },
+    {
+      "sourceId": "2729",
+      "school": "William & Mary",
+      "teamName": "William & Mary Tribe",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2729",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2729"
+      }
+    },
+    {
+      "sourceId": "2737",
+      "school": "Winthrop",
+      "teamName": "Winthrop Eagles",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2737",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2737"
+      }
+    },
+    {
+      "sourceId": "275",
+      "school": "Wisconsin",
+      "teamName": "Wisconsin Badgers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/275",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/275"
+      }
+    },
+    {
+      "sourceId": "2747",
+      "school": "Wofford",
+      "teamName": "Wofford Terriers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2747",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2747"
+      }
+    },
+    {
+      "sourceId": "2750",
+      "school": "Wright State",
+      "teamName": "Wright State Raiders",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2750",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2750"
+      }
+    },
+    {
+      "sourceId": "2751",
+      "school": "Wyoming",
+      "teamName": "Wyoming Cowboys",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2751",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2751"
+      }
+    },
+    {
+      "sourceId": "2752",
+      "school": "Xavier",
+      "teamName": "Xavier Musketeers",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2752",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2752"
+      }
+    },
+    {
+      "sourceId": "43",
+      "school": "Yale",
+      "teamName": "Yale Bulldogs",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/43",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/43"
+      }
+    },
+    {
+      "sourceId": "2754",
+      "school": "Youngstown State",
+      "teamName": "Youngstown State Penguins",
+      "sourceLinks": {
+        "roster": "https://www.espn.com/mens-college-basketball/team/roster/_/id/2754",
+        "statistics": "https://www.espn.com/mens-college-basketball/team/stats/_/id/2754"
+      }
+    }
+  ]
+}

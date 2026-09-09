@@ -1,0 +1,2424 @@
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+	<External>null</External>
+	<External>nil</External>
+	<Item class="Workspace" referent="3">
+		<Properties>
+			<float name="AirDensity">0.00120000006</float>
+			<float name="AirTurbulenceIntensity">0</float>
+			<bool name="AllowThirdPartySales">false</bool>
+			<token name="AuthorityMode">1</token>
+			<token name="AvatarUnificationMode">0</token>
+			<token name="ClientAnimatorThrottling">0</token>
+			<Ref name="CurrentCamera">RBXa14e7198187542e3878998a2fbeaeae8</Ref>
+			<double name="DistributedGameTime">0</double>
+			<token name="EnableSLIMAvatars">0</token>
+			<token name="ExpandedTerrain">0</token>
+			<bool name="ExplicitAutoJoints">true</bool>
+			<bool name="FallHeightEnabled">true</bool>
+			<float name="FallenPartsDestroyHeight">-500</float>
+			<token name="FluidForces">0</token>
+			<Vector3 name="GlobalWind">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+			</Vector3>
+			<float name="Gravity">196.199997</float>
+			<token name="IKControlConstraintSupport">0</token>
+			<token name="ImprovedAnimationConstraint">0</token>
+			<token name="ImprovedPhysicsReplication">0</token>
+			<token name="LayeredClothingCacheOptimizations">0</token>
+			<token name="LuauTypeCheckMode">0</token>
+			<token name="MeshPartHeadsAndAccessories">0</token>
+			<token name="MeshStreamingAndImprovedLods">0</token>
+			<token name="ModelStreamingBehavior">0</token>
+			<token name="NextGenerationReplication">0</token>
+			<token name="PathfindingUseImprovedSearch">0</token>
+			<token name="PhysicsSteppingMethod">0</token>
+			<token name="PlayerCharacterDestroyBehavior">0</token>
+			<token name="PlayerScriptsUseInputActionSystem">0</token>
+			<token name="PredictiveStreamingMode">0</token>
+			<token name="PrimalPhysicsSolver">0</token>
+			<token name="RejectCharacterDeletions">0</token>
+			<token name="RenderingCacheOptimizations">0</token>
+			<token name="ReplicateInstanceDestroySetting">0</token>
+			<token name="Retargeting">0</token>
+			<token name="SandboxedInstanceMode">0</token>
+			<token name="SignalBehavior2">0</token>
+			<token name="StreamOutBehavior">0</token>
+			<bool name="StreamingEnabled">false</bool>
+			<token name="StreamingIntegrityMode">0</token>
+			<int name="StreamingMinRadius">64</int>
+			<int name="StreamingTargetRadius">1024</int>
+			<bool name="TerrainWeldsFixed">true</bool>
+			<token name="TouchEventsUseCollisionGroups">0</token>
+			<bool name="TouchesUseCollisionGroups">false</bool>
+			<token name="UseFixedSimulation">0</token>
+			<token name="UseInputSink">0</token>
+			<token name="UseNewLuauTypeSolver">2</token>
+			<token name="ValidateEnabledProximityPrompt">0</token>
+			<bool name="AutoSimulate">true</bool>
+			<BinaryString name="CollisionGroupData">AQEABP////8HRGVmYXVsdA==</BinaryString>
+			<Vector3 name="GravityDirection">
+				<X>0</X>
+				<Y>-1</Y>
+				<Z>0</Z>
+			</Vector3>
+			<float name="SimulationRate">1</float>
+			<float name="Wind">0</float>
+			<Vector3 name="WindDirection">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+			</Vector3>
+			<token name="LevelOfDetail">0</token>
+			<CoordinateFrame name="ModelMeshCFrame">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<SharedString name="ModelMeshData">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<Vector3 name="ModelMeshSize">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+			</Vector3>
+			<token name="ModelStreamingMode">0</token>
+			<bool name="NeedsPivotMigration">false</bool>
+			<Ref name="PrimaryPart">null</Ref>
+			<float name="ScaleFactor">1</float>
+			<SharedString name="SlimHash">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<OptionalCoordinateFrame name="WorldPivotData"></OptionalCoordinateFrame>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Workspace</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000002</UniqueId>
+		</Properties>
+		<Item class="Camera" referent="RBXa14e7198187542e3878998a2fbeaeae8">
+			<Properties>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>22.3426056</Y>
+					<Z>22.928257</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>-0</R02>
+					<R10>-0</R10>
+					<R11>0.780868828</R11>
+					<R12>0.624695063</R12>
+					<R20>0</R20>
+					<R21>-0.624695063</R21>
+					<R22>0.780868828</R22>
+				</CoordinateFrame>
+				<Ref name="CameraSubject">null</Ref>
+				<token name="CameraType">0</token>
+				<float name="FieldOfView">70</float>
+				<token name="FieldOfViewMode">0</token>
+				<CoordinateFrame name="Focus">
+					<X>0</X>
+					<Y>21.0932159</Y>
+					<Z>21.3665199</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="HeadLocked">true</bool>
+				<float name="HeadScale">1</float>
+				<bool name="VRTiltAndRollEnabled">false</bool>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">Camera</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003a4</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="Part" referent="4">
+			<Properties>
+				<token name="shape">1</token>
+				<token name="formFactorRaw">1</token>
+				<bool name="Anchored">true</bool>
+				<bool name="AudioCanCollide">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="CanQuery">true</bool>
+				<bool name="CanTouch">true</bool>
+				<bool name="CastShadow">true</bool>
+				<string name="CollisionGroup">Default</string>
+				<int name="CollisionGroupId">0</int>
+				<Color3uint8 name="Color3uint8">4283265869</Color3uint8>
+				<PhysicalProperties name="CustomPhysicalProperties">
+					<CustomPhysics>false</CustomPhysics>
+				</PhysicalProperties>
+				<bool name="EnableFluidForces">true</bool>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<bool name="Massless">false</bool>
+				<token name="Material">256</token>
+				<string name="MaterialVariantSerialized"></string>
+				<CoordinateFrame name="PivotOffset">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<int name="RootPriority">0</int>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<Vector3 name="size">
+					<X>256</X>
+					<Y>1</Y>
+					<Z>256</Z>
+				</Vector3>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">Baseplate</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003d4</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="SpawnLocation" referent="5">
+			<Properties>
+				<bool name="AllowTeamChangeOnTouch">false</bool>
+				<int name="Duration">10</int>
+				<bool name="Enabled">true</bool>
+				<bool name="Neutral">true</bool>
+				<int name="TeamColor">194</int>
+				<token name="shape">1</token>
+				<token name="formFactorRaw">1</token>
+				<bool name="Anchored">true</bool>
+				<bool name="AudioCanCollide">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="CanQuery">true</bool>
+				<bool name="CanTouch">true</bool>
+				<bool name="CastShadow">true</bool>
+				<string name="CollisionGroup">Default</string>
+				<int name="CollisionGroupId">0</int>
+				<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
+				<PhysicalProperties name="CustomPhysicalProperties">
+					<CustomPhysics>false</CustomPhysics>
+				</PhysicalProperties>
+				<bool name="EnableFluidForces">true</bool>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">false</bool>
+				<bool name="Massless">false</bool>
+				<token name="Material">256</token>
+				<string name="MaterialVariantSerialized"></string>
+				<CoordinateFrame name="PivotOffset">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<int name="RootPriority">0</int>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<Vector3 name="size">
+					<X>8</X>
+					<Y>1</Y>
+					<Z>8</Z>
+				</Vector3>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">SpawnLocation</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003d5</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="Terrain" referent="RBX21ca4a0efa3243739b16a834565f03ac">
+			<Properties>
+				<token name="AcquisitionMethod">0</token>
+				<bool name="Decoration">false</bool>
+				<float name="GrassLength">0.699999988</float>
+				<BinaryString name="MaterialColors"><![CDATA[AAAAAAAAan8/P39rf2Y/ilY+j35fi21PZmxvZbDqw8faiVpHOi4kHh4lZlw76JxKc3trhHta
+gcLgc4RKxr21zq2UlJSM]]></BinaryString>
+				<SharedString name="Materials">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<BinaryString name="PhysicsGrid">AgMAAAAAAAAAAAAAAAA=</BinaryString>
+				<BinaryString name="SmoothGrid">AQU=</BinaryString>
+				<bool name="SmoothVoxelsUpgraded">false</bool>
+				<Color3 name="WaterColor">
+					<R>0.0500000007</R>
+					<G>0.330000013</G>
+					<B>0.360000014</B>
+				</Color3>
+				<float name="WaterReflectance">1</float>
+				<float name="WaterTransparency">0.300000012</float>
+				<float name="WaterWaveSize">0.150000006</float>
+				<float name="WaterWaveSpeed">10</float>
+				<bool name="Anchored">true</bool>
+				<bool name="AudioCanCollide">true</bool>
+				<float name="BackParamA">-0.5</float>
+				<float name="BackParamB">0.5</float>
+				<token name="BackSurface">0</token>
+				<token name="BackSurfaceInput">0</token>
+				<float name="BottomParamA">-0.5</float>
+				<float name="BottomParamB">0.5</float>
+				<token name="BottomSurface">4</token>
+				<token name="BottomSurfaceInput">0</token>
+				<CoordinateFrame name="CFrame">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<bool name="CanCollide">true</bool>
+				<bool name="CanQuery">true</bool>
+				<bool name="CanTouch">true</bool>
+				<bool name="CastShadow">true</bool>
+				<string name="CollisionGroup">Default</string>
+				<int name="CollisionGroupId">0</int>
+				<Color3uint8 name="Color3uint8">4288914085</Color3uint8>
+				<PhysicalProperties name="CustomPhysicalProperties">
+					<CustomPhysics>false</CustomPhysics>
+				</PhysicalProperties>
+				<bool name="EnableFluidForces">true</bool>
+				<float name="FrontParamA">-0.5</float>
+				<float name="FrontParamB">0.5</float>
+				<token name="FrontSurface">0</token>
+				<token name="FrontSurfaceInput">0</token>
+				<float name="LeftParamA">-0.5</float>
+				<float name="LeftParamB">0.5</float>
+				<token name="LeftSurface">0</token>
+				<token name="LeftSurfaceInput">0</token>
+				<bool name="Locked">true</bool>
+				<bool name="Massless">false</bool>
+				<token name="Material">256</token>
+				<string name="MaterialVariantSerialized"></string>
+				<CoordinateFrame name="PivotOffset">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+					<R00>1</R00>
+					<R01>0</R01>
+					<R02>0</R02>
+					<R10>0</R10>
+					<R11>1</R11>
+					<R12>0</R12>
+					<R20>0</R20>
+					<R21>0</R21>
+					<R22>1</R22>
+				</CoordinateFrame>
+				<float name="Reflectance">0</float>
+				<float name="RightParamA">-0.5</float>
+				<float name="RightParamB">0.5</float>
+				<token name="RightSurface">0</token>
+				<token name="RightSurfaceInput">0</token>
+				<int name="RootPriority">0</int>
+				<Vector3 name="RotVelocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="TopParamA">-0.5</float>
+				<float name="TopParamB">0.5</float>
+				<token name="TopSurface">3</token>
+				<token name="TopSurfaceInput">0</token>
+				<float name="Transparency">0</float>
+				<Vector3 name="Velocity">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<Vector3 name="size">
+					<X>2044</X>
+					<Y>252</Y>
+					<Z>2044</Z>
+				</Vector3>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">Terrain</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003d7</UniqueId>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="TimerService" referent="RBX6479ba411fd34ab3903db2528449363d">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">TimerService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000353</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="CollectionService" referent="RBX1b64e4a529574995b0e2f81335e3e1d5">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">CollectionService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000354</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="SoundService" referent="RBX1b823e315ce448b6a58dcc2c5361f0b7">
+		<Properties>
+			<bool name="AcousticSimulationEnabled">false</bool>
+			<token name="AmbientReverb">0</token>
+			<token name="AudioApiByDefault">0</token>
+			<token name="CharacterSoundsUseNewApi">0</token>
+			<token name="DefaultListenerLocation">0</token>
+			<bool name="DiffractionEnabled">true</bool>
+			<float name="DistanceFactor">3.32999992</float>
+			<float name="DopplerScale">1</float>
+			<bool name="IsNewExpForAudioApiByDefault">false</bool>
+			<CoordinateFrame name="ListenerCFrame">
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+				<R00>1</R00>
+				<R01>0</R01>
+				<R02>0</R02>
+				<R10>0</R10>
+				<R11>1</R11>
+				<R12>0</R12>
+				<R20>0</R20>
+				<R21>0</R21>
+				<R22>1</R22>
+			</CoordinateFrame>
+			<Ref name="ListenerObject">null</Ref>
+			<token name="ListenerType">0</token>
+			<bool name="OcclusionEnabled">true</bool>
+			<bool name="RespectFilteringEnabled">false</bool>
+			<bool name="ReverbEnabled">true</bool>
+			<float name="RolloffScale">1</float>
+			<token name="VolumetricAudio">1</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">SoundService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000355</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="VideoCaptureService" referent="RBX266c172ce5a346199568a89aecd241a2">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">VideoCaptureService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000361</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="NonReplicatedCSGDictionaryService" referent="RBX15c37d3c258f4cebbaa00572a5a5cf94">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">NonReplicatedCSGDictionaryService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000362</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="CSGDictionaryService" referent="RBXf8799fbda9c64158877ca1eec6dc1a78">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">CSGDictionaryService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000363</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Chat" referent="RBXfd848d938bf7421c8ffb4459ad84dc05">
+		<Properties>
+			<bool name="BubbleChatEnabled">false</bool>
+			<bool name="IsAutoMigrated">false</bool>
+			<bool name="LoadDefaultChat">true</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Chat</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000369</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Players" referent="RBXf816f2e9ec4b4cb49578153244f6fcdb">
+		<Properties>
+			<bool name="BanningEnabled">true</bool>
+			<bool name="CharacterAutoLoads">true</bool>
+			<int name="MaxPlayersInternal">12</int>
+			<int name="PreferredPlayersInternal">0</int>
+			<float name="RespawnTime">5</float>
+			<bool name="UseStrafingAnimations">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Players</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000036b</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ReplicatedFirst" referent="RBXd1766a9aae9b4bac8c305c61882637a5">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ReplicatedFirst</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000036e</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TweenService" referent="RBX43b1e0d03a4e45ce9f6f1fc4683428a9">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">TweenService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000370</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="MaterialService" referent="RBXcd62dcd8d1124aec9957949baba88626">
+		<Properties>
+			<string name="AsphaltName">Asphalt</string>
+			<string name="BasaltName">Basalt</string>
+			<string name="BrickName">Brick</string>
+			<string name="CardboardName">Cardboard</string>
+			<string name="CarpetName">Carpet</string>
+			<string name="CeramicTilesName">CeramicTiles</string>
+			<string name="ClayRoofTilesName">ClayRoofTiles</string>
+			<string name="CobblestoneName">Cobblestone</string>
+			<string name="ConcreteName">Concrete</string>
+			<string name="CorrodedMetalName">CorrodedMetal</string>
+			<string name="CrackedLavaName">CrackedLava</string>
+			<string name="DiamondPlateName">DiamondPlate</string>
+			<string name="FabricName">Fabric</string>
+			<string name="FoilName">Foil</string>
+			<string name="GlacierName">Glacier</string>
+			<string name="GraniteName">Granite</string>
+			<string name="GrassName">Grass</string>
+			<string name="GroundName">Ground</string>
+			<string name="IceName">Ice</string>
+			<string name="LeafyGrassName">LeafyGrass</string>
+			<string name="LeatherName">Leather</string>
+			<string name="LimestoneName">Limestone</string>
+			<string name="MarbleName">Marble</string>
+			<string name="MetalName">Metal</string>
+			<string name="MudName">Mud</string>
+			<string name="PavementName">Pavement</string>
+			<string name="PebbleName">Pebble</string>
+			<string name="PlasterName">Plaster</string>
+			<string name="PlasticName">Plastic</string>
+			<string name="RockName">Rock</string>
+			<string name="RoofShinglesName">RoofShingles</string>
+			<string name="RubberName">Rubber</string>
+			<string name="SaltName">Salt</string>
+			<string name="SandName">Sand</string>
+			<string name="SandstoneName">Sandstone</string>
+			<string name="SlateName">Slate</string>
+			<string name="SmoothPlasticName">SmoothPlastic</string>
+			<string name="SnowName">Snow</string>
+			<bool name="Use2022MaterialsXml">false</bool>
+			<string name="WoodName">Wood</string>
+			<string name="WoodPlanksName">WoodPlanks</string>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">MaterialService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000371</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TextChatService" referent="RBXf5efed404b0948668443d540f8512efe">
+		<Properties>
+			<bool name="ChatTranslationFTUXShown">true</bool>
+			<bool name="ChatTranslationToggleEnabled">false</bool>
+			<token name="ChatVersion">0</token>
+			<bool name="CreateDefaultCommands">true</bool>
+			<bool name="CreateDefaultTextChannels">true</bool>
+			<bool name="HasSeenDeprecationDialog">false</bool>
+			<bool name="IsLegacyChatDisabled">false</bool>
+			<token name="PlatformIntegratedChat">0</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">TextChatService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000372</UniqueId>
+		</Properties>
+		<Item class="ChatWindowConfiguration" referent="RBX66d928f5f7e245d99878a4374c56a306">
+			<Properties>
+				<Color3 name="BackgroundColor3">
+					<R>0.0980392173</R>
+					<G>0.105882354</G>
+					<B>0.113725491</B>
+				</Color3>
+				<double name="BackgroundTransparency">0.2999999999999999889</double>
+				<bool name="Enabled">true</bool>
+				<Font name="FontFace">
+					<Family><url>rbxasset://fonts/families/GothamSSm.json</url></Family>
+					<Weight>500</Weight>
+					<Style>Normal</Style>
+					<CachedFaceId><url>rbxasset://fonts/Montserrat-Medium.ttf</url></CachedFaceId>
+				</Font>
+				<float name="HeightScale">1</float>
+				<token name="HorizontalAlignment">1</token>
+				<Color3 name="TextColor3">
+					<R>1</R>
+					<G>1</G>
+					<B>1</B>
+				</Color3>
+				<int64 name="TextSize">14</int64>
+				<Color3 name="TextStrokeColor3">
+					<R>0</R>
+					<G>0</G>
+					<B>0</B>
+				</Color3>
+				<double name="TextStrokeTransparency">0.5</double>
+				<token name="VerticalAlignment">1</token>
+				<float name="WidthScale">1</float>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">ChatWindowConfiguration</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003d9</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="ChatInputBarConfiguration" referent="RBX8af2baf92aa4495f9bad8de1d70ca05f">
+			<Properties>
+				<bool name="AutocompleteEnabled">true</bool>
+				<Color3 name="BackgroundColor3">
+					<R>0.0980392173</R>
+					<G>0.105882354</G>
+					<B>0.113725491</B>
+				</Color3>
+				<double name="BackgroundTransparency">0.2000000000000000111</double>
+				<bool name="Enabled">true</bool>
+				<Font name="FontFace">
+					<Family><url>rbxasset://fonts/families/GothamSSm.json</url></Family>
+					<Weight>500</Weight>
+					<Style>Normal</Style>
+					<CachedFaceId><url>rbxasset://fonts/Montserrat-Medium.ttf</url></CachedFaceId>
+				</Font>
+				<token name="KeyboardKeyCode">47</token>
+				<Color3 name="PlaceholderColor3">
+					<R>0.698039234</R>
+					<G>0.698039234</G>
+					<B>0.698039234</B>
+				</Color3>
+				<Ref name="TargetTextChannel">null</Ref>
+				<Color3 name="TextColor3">
+					<R>1</R>
+					<G>1</G>
+					<B>1</B>
+				</Color3>
+				<int64 name="TextSize">14</int64>
+				<Color3 name="TextStrokeColor3">
+					<R>0</R>
+					<G>0</G>
+					<B>0</B>
+				</Color3>
+				<double name="TextStrokeTransparency">0.5</double>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">ChatInputBarConfiguration</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003da</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="BubbleChatConfiguration" referent="RBXa0fbaf2a86d841cda60346cf6d056912">
+			<Properties>
+				<string name="AdorneeName">HumanoidRootPart</string>
+				<Color3 name="BackgroundColor3">
+					<R>0.980392158</R>
+					<G>0.980392158</G>
+					<B>0.980392158</B>
+				</Color3>
+				<double name="BackgroundTransparency">0.10000000000000000555</double>
+				<float name="BubbleDuration">15</float>
+				<float name="BubblesSpacing">6</float>
+				<bool name="Enabled">true</bool>
+				<token name="Font">18</token>
+				<Font name="FontFace">
+					<Family><url>rbxasset://fonts/families/GothamSSm.json</url></Family>
+					<Weight>500</Weight>
+					<Style>Normal</Style>
+					<CachedFaceId><url>rbxasset://fonts/Montserrat-Medium.ttf</url></CachedFaceId>
+				</Font>
+				<Vector3 name="LocalPlayerStudsOffset">
+					<X>0</X>
+					<Y>0</Y>
+					<Z>0</Z>
+				</Vector3>
+				<float name="MaxBubbles">3</float>
+				<float name="MaxDistance">100</float>
+				<float name="MinimizeDistance">40</float>
+				<bool name="TailVisible">true</bool>
+				<Color3 name="TextColor3">
+					<R>0.223529413</R>
+					<G>0.23137255</G>
+					<B>0.239215687</B>
+				</Color3>
+				<int64 name="TextSize">16</int64>
+				<float name="VerticalStudsOffset">0</float>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">BubbleChatConfiguration</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003db</UniqueId>
+			</Properties>
+		</Item>
+		<Item class="ChannelTabsConfiguration" referent="RBX3d5bd6643dee4cb89f3031910748872a">
+			<Properties>
+				<Color3 name="BackgroundColor3">
+					<R>0.0980392173</R>
+					<G>0.105882354</G>
+					<B>0.113725491</B>
+				</Color3>
+				<double name="BackgroundTransparency">0</double>
+				<bool name="Enabled">false</bool>
+				<Font name="FontFace">
+					<Family><url>rbxasset://fonts/families/BuilderSans.json</url></Family>
+					<Weight>700</Weight>
+					<Style>Normal</Style>
+					<CachedFaceId><url>rbxasset://fonts/BuilderSans-Bold.otf</url></CachedFaceId>
+				</Font>
+				<Color3 name="HoverBackgroundColor3">
+					<R>0.490196079</R>
+					<G>0.490196079</G>
+					<B>0.490196079</B>
+				</Color3>
+				<Color3 name="SelectedTabTextColor3">
+					<R>1</R>
+					<G>1</G>
+					<B>1</B>
+				</Color3>
+				<Color3 name="TextColor3">
+					<R>0.686274529</R>
+					<G>0.686274529</G>
+					<B>0.686274529</B>
+				</Color3>
+				<int64 name="TextSize">18</int64>
+				<Color3 name="TextStrokeColor3">
+					<R>0</R>
+					<G>0</G>
+					<B>0</B>
+				</Color3>
+				<double name="TextStrokeTransparency">1</double>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">ChannelTabsConfiguration</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003dc</UniqueId>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="PermissionsService" referent="RBX420e2f41b0874e73a23a6fcc77734a76">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">PermissionsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000374</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="PlayerEmulatorService" referent="RBX8ac9ca68321746a6a8a86c91bb52f90e">
+		<Properties>
+			<bool name="CustomPoliciesEnabled">false</bool>
+			<string name="EmulatedCountryCode"></string>
+			<string name="EmulatedGameLocale"></string>
+			<bool name="PlayerEmulationEnabled">false</bool>
+			<bool name="PseudolocalizationEnabled">false</bool>
+			<BinaryString name="SerializedEmulatedPolicyInfo"></BinaryString>
+			<int name="TextElongationFactor">0</int>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">PlayerEmulatorService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000375</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="StudioData" referent="RBX071b713319bc4289a8afe7757bebe9a5">
+		<Properties>
+			<bool name="EnableScriptCollabByDefaultOnLoad">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">StudioData</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000378</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="StarterPlayer" referent="0">
+		<Properties>
+			<bool name="AllowCustomAnimations">true</bool>
+			<bool name="AutoJumpEnabled">true</bool>
+			<token name="AvatarJointUpgrade_SerializedRollout">0</token>
+			<float name="CameraMaxZoomDistance">400</float>
+			<float name="CameraMinZoomDistance">0.5</float>
+			<token name="CameraMode">0</token>
+			<bool name="CharacterBreakJointsOnDeath">true</bool>
+			<float name="CharacterJumpHeight">7.19999981</float>
+			<float name="CharacterJumpPower">50</float>
+			<float name="CharacterMaxSlopeAngle">89</float>
+			<bool name="CharacterUseJumpPower">true</bool>
+			<float name="CharacterWalkSpeed">16</float>
+			<bool name="ClassicDeath">true</bool>
+			<bool name="CreateDefaultPlayerModule">true</bool>
+			<token name="DevCameraOcclusionMode">0</token>
+			<token name="DevComputerCameraMovementMode">0</token>
+			<token name="DevComputerMovementMode">0</token>
+			<token name="DevTouchCameraMovementMode">0</token>
+			<token name="DevTouchMovementMode">0</token>
+			<token name="EnableDynamicHeads">0</token>
+			<bool name="EnableMouseLockOption">true</bool>
+			<int64 name="GameSettingsAssetIDFace">0</int64>
+			<int64 name="GameSettingsAssetIDHead">0</int64>
+			<int64 name="GameSettingsAssetIDLeftArm">0</int64>
+			<int64 name="GameSettingsAssetIDLeftLeg">0</int64>
+			<int64 name="GameSettingsAssetIDPants">0</int64>
+			<int64 name="GameSettingsAssetIDRightArm">0</int64>
+			<int64 name="GameSettingsAssetIDRightLeg">0</int64>
+			<int64 name="GameSettingsAssetIDShirt">0</int64>
+			<int64 name="GameSettingsAssetIDTeeShirt">0</int64>
+			<int64 name="GameSettingsAssetIDTorso">0</int64>
+			<token name="GameSettingsAvatar">1</token>
+			<token name="GameSettingsR15Collision">0</token>
+			<NumberRange name="GameSettingsScaleRangeBodyType">0 1 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeHead">0.95 1 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeHeight">0.9 1.05 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeProportion">0 1 </NumberRange>
+			<NumberRange name="GameSettingsScaleRangeWidth">0.7 1 </NumberRange>
+			<float name="HealthDisplayDistance">100</float>
+			<bool name="LoadCharacterAppearance">true</bool>
+			<token name="LoadCharacterLayeredClothing">0</token>
+			<token name="LuaCharacterController">0</token>
+			<float name="NameDisplayDistance">100</float>
+			<int name="PlayerModuleStatus">0</int>
+			<bool name="UserEmotesEnabled">true</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">StarterPlayer</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000037a</UniqueId>
+		</Properties>
+		<Item class="StarterPlayerScripts" referent="1">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">StarterPlayerScripts</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003cf</UniqueId>
+			</Properties>
+			<Item class="LocalScript" referent="2">
+				<Properties>
+					<ProtectedString name="Source"><![CDATA[-- Staged implementation / Feature 1: standalone interface only.
+-- Paste into a LocalScript named HoopsUI under StarterPlayerScripts.
+-- Studio preview counters are disposable. Real actions require a future server feature.
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local GuiService = game:GetService("GuiService")
+local UserInputService = game:GetService("UserInputService")
+
+local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+if playerGui:FindFirstChild("CollegeHoopsUI") then
+	return -- Prevent duplicate copies of this interface.
+end
+local preview = RunService:IsStudio()
+local colors = {
+	background = Color3.fromRGB(15, 20, 29),
+	panel = Color3.fromRGB(25, 33, 46),
+	button = Color3.fromRGB(43, 56, 74),
+	accent = Color3.fromRGB(100, 229, 170),
+	danger = Color3.fromRGB(242, 135, 135),
+	text = Color3.fromRGB(241, 244, 249),
+	muted = Color3.fromRGB(168, 181, 199),
+}
+local function create(className, parent, properties)
+	local object = Instance.new(className)
+	for key, value in pairs(properties) do
+		object[key] = value
+	end
+	object.Parent = parent
+	return object
+end
+local function round(object)
+	create("UICorner", object, { CornerRadius = UDim.new(0, 3) })
+end
+local gui = create("ScreenGui", playerGui, {
+	Name = "CollegeHoopsUI",
+	ResetOnSpawn = false,
+	ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
+	DisplayOrder = 10,
+	ScreenInsets = Enum.ScreenInsets.CoreUISafeInsets,
+})
+local background = create("Frame", gui, {
+	Size = UDim2.fromScale(1, 1),
+	BackgroundTransparency = 1,
+	Visible = false,
+	BorderSizePixel = 0,
+})
+local build = create("TextButton", gui, {
+	Name = "Build",
+	AnchorPoint = Vector2.new(0.5, 1),
+	Position = UDim2.new(0.5, 0, 1, -16),
+	Size = UDim2.new(1, -32, 0, 64),
+	Text = "Build Your Squad",
+	Font = Enum.Font.GothamBold,
+	TextSize = 20,
+	BackgroundColor3 = Color3.fromRGB(8, 12, 12),
+	TextColor3 = colors.text,
+	BorderSizePixel = 0,
+	Visible = true,
+	Selectable = true,
+})
+round(build)
+create("UISizeConstraint", build, { MaxSize = Vector2.new(320, 64) })
+create("UIStroke", build, {
+	ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+	Thickness = 2,
+	Color = Color3.fromRGB(83, 220, 133),
+})
+-- A fixed design canvas scales to the available safe area: no scrolling.
+local canvas = create("Frame", background, {
+	Name = "SquadCanvas",
+	AnchorPoint = Vector2.new(0.5, 0.5),
+	Position = UDim2.fromScale(0.5, 0.5),
+	Size = UDim2.fromOffset(1120, 680),
+	BackgroundTransparency = 1,
+})
+local canvasScale = create("UIScale", canvas, { Scale = 1 })
+local function fitCanvas()
+	local size = background.AbsoluteSize
+	canvasScale.Scale = math.min(size.X / 1120, size.Y / 680)
+end
+local resizeConnection = background:GetPropertyChangedSignal("AbsoluteSize"):Connect(fitCanvas)
+fitCanvas()
+local function textAt(parent, name, text, x, y, width, height, size, color)
+	return create("TextLabel", parent, {
+		Name = name,
+		Position = UDim2.fromOffset(x, y),
+		Size = UDim2.fromOffset(width, height),
+		BackgroundTransparency = 1,
+		Text = text,
+		TextSize = size,
+		TextColor3 = color or colors.text,
+		Font = Enum.Font.GothamBold,
+		TextWrapped = true,
+		TextStrokeTransparency = 0.5,
+	})
+end
+local function outline(object, color)
+	create("UIStroke", object, {
+		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+		Thickness = 2,
+		Color = color or colors.accent,
+	})
+end
+textAt(canvas, "Title", "BUILD YOUR\nSQUAD", 24, 18, 280, 100, 38)
+textAt(canvas, "Mode", preview and "STUDIO UI PREVIEW" or "UI ONLY", 24, 120, 280, 24, 14, colors.accent)
+local counters = textAt(canvas, "Counters", "", 24, 147, 280, 40, 15)
+local actions = create("Frame", canvas, {
+	Name = "Actions",
+	Position = UDim2.fromOffset(44, 202),
+	Size = UDim2.fromOffset(240, 422),
+	BackgroundTransparency = 1,
+})
+create("UIListLayout", actions, { Padding = UDim.new(0, 10), SortOrder = Enum.SortOrder.LayoutOrder })
+local buttons = {}
+local actionNames = { "Roll", "Reroll", "Refresh", "Restart", "Exit" }
+for index, name in ipairs(actionNames) do
+	local button = create("TextButton", actions, {
+		Name = name:gsub(" ", ""),
+		LayoutOrder = index,
+		Size = UDim2.fromOffset(240, 50),
+		Text = name:upper(),
+		BackgroundColor3 = Color3.fromRGB(8, 12, 12),
+		BackgroundTransparency = 0.12,
+		TextColor3 = colors.text,
+		Font = Enum.Font.GothamBold,
+		TextSize = 18,
+		BorderSizePixel = 0,
+		AutoButtonColor = true,
+		Selectable = true,
+	})
+	round(button)
+	outline(button, (name == "Restart" or name == "Exit") and colors.danger or colors.accent)
+	buttons[name] = button
+end
+textAt(canvas, "Overall", "TEAM OVR: —   |   CHEMISTRY: —", 340, 16, 748, 40, 26)
+textAt(canvas, "SchoolSeason", "School & season: awaiting game system", 340, 61, 748, 28, 16)
+local court = create("Frame", canvas, {
+	Name = "CurrentPlayers",
+	Position = UDim2.fromOffset(340, 100),
+	Size = UDim2.fromOffset(748, 366),
+	BackgroundTransparency = 1,
+	BorderSizePixel = 0,
+})
+outline(court)
+local lineup = textAt(court, "LineupCount", "", 12, 6, 724, 26, 17)
+local positions = { "PG", "SG", "SF", "PF", "C" }
+local slotLocations =
+	{ Vector2.new(184, 44), Vector2.new(414, 44), Vector2.new(70, 204), Vector2.new(299, 204), Vector2.new(528, 204) }
+local slots = {}
+for index, position in ipairs(positions) do
+	local point = slotLocations[index]
+	local card = textAt(court, position, position .. "\n\nEMPTY", point.X, point.Y, 150, 140, 21)
+	card.BackgroundColor3 = colors.panel
+	card.BackgroundTransparency = 0.24
+	card.BorderSizePixel = 0
+	round(card)
+	outline(card, colors.muted)
+	slots[index] = card
+end
+textAt(canvas, "CandidatesTitle", "CHOOSE A PLAYER  |  ONE PER POSITION", 340, 477, 748, 24, 16)
+local candidateButtons = {}
+for index, position in ipairs(positions) do
+	local card = create("TextButton", canvas, {
+		Name = "Candidate" .. position,
+		Position = UDim2.fromOffset(340 + (index - 1) * 152, 509),
+		Size = UDim2.fromOffset(140, 100),
+		Text = position,
+		Font = Enum.Font.GothamBold,
+		TextSize = 16,
+		TextWrapped = true,
+		TextColor3 = colors.text,
+		BackgroundColor3 = colors.panel,
+		BackgroundTransparency = 0.16,
+		BorderSizePixel = 0,
+		Selectable = true,
+		AutoButtonColor = true,
+	})
+	round(card)
+	outline(card, colors.muted)
+	candidateButtons[index] = card
+end
+local reveal = textAt(canvas, "SelectedPlayer", "Select a candidate", 24, 522, 280, 74, 16)
+local status = textAt(
+	canvas,
+	"Status",
+	"Choose a candidate to fill their position. Preview players only; nothing is saved.",
+	340,
+	622,
+	748,
+	46,
+	16
+)
+status.BackgroundColor3 = colors.panel
+status.BackgroundTransparency = 0.15
+status.BorderSizePixel = 0
+
+local overlay = create("TextButton", gui, {
+	Name = "ConfirmationOverlay",
+	Size = UDim2.fromScale(1, 1),
+	Text = "",
+	BackgroundColor3 = Color3.new(),
+	BackgroundTransparency = 0.25,
+	AutoButtonColor = false,
+	Selectable = false,
+	Visible = false,
+	ZIndex = 20,
+	Modal = true,
+})
+local dialog = create("Frame", overlay, {
+	AnchorPoint = Vector2.new(0.5, 0.5),
+	Position = UDim2.fromScale(0.5, 0.5),
+	Size = UDim2.new(1, -32, 0, 224),
+	BackgroundColor3 = colors.panel,
+	BorderSizePixel = 0,
+	ZIndex = 21,
+})
+round(dialog)
+create("UISizeConstraint", dialog, { MaxSize = Vector2.new(460, 224) })
+local dialogText = create("TextLabel", dialog, {
+	Position = UDim2.fromOffset(16, 16),
+	Size = UDim2.new(1, -32, 0, 124),
+	BackgroundTransparency = 1,
+	TextColor3 = colors.text,
+	TextSize = 18,
+	Font = Enum.Font.GothamMedium,
+	TextWrapped = true,
+	ZIndex = 22,
+	Text = "RESTART PREVIEW?\n\nClears this UI preview and sets Rerolls and Refreshes to 1 each. No real team or collection exists yet.",
+})
+local function dialogButton(text, x)
+	local button = create("TextButton", dialog, {
+		Position = UDim2.new(x, 12, 1, -68),
+		Size = UDim2.new(0.5, -24, 0, 52),
+		Text = text,
+		TextColor3 = colors.text,
+		BackgroundColor3 = colors.button,
+		Font = Enum.Font.GothamBold,
+		TextSize = 16,
+		BorderSizePixel = 0,
+		ZIndex = 22,
+		Selectable = true,
+	})
+	round(button)
+	return button
+end
+local cancel = dialogButton("CANCEL", 0)
+local confirm = dialogButton("RESTART", 0.5)
+local freeRerolls, freeRefreshes = 1, 1
+local finished = false
+local pendingAction, returnFocus, selected = nil, nil, nil
+local squad, candidates = {}, {}
+-- Disposable UI fixtures, not the real roster, ratings, or drop odds.
+local rng = Random.new()
+local previewSequence = 0
+local function newPreviewPlayer(position)
+	previewSequence += 1
+	return { name = position .. " Prospect " .. rng:NextInteger(100, 999), id = previewSequence }
+end
+local function refillCandidates()
+	for index, position in ipairs(positions) do
+		candidates[index] = newPreviewPlayer(position)
+	end
+end
+local function countFilled()
+	local count = 0
+	for index = 1, 5 do
+		if squad[index] then
+			count += 1
+		end
+	end
+	return count
+end
+local function setModal(open)
+	overlay.Visible = open
+	for _, button in pairs(buttons) do
+		button.Selectable = not open
+		button.Active = not open
+	end
+	for _, button in ipairs(candidateButtons) do
+		button.Selectable = not open
+		button.Active = not open
+	end
+end
+local function render()
+	local filled = countFilled()
+	counters.Text = preview and string.format("Free Rerolls: %d   |   Free Refreshes: %d", freeRerolls, freeRefreshes)
+		or "Free actions: awaiting server"
+	buttons.Reroll.Text = filled == 5 and (finished and "FINISHED" or "FINISH")
+		or (preview and string.format("REROLL  |  %d FREE", freeRerolls) or "REROLL")
+	buttons.Refresh.Text = preview and string.format("REFRESH  |  %d FREE", freeRefreshes) or "REFRESH"
+	lineup.Text = string.format("CURRENT PLAYERS  |  %d / 5 preview slots", filled)
+	for index, slot in ipairs(slots) do
+		local player = squad[index]
+		slot.Text = positions[index] .. "\n\n" .. (player and player.name or "EMPTY")
+		slot.TextColor3 = player and colors.accent or colors.text
+		local card = candidateButtons[index]
+		card.Text = positions[index]
+			.. "\n"
+			.. (preview and candidates[index].name or "Awaiting roster")
+			.. (selected == index and "\nSELECTED" or "")
+		card.BackgroundColor3 = selected == index and colors.button or colors.panel
+	end
+	reveal.Text = selected and ("SELECTED: " .. positions[selected] .. "\n" .. squad[selected].name)
+		or "Select a candidate"
+end
+local function closeDialog()
+	setModal(false)
+	pendingAction = nil
+	GuiService.SelectedObject = returnFocus
+end
+local function openDialog(action, text)
+	pendingAction = action
+	returnFocus = GuiService.SelectedObject
+	dialogText.Text = text
+	confirm.Text = action == "Restart" and "RESTART" or "FINISH PREVIEW"
+	setModal(true)
+	GuiService.SelectedObject = cancel
+end
+cancel.NextSelectionLeft = confirm
+cancel.NextSelectionRight = confirm
+cancel.NextSelectionUp = confirm
+cancel.NextSelectionDown = confirm
+confirm.NextSelectionLeft = cancel
+confirm.NextSelectionRight = cancel
+confirm.NextSelectionUp = cancel
+confirm.NextSelectionDown = cancel
+local function restartPreview()
+	freeRerolls, freeRefreshes = 1, 1
+	squad, selected, finished = {}, nil, false
+	refillCandidates()
+	status.Text = "Preview restarted. Choose a player for each position. Free counters reset to 1."
+	render()
+end
+local function canEdit()
+	if overlay.Visible or not background.Visible then
+		return false
+	end
+	if not preview then
+		status.Text = "UI ready. Real roster actions need the later server stage."
+		return false
+	end
+	if finished then
+		status.Text = "Preview finished. Restart to test another squad."
+		return false
+	end
+	return true
+end
+local function chooseCandidate(index)
+	if not canEdit() then
+		return
+	end
+	selected = index
+	-- Candidate selection immediately accepts that preview player into its position.
+	squad[index] = candidates[index]
+	status.Text = countFilled() == 5 and "All five players chosen. Press Finish to end this preview."
+		or (positions[index] .. " filled. Choose another position, or Reroll this player.")
+	render()
+end
+for index, button in ipairs(candidateButtons) do
+	button.Activated:Connect(function()
+		chooseCandidate(index)
+	end)
+end
+cancel.Activated:Connect(closeDialog)
+confirm.Activated:Connect(function()
+	if not overlay.Visible then
+		return
+	end
+	local action = pendingAction
+	closeDialog()
+	if action == "Restart" then
+		restartPreview()
+	elseif action == "Finish" and countFilled() == 5 and not finished then
+		finished = true
+		status.Text = "Preview finished. No cards or team were saved. Restart to test again."
+		render()
+	end
+end)
+for name, button in pairs(buttons) do
+	button.Activated:Connect(function()
+		if overlay.Visible or not background.Visible then
+			return
+		end
+		if name == "Exit" then
+			background.Visible = false
+			build.Visible = true
+			GuiService.SelectedObject = build
+			return
+		end
+		if name == "Restart" and preview then
+			if countFilled() > 0 and not finished then
+				openDialog(
+					"Restart",
+					"RESTART PREVIEW?\n\nDiscard all five-position preview progress and candidates. Both free counters reset to 1. No permanent collection is affected."
+				)
+			else
+				restartPreview()
+			end
+			return
+		end
+		if not canEdit() then
+			return
+		end
+		if name == "Roll" then
+			for index = 1, 5 do
+				if not squad[index] then
+					chooseCandidate(index)
+					return
+				end
+			end
+			status.Text = "All positions are filled. Press Finish."
+		elseif name == "Reroll" then
+			-- Finish takes priority over spending the Reroll resource.
+			if countFilled() == 5 then
+				openDialog(
+					"Finish",
+					"FINISH PREVIEW?\n\nAll five positions are filled. End this UI test? Nothing is saved in this stage."
+				)
+				return
+			end
+			if not selected then
+				status.Text = "Choose a candidate first so Reroll knows which player to replace."
+				return
+			end
+			if freeRerolls == 0 then
+				status.Text = "No free Rerolls left. Choose the remaining candidates to complete your squad."
+				return
+			end
+			freeRerolls -= 1
+			candidates[selected] = newPreviewPlayer(positions[selected])
+			squad[selected] = candidates[selected]
+			status.Text = "Selected player replaced and automatically placed in the squad."
+			render()
+		elseif name == "Refresh" then
+			if freeRefreshes == 0 then
+				status.Text = "No free Refreshes left in this preview."
+				return
+			end
+			freeRefreshes -= 1
+			refillCandidates()
+			status.Text = "Five preview candidates refreshed, one per position. Current squad preserved."
+			render()
+		end
+	end)
+end
+refillCandidates()
+build.Activated:Connect(function()
+	build.Visible = false
+	background.Visible = true
+	GuiService.SelectedObject = buttons.Roll
+end)
+local inputConnection = UserInputService.InputBegan:Connect(function(input)
+	if overlay.Visible and (input.KeyCode == Enum.KeyCode.Escape or input.KeyCode == Enum.KeyCode.ButtonB) then
+		closeDialog()
+	end
+end)
+gui.Destroying:Connect(function()
+	inputConnection:Disconnect()
+	resizeConnection:Disconnect()
+end)
+render()
+]]></ProtectedString>
+					<bool name="Disabled">false</bool>
+					<Content name="LinkedSource"><null></null></Content>
+					<token name="RunContext">0</token>
+					<string name="ScriptGuid">{caa47151-1df4-4282-8416-4f7b3df341aa}</string>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+					<string name="Name">HoopsUI</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+					<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003d0</UniqueId>
+				</Properties>
+			</Item>
+		</Item>
+		<Item class="StarterCharacterScripts" referent="RBX824d32ae4f0a47f89486969a68d867b0">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">StarterCharacterScripts</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003d8</UniqueId>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="StarterPack" referent="RBXd69a99157b5944908b824d31bec9fcc4">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">StarterPack</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000037b</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="StarterGui" referent="RBXe9040ab9abb74f209e7d43dcff6abca2">
+		<Properties>
+			<token name="ClipsDescendantsSupportsRotation">0</token>
+			<bool name="ResetPlayerGuiOnSpawn">true</bool>
+			<token name="RtlTextSupport">0</token>
+			<token name="ScreenOrientation">2</token>
+			<bool name="ShowDevelopmentGui">true</bool>
+			<Ref name="StudioDefaultStyleSheet">null</Ref>
+			<Ref name="StudioInsertWidgetLayerCollectorAutoLinkStyleSheet">null</Ref>
+			<token name="VirtualCursorMode">0</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">StarterGui</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000037c</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="LocalizationService" referent="RBX4cd6107141874124843f9fdf7d66e296">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">LocalizationService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000037e</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TeleportService" referent="RBX9379cdbf4eab41f0b2843fee58e99294">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Teleport Service</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000382</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="PhysicsService" referent="RBX3d08b8aaaa5d4ce98cc465b3db1edb0f">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">PhysicsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000384</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="InsertService" referent="RBX5570ef712aec450d986223c891118958">
+		<Properties>
+			<bool name="AllowInsertFreeModels">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">InsertService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000387</UniqueId>
+		</Properties>
+		<Item class="StringValue" referent="RBX484bcacc24c04a81b7560e0817e795e7">
+			<Properties>
+				<string name="Value">{0fd50197-752a-4853-a045-0dcffd4551bd}</string>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">InsertionHash</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000b47</UniqueId>
+			</Properties>
+		</Item>
+	</Item>
+	<Item class="GamePassService" referent="RBX25c7f03ee244498ba39fec2aa5242277">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">GamePassService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000388</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Debris" referent="RBX109d17681f214e9c9f34cdb03435f0c9">
+		<Properties>
+			<int name="MaxItems">1000</int>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Debris</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000389</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="CookiesService" referent="RBXe13bf7a4cf34476997859c228a37085a">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">CookiesService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000038a</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Selection" referent="RBX78cc3db37ac041d6958758fa69bf8e58">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Selection</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000038b</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="VRService" referent="RBXee0ddc4c51d54526b37a15ddba8ad4ff">
+		<Properties>
+			<token name="AutomaticScaling">0</token>
+			<bool name="AvatarGestures">false</bool>
+			<token name="ControllerModels">1</token>
+			<bool name="FadeOutViewOnCollision">true</bool>
+			<token name="LaserPointer">1</token>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">VRService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000038f</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ContextActionService" referent="RBXd8e015aa90fa406d8d507360379a59c5">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ContextActionService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000390</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ScriptService" referent="RBX1e5a31b7e988422c8f17a2eba6447573">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ScriptService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000391</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="AssetService" referent="RBX05b462e0823d4f66a6c0857825ad1054">
+		<Properties>
+			<bool name="AllowInsertFreeAssets">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">AssetService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000392</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TouchInputService" referent="RBXcef79c5904ef40f2b7fddd9a91bf5300">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">TouchInputService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000394</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="AvatarSettings" referent="RBXb3e0ade6f8d444c19caa27cc82e4aed4">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">AvatarSettings</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000039a</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Packages" referent="RBX9c812901f0274c6eab5894255fec4e29">
+		<Properties>
+			<bool name="IsDehydrated">false</bool>
+			<int name="ShellPackagesCount">0</int>
+			<int name="SkippedInstancesCount">0</int>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Packages</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000039e</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="GuidRegistryService" referent="RBX3bf54eac97434e90aec9a0e659b7e5b2">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">GuidRegistryService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000039f</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="LuaWebService" referent="RBX5e4c49d218b6473aa17ee6b78d76550a">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">LuaWebService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003ae</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ProcessInstancePhysicsService" referent="RBXbe86ccea60024c67a60394ea8b6f1b02">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ProcessInstancePhysicsService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003af</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ReplicatedStorage" referent="RBX276706e5b6f64d6592fda1520a5b0aa7">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ReplicatedStorage</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003b0</UniqueId>
+		</Properties>
+		<Item class="Folder" referent="RBX9718bc254da3410a92ef6a6541265533">
+			<Properties>
+				<BinaryString name="AttributesSerialize"></BinaryString>
+				<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+				<bool name="DefinesCapabilities">false</bool>
+				<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+				<string name="Name">Shared</string>
+				<int64 name="SourceAssetId">-1</int64>
+				<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+				<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000b44</UniqueId>
+			</Properties>
+			<Item class="ModuleScript" referent="RBX4c6ee235598942738409e7acb8ae5644">
+				<Properties>
+					<Content name="LinkedSource"><null></null></Content>
+					<ProtectedString name="Source"><![CDATA[--!strict
+-- Fictional development seed: 20 cards, 10 Common / 6 Rare / 3 Epic / 1 Legendary.
+-- This composition is NOT a roll probability table or the verified NCAA dataset.
+-- Ordinary Overall: 1-99; All-NBA: 100-105; HOF: 105-110 (105 overlaps by request).
+-- Overall is a provisional card appraisal, not the average of its base attributes.
+-- All real-player ratings below are uncalibrated development placeholders.
+
+export type Rarity = "Common" | "Rare" | "Epic" | "Legendary" | "All-NBA" | "HOF"
+export type Position = "PG" | "SG" | "SF" | "PF" | "C"
+
+-- Singleton field types preserve enum precision for consumers and the LSP.
+local Rarity: {
+    Common: "Common",
+    Rare: "Rare",
+    Epic: "Epic",
+    Legendary: "Legendary",
+    AllNBA: "All-NBA",
+    HOF: "HOF",
+} = table.freeze({
+    Common = "Common",
+    Rare = "Rare",
+    Epic = "Epic",
+    Legendary = "Legendary",
+    AllNBA = "All-NBA",
+    HOF = "HOF",
+})
+
+export type Attributes = {
+    shooting: number,
+    dribbling: number,
+    defense: number,
+    speed: number,
+    stamina: number,
+}
+
+export type Player = {
+    id: string,
+    name: string,
+    position: Position,
+    rarity: Rarity,
+    attributes: Attributes,
+    statMultiplier: number,
+    overall: number,
+    sourceType: "EXAMPLE" | "LEGACY_HOF" | "NON_COLLEGE",
+    acquisition: "EXAMPLE_ONLY" | "GLOBAL_HOF" | "DIRECT_PURCHASE",
+    ratingStatus: "PROVISIONAL",
+    schoolSeasonId: string?,
+    school: string?,
+    season: string?,
+    eligiblePositions: { Position }?,
+}
+
+-- Attributes are BASE values. Future stat consumers apply the multiplier once:
+-- math.clamp(math.round(baseAttribute * player.statMultiplier), 1, 99).
+-- Multipliers affect every attribute; no gameplay calculation runs in this module.
+local StatMultiplierByRarity: { [Rarity]: number } = table.freeze({
+    [Rarity.Common] = 1.00,
+    [Rarity.Rare] = 1.05,
+    [Rarity.Epic] = 1.10,
+    [Rarity.Legendary] = 1.15,
+    [Rarity.AllNBA] = 1.20,
+    [Rarity.HOF] = 1.25,
+})
+
+export type RatingRange = { min: number, max: number }
+-- Ordinary cutoffs are prototype balance choices. Special cutoffs are user-specified.
+local OverallRangeByRarity: { [Rarity]: RatingRange } = {
+    [Rarity.Common] = { min = 1, max = 64 },
+    [Rarity.Rare] = { min = 65, max = 79 },
+    [Rarity.Epic] = { min = 80, max = 89 },
+    [Rarity.Legendary] = { min = 90, max = 99 },
+    [Rarity.AllNBA] = { min = 100, max = 105 },
+    [Rarity.HOF] = { min = 105, max = 110 },
+}
+for _, range in OverallRangeByRarity do
+    table.freeze(range)
+end
+table.freeze(OverallRangeByRarity)
+
+local Players: { Player } = {
+    {
+        id = "example-marcus-reed",
+        name = "Marcus Reed",
+        position = "PG",
+        rarity = Rarity.Common,
+        attributes = { shooting = 58, dribbling = 65, defense = 48, speed = 68, stamina = 62 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-eli-brooks",
+        name = "Eli Brooks",
+        position = "SG",
+        rarity = Rarity.Common,
+        attributes = { shooting = 66, dribbling = 51, defense = 49, speed = 60, stamina = 58 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-noah-price",
+        name = "Noah Price",
+        position = "SF",
+        rarity = Rarity.Common,
+        attributes = { shooting = 54, dribbling = 50, defense = 62, speed = 59, stamina = 64 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-owen-hayes",
+        name = "Owen Hayes",
+        position = "PF",
+        rarity = Rarity.Common,
+        attributes = { shooting = 45, dribbling = 38, defense = 67, speed = 48, stamina = 66 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-caleb-stone",
+        name = "Caleb Stone",
+        position = "C",
+        rarity = Rarity.Common,
+        attributes = { shooting = 35, dribbling = 30, defense = 70, speed = 39, stamina = 65 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-miles-carter",
+        name = "Miles Carter",
+        position = "PG",
+        rarity = Rarity.Common,
+        attributes = { shooting = 50, dribbling = 69, defense = 46, speed = 72, stamina = 60 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-jalen-frost",
+        name = "Jalen Frost",
+        position = "SG",
+        rarity = Rarity.Common,
+        attributes = { shooting = 69, dribbling = 55, defense = 42, speed = 63, stamina = 56 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-theo-banks",
+        name = "Theo Banks",
+        position = "SF",
+        rarity = Rarity.Common,
+        attributes = { shooting = 57, dribbling = 49, defense = 59, speed = 64, stamina = 61 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-isaac-porter",
+        name = "Isaac Porter",
+        position = "PF",
+        rarity = Rarity.Common,
+        attributes = { shooting = 48, dribbling = 40, defense = 64, speed = 50, stamina = 70 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-levi-knox",
+        name = "Levi Knox",
+        position = "C",
+        rarity = Rarity.Common,
+        attributes = { shooting = 38, dribbling = 28, defense = 72, speed = 35, stamina = 68 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Common],
+        overall = 58,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-adrian-cole",
+        name = "Adrian Cole",
+        position = "PG",
+        rarity = Rarity.Rare,
+        attributes = { shooting = 65, dribbling = 76, defense = 58, speed = 77, stamina = 71 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Rare],
+        overall = 72,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-dante-wells",
+        name = "Dante Wells",
+        position = "SG",
+        rarity = Rarity.Rare,
+        attributes = { shooting = 78, dribbling = 66, defense = 55, speed = 70, stamina = 68 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Rare],
+        overall = 72,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-simon-cross",
+        name = "Simon Cross",
+        position = "SF",
+        rarity = Rarity.Rare,
+        attributes = { shooting = 67, dribbling = 62, defense = 73, speed = 68, stamina = 74 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Rare],
+        overall = 72,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-roman-vale",
+        name = "Roman Vale",
+        position = "PF",
+        rarity = Rarity.Rare,
+        attributes = { shooting = 57, dribbling = 48, defense = 79, speed = 60, stamina = 76 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Rare],
+        overall = 72,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-felix-grant",
+        name = "Felix Grant",
+        position = "C",
+        rarity = Rarity.Rare,
+        attributes = { shooting = 44, dribbling = 35, defense = 83, speed = 46, stamina = 78 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Rare],
+        overall = 72,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-evan-shaw",
+        name = "Evan Shaw",
+        position = "SG",
+        rarity = Rarity.Rare,
+        attributes = { shooting = 74, dribbling = 71, defense = 63, speed = 73, stamina = 70 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Rare],
+        overall = 72,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-xavier-lane",
+        name = "Xavier Lane",
+        position = "PG",
+        rarity = Rarity.Epic,
+        attributes = { shooting = 76, dribbling = 85, defense = 68, speed = 84, stamina = 80 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Epic],
+        overall = 86,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-malik-rivers",
+        name = "Malik Rivers",
+        position = "SF",
+        rarity = Rarity.Epic,
+        attributes = { shooting = 80, dribbling = 74, defense = 83, speed = 78, stamina = 82 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Epic],
+        overall = 86,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-asher-steele",
+        name = "Asher Steele",
+        position = "C",
+        rarity = Rarity.Epic,
+        attributes = { shooting = 58, dribbling = 43, defense = 90, speed = 56, stamina = 85 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Epic],
+        overall = 86,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "example-damian-summit",
+        name = "Damian Summit",
+        position = "PF",
+        rarity = Rarity.Legendary,
+        attributes = { shooting = 82, dribbling = 75, defense = 88, speed = 77, stamina = 87 },
+        statMultiplier = StatMultiplierByRarity[Rarity.Legendary],
+        overall = 96,
+        sourceType = "EXAMPLE",
+        acquisition = "EXAMPLE_ONLY",
+        ratingStatus = "PROVISIONAL",
+    },
+}
+
+-- These eight references are the exact whitelist from design section 9.1.
+-- No recent school-season membership is implied by these historical cards.
+local HOFPlayers: { Player } = {
+    {
+        id = "hof-magic-johnson-1978-79", name = "Magic Johnson", position = "PG",
+        rarity = Rarity.HOF, overall = 108, attributes = { shooting = 82, dribbling = 98, defense = 88, speed = 91, stamina = 96 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "michigan-state-1978-79", school = "Michigan State", season = "1978-79",
+    },
+    {
+        id = "hof-michael-jordan-1983-84", name = "Michael Jordan", position = "SG",
+        rarity = Rarity.HOF, overall = 110, attributes = { shooting = 96, dribbling = 95, defense = 98, speed = 97, stamina = 98 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "north-carolina-1983-84", school = "North Carolina", season = "1983-84",
+    },
+    {
+        id = "hof-shaquille-oneal-1991-92", name = "Shaquille O'Neal", position = "C",
+        rarity = Rarity.HOF, overall = 109, attributes = { shooting = 62, dribbling = 48, defense = 99, speed = 74, stamina = 94 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "lsu-1991-92", school = "LSU", season = "1991-92",
+    },
+    {
+        id = "hof-oscar-robertson-1959-60", name = "Oscar Robertson", position = "PG",
+        rarity = Rarity.HOF, overall = 108, attributes = { shooting = 94, dribbling = 96, defense = 87, speed = 89, stamina = 98 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "cincinnati-1959-60", school = "Cincinnati", season = "1959-60",
+    },
+    {
+        id = "hof-pete-maravich-1969-70", name = "Pete Maravich", position = "SG",
+        rarity = Rarity.HOF, overall = 107, attributes = { shooting = 99, dribbling = 98, defense = 70, speed = 91, stamina = 95 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "lsu-1969-70", school = "LSU", season = "1969-70",
+    },
+    {
+        id = "hof-jayson-tatum-2016-17", name = "Jayson Tatum", position = "SF",
+        rarity = Rarity.HOF, overall = 105, attributes = { shooting = 95, dribbling = 90, defense = 88, speed = 85, stamina = 93 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "duke-2016-17", school = "Duke", season = "2016-17",
+    },
+    {
+        id = "hof-derrick-rose-2007-08", name = "Derrick Rose", position = "PG",
+        rarity = Rarity.HOF, overall = 106, attributes = { shooting = 83, dribbling = 98, defense = 81, speed = 99, stamina = 93 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "memphis-2007-08", school = "Memphis", season = "2007-08",
+    },
+    {
+        id = "hof-kyrie-irving-2010-11", name = "Kyrie Irving", position = "PG",
+        rarity = Rarity.HOF, overall = 106, attributes = { shooting = 97, dribbling = 99, defense = 72, speed = 93, stamina = 88 },
+        statMultiplier = StatMultiplierByRarity[Rarity.HOF],
+        sourceType = "LEGACY_HOF", acquisition = "GLOBAL_HOF", ratingStatus = "PROVISIONAL",
+        schoolSeasonId = "duke-2010-11", school = "Duke", season = "2010-11",
+    },
+}
+
+-- Design section 9.2: these four cards are never members of a random-roll pool.
+-- All-NBA is a provisional game tier, not a claim about an award in a given year.
+local NonCollegePlayers: { Player } = {
+    {
+        id = "non-college-kobe-bryant", name = "Kobe Bryant", position = "SG",
+        eligiblePositions = { "SG", "SF" },
+        rarity = Rarity.AllNBA, overall = 105, attributes = { shooting = 98, dribbling = 95, defense = 94, speed = 91, stamina = 97 },
+        statMultiplier = StatMultiplierByRarity[Rarity.AllNBA],
+        sourceType = "NON_COLLEGE", acquisition = "DIRECT_PURCHASE", ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "non-college-lebron-james", name = "LeBron James", position = "SF",
+        eligiblePositions = { "SF", "PF", "PG" },
+        rarity = Rarity.AllNBA, overall = 105, attributes = { shooting = 90, dribbling = 95, defense = 94, speed = 95, stamina = 99 },
+        statMultiplier = StatMultiplierByRarity[Rarity.AllNBA],
+        sourceType = "NON_COLLEGE", acquisition = "DIRECT_PURCHASE", ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "non-college-luka-doncic", name = "Luka Doncic", position = "PG",
+        eligiblePositions = { "PG", "SG", "SF" },
+        rarity = Rarity.AllNBA, overall = 103, attributes = { shooting = 96, dribbling = 98, defense = 76, speed = 78, stamina = 94 },
+        statMultiplier = StatMultiplierByRarity[Rarity.AllNBA],
+        sourceType = "NON_COLLEGE", acquisition = "DIRECT_PURCHASE", ratingStatus = "PROVISIONAL",
+    },
+    {
+        id = "non-college-nikola-jokic", name = "Nikola Jokic", position = "C",
+        eligiblePositions = { "C", "PF" },
+        rarity = Rarity.AllNBA, overall = 104, attributes = { shooting = 93, dribbling = 90, defense = 85, speed = 65, stamina = 97 },
+        statMultiplier = StatMultiplierByRarity[Rarity.AllNBA],
+        sourceType = "NON_COLLEGE", acquisition = "DIRECT_PURCHASE", ratingStatus = "PROVISIONAL",
+    },
+}
+
+-- Luau has no integer/range types or compile-time uniqueness constraints.
+-- Validate those data invariants at require time; structural mistakes are LSP errors.
+local seenIds: { [string]: boolean } = {}
+local pools: { { Player } } = { Players, HOFPlayers, NonCollegePlayers }
+for _, pool in pools do
+    for _, player in pool do
+        assert(player.id ~= "" and not seenIds[player.id], "Empty or duplicate player ID: " .. player.id)
+        seenIds[player.id] = true
+        for attribute, value in player.attributes do
+            assert(value >= 1 and value <= 99 and value % 1 == 0,
+                player.id .. ": " .. attribute .. " must be an integer in 1-99")
+        end
+        local range = OverallRangeByRarity[player.rarity]
+        assert(player.overall % 1 == 0 and player.overall >= range.min and player.overall <= range.max,
+            player.id .. ": Overall outside rarity band")
+        if player.sourceType == "NON_COLLEGE" then
+            assert(player.acquisition == "DIRECT_PURCHASE" and player.schoolSeasonId == nil,
+                player.id .. ": non-college cards must be purchase-only without a school-season")
+        elseif player.sourceType == "LEGACY_HOF" then
+            assert(player.schoolSeasonId ~= nil and player.rarity == Rarity.HOF,
+                player.id .. ": HOF reference requires historical school-season metadata")
+        end
+        if player.eligiblePositions then
+            table.freeze(player.eligiblePositions)
+        end
+        table.freeze(player.attributes)
+        table.freeze(player)
+    end
+    table.freeze(pool)
+end
+
+return table.freeze({
+    Rarity = Rarity,
+    StatMultiplierByRarity = StatMultiplierByRarity,
+    OverallRangeByRarity = OverallRangeByRarity,
+    Players = Players,
+    HOFPlayers = HOFPlayers,
+    NonCollegePlayers = NonCollegePlayers,
+})
+]]></ProtectedString>
+					<string name="ScriptGuid">{bd6a7a0d-b792-4ae4-8ebf-ff36fc332192}</string>
+					<BinaryString name="AttributesSerialize"></BinaryString>
+					<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+					<bool name="DefinesCapabilities">false</bool>
+					<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+					<string name="Name">PlayerDatabase</string>
+					<int64 name="SourceAssetId">-1</int64>
+					<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+					<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000b45</UniqueId>
+				</Properties>
+			</Item>
+		</Item>
+	</Item>
+	<Item class="ServerScriptService" referent="RBXdf7318d8903e46eaa3451f62ce37a07f">
+		<Properties>
+			<bool name="LoadStringEnabled">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ServerScriptService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003b1</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ServerStorage" referent="RBXafd81034206441389e6934154c9b24c8">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ServerStorage</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003b2</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="ServiceVisibilityService" referent="RBX5e2346f919a64a109f477ea2b89aa22a">
+		<Properties>
+			<BinaryString name="HiddenServices">AAAAAA==</BinaryString>
+			<BinaryString name="VisibleServices">AAAAAA==</BinaryString>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">ServiceVisibilityService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003c0</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="HttpService" referent="RBXa5c1d035b90c4ccc8fdb9c53729c3930">
+		<Properties>
+			<bool name="HttpEnabled">false</bool>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">HttpService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003c3</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="Lighting" referent="RBX00a073b9c5544cbda360d4d96ce23e23">
+		<Properties>
+			<Color3 name="Ambient">
+				<R>0.5</R>
+				<G>0.5</G>
+				<B>0.5</B>
+			</Color3>
+			<float name="Brightness">1</float>
+			<Color3 name="ColorShift_Bottom">
+				<R>0</R>
+				<G>0</G>
+				<B>0</B>
+			</Color3>
+			<Color3 name="ColorShift_Top">
+				<R>0</R>
+				<G>0</G>
+				<B>0</B>
+			</Color3>
+			<float name="EnvironmentDiffuseScale">0</float>
+			<float name="EnvironmentSpecularScale">0</float>
+			<float name="ExposureCompensation">0</float>
+			<token name="ExtendLightRangeTo120">0</token>
+			<Color3 name="FogColor">
+				<R>0.75</R>
+				<G>0.75</G>
+				<B>0.75</B>
+			</Color3>
+			<float name="FogEnd">100000</float>
+			<float name="FogStart">0</float>
+			<float name="GeographicLatitude">41.7332993</float>
+			<bool name="GlobalShadows">false</bool>
+			<token name="LightingStyle">1</token>
+			<Color3 name="OutdoorAmbient">
+				<R>0.5</R>
+				<G>0.5</G>
+				<B>0.5</B>
+			</Color3>
+			<bool name="Outlines">true</bool>
+			<bool name="PrioritizeLightingQuality">false</bool>
+			<float name="ShadowSoftness">0.5</float>
+			<token name="Technology">2</token>
+			<string name="TimeOfDay">14:00:00</string>
+			<BinaryString name="AttributesSerialize">AQAAACYAAABSQlhfTGlnaHRpbmdUZWNobm9sb2d5VW5pZmllZE1pZ3JhdGlvbgMB</BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">Lighting</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003e5</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="VideoService" referent="RBX7685406d1ae84ab490928723ab3d47f5">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">VideoService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003e8</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="LodDataService" referent="RBXfacac86d065748d6810158ad757fefff">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">LodDataService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e000003e9</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="TestService" referent="RBXd63008cf9e1e4da082c730be58ddb0dc">
+		<Properties>
+			<bool name="AutoRuns">true</bool>
+			<string name="Description"></string>
+			<bool name="ExecuteWithStudioRun">false</bool>
+			<bool name="IsPhysicsEnvironmentalThrottled">true</bool>
+			<bool name="IsSleepAllowed">true</bool>
+			<int name="NumberOfPlayers">0</int>
+			<double name="SimulateSecondsLag">0</double>
+			<bool name="ThrottlePhysicsToRealtime">true</bool>
+			<double name="Timeout">10</double>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">TestService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e0000059a</UniqueId>
+		</Properties>
+	</Item>
+	<Item class="SerializationService" referent="RBX504a58c72be94bcb9669c1108b014fc0">
+		<Properties>
+			<BinaryString name="AttributesSerialize"></BinaryString>
+			<SecurityCapabilities name="Capabilities">0</SecurityCapabilities>
+			<bool name="DefinesCapabilities">false</bool>
+			<UniqueId name="HistoryId">00000000000000000000000000000000</UniqueId>
+			<string name="Name">SerializationService</string>
+			<int64 name="SourceAssetId">-1</int64>
+			<SharedString name="Tags">yuZpQdnvvUBOTYh1jqZ2cA==</SharedString>
+			<UniqueId name="UniqueId">43a8cea74a3b16030aad221e00000623</UniqueId>
+		</Properties>
+	</Item>
+	<SharedStrings>
+		<SharedString md5="yuZpQdnvvUBOTYh1jqZ2cA=="></SharedString>
+	</SharedStrings>
+</roblox>

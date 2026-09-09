@@ -1,0 +1,10 @@
+{
+  "luauVersion": "0.737",
+  "staticAnalysis": "PASS (all new data/config modules; static require paths adapted for standalone CLI)",
+  "runtime": "PASS (all card, school-season, odds, purchase-exclusion and source checks)",
+  "rojoVersion": "7.6.1",
+  "rojoBuild": "PASS",
+  "moduleScriptsInBuild": 146,
+  "studioPlaytest": "Not run",
+  "fullIndividualResearch": "Incomplete; bulk import with sampled verification"
+}

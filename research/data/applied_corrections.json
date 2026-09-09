@@ -1,0 +1,30 @@
+[
+  {
+    "cardId": "college-5041939-150-2025",
+    "field": "minutes",
+    "feedValue": 1134,
+    "officialValue": 1130,
+    "sourceUrl": "https://goduke.com/sports/mens-basketball/stats/2024-25"
+  },
+  {
+    "cardId": "college-5041939-150-2025",
+    "field": "defensiveRebounds",
+    "feedValue": 228,
+    "officialValue": 229,
+    "sourceUrl": "https://goduke.com/sports/mens-basketball/stats/2024-25"
+  },
+  {
+    "cardId": "college-5041939-150-2025",
+    "field": "rebounds",
+    "feedValue": 277,
+    "officialValue": 278,
+    "sourceUrl": "https://goduke.com/sports/mens-basketball/stats/2024-25"
+  },
+  {
+    "cardId": "college-5041935-150-2026",
+    "field": "turnovers",
+    "feedValue": 96,
+    "officialValue": 95,
+    "sourceUrl": "https://goduke.com/sports/mens-basketball/stats/2025-26"
+  }
+]

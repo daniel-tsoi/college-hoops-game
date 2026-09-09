@@ -1,0 +1,15 @@
+local Ranking = require("../src/ServerScriptService/Leaderboard/Ranking")
+assert(Ranking.score(99, 4) == nil)
+assert(Ranking.score(0, 5) == nil)
+assert(Ranking.score(0/0, 5) == nil)
+assert(Ranking.score(116, 5) == nil)
+assert(Ranking.score(104.5, 5) == 105)
+local entries = {}
+for i = 1, 65 do table.insert(entries, { userId = i, username = "Test" .. i, overall = i }) end
+local rows = Ranking.top(entries)
+assert(#rows == 50 and rows[1].userId == 65 and rows[50].userId == 16)
+assert(rows[1].rank == 1 and rows[50].rank == 50 and entries[1].rank == nil)
+assert(#Ranking.top({}) == 0)
+local tied = Ranking.top({ {userId=7, overall=100}, {userId=2, overall=100} })
+assert(tied[1].userId == 2 and tied[2].userId == 7)
+print("Leaderboard: qualification, score validation, descending top 50, ranks, ties and immutable inputs passed")
