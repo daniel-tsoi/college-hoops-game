@@ -97,8 +97,27 @@ Lifetime `playSeconds` is still accumulated and shown as an all-time statistic.
 Cash, cards, gold and reward stock already earned are never taken back. Profiles
 saved before login tracking migrate with `logins` at 0 and an empty history;
 their old lifetime `claimedQuests` flags are kept for reference and no longer
-block a new login's rewards. Studio builds a disposable profile on each Play, so
-they always report login #1 with no history; only live profiles accumulate it.
+block a new login's rewards.
+
+### Testing persistence in Studio
+
+Studio builds a disposable profile on each Play: no DataStore is read or
+written, so progress cannot survive a rejoin and every session reports login #1
+with no history. That is the default, not a fault, and "Enable Studio Access to
+API Services" does not change it because the save path is skipped before that
+setting would apply. Each server states its mode once at startup, so the output
+window says plainly whether saving is live, opted-in, or disposable.
+
+To verify persistence, set `enabled = true` in
+`src/ServerScriptService/Config/StudioSaving.luau`. Studio then reads and writes
+the real `CollegeHoopsShop_v1` and `HoopsPlayerSettings_v1` stores under the
+`studio_` key prefix, so a Studio session can never read or overwrite a live
+player's profile. Fresh Studio profiles start with the configured cash either
+way. The global best-team leaderboard is deliberately excluded: its ordered
+store is keyed by user ID with no room for a prefix, so Studio play would land
+in the live rankings; Studio rankings stay session-local. The opt-in is
+committed disabled and `lune run tests/studio_saving.spec.luau` fails if that
+changes, along with checking Studio keys cannot collide with live ones.
 
 ## Overhead titles
 
@@ -156,6 +175,19 @@ with `python3 scripts/build_card_appearance.py`.
 
 The gear button opens a rounded two-column settings panel. Choose one of eight
 jersey colors and a number from 00–99; the back uses the Roblox username.
+The silhouette is built from flat-topped fabric slabs capped by a rotated piping
+chord, with the maths in `src/shared/JerseyGeometry.luau`. Each slab's top sits
+on its chord's midpoint and the piping is at least as thick as a slab is wide,
+which provably covers the fabric corners at every slope — including the steep
+drop into each armhole, where the previous fixed 0.055 piping left them exposed
+by 0.068 studs and read as a jagged strip. The piping is now one band per slab
+wrapping the full torso depth, instead of two thinner ribbons floating 0.026
+clear of the fabric, and the separate `ShoulderTrim` nubs are gone because they
+sat at the same height as the shoulder-strap chord and shimmered against it.
+Slabs overlap by 0.004 so their side faces never share a plane. This is 20
+slabs rather than 48, which is 50 parts per avatar instead of 158. Run
+`lune run tests/jersey_fit.spec.luau` to check coverage across torso shapes.
+
 Sleeveless scoop-neck jerseys include contrasting neck/arm piping and matching
 shorts with trimmed hems. The front shows a centered number; the back shows the
 username and number. Server-built uniforms replicate and reapply on respawn

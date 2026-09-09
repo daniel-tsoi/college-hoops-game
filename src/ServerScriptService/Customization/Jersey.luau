@@ -1,5 +1,6 @@
 -- A sleeveless scoop-neck uniform, fitted and welded to R6/R15 body segments.
 local Palette=require(game:GetService("ReplicatedStorage").Shared.PlayerSettings)
+local Geometry=require(game:GetService("ReplicatedStorage").Shared.JerseyGeometry)
 local Jersey={}
 function Jersey.apply(player, character, settings)
  local torso=character:FindFirstChild("UpperTorso") or character:FindFirstChild("Torso")
@@ -19,34 +20,20 @@ function Jersey.apply(player, character, settings)
  end
  local width,height,depth=torso.Size.X+.065,torso.Size.Y,torso.Size.Z+.085
  -- Neck and armholes are actual openings, showing the avatar underneath.
- local function topAt(x)
-  local u=math.abs(x)*2/width
-  local top=.5
-  if u<.60 then top=.21+.29*(u/.60)^2 end
-  if u>.78 then top=.5-.36*((u-.78)/.22)^2 end
-  return top*height
+ -- Slab tops sit on their chord's midpoint and the trim is at least as thick as
+ -- a slab is wide, which covers the fabric corners at every slope. See
+ -- JerseyGeometry for the proof and tests/jersey_fit.spec.luau for the check.
+ local shape=Geometry.build(width,height)
+ for _,slab in ipairs(shape.slabs) do
+  piece("TankFabric",torso,Vector3.new(slab.width,slab.top+height/2,depth),
+   CFrame.new(slab.x,(slab.top-height/2)/2,0))
  end
- -- Shared strip boundaries prevent coplanar overlap (flickering vertical seams).
- -- Bounded curve slopes keep fabric edges covered by the raised piping.
- local segments=48
- for i=1,segments do
-  local x=-width/2+(i-.5)*width/segments
-  local top=math.min(topAt(x-width/segments/2),topAt(x+width/segments/2))
-  piece("TankFabric",torso,Vector3.new(width/segments,top+height/2,depth),CFrame.new(x,(top-height/2)/2,0))
- end
- -- Thin piping follows the scoop neck and each arm opening, front and back.
- for _,z in ipairs({-depth/2-.026,depth/2+.026}) do
-  for i=1,segments do
-   local x1=-width/2+(i-1)*width/segments
-   local x2=x1+width/segments
-   local a,b=Vector3.new(x1,topAt(x1),z),Vector3.new(x2,topAt(x2),z)
-   local delta=b-a
-   piece("NeckAndArmTrim",torso,Vector3.new(delta.Magnitude,.055,.04),
-    CFrame.new((a+b)/2)*CFrame.Angles(0,0,math.atan2(delta.Y,delta.X)),ink)
-  end
- end
- for _,x in ipairs({-.39*width,-.30*width,.30*width,.39*width}) do
-  piece("ShoulderTrim",torso,Vector3.new(.055,.04,depth+.09),CFrame.new(x,.5*height,0),ink)
+ -- One piping band per slab, wrapping the whole torso depth. A single enclosing
+ -- band replaces the two ribbons that used to float clear of the fabric edge.
+ for _,chord in ipairs(shape.trims) do
+  piece("NeckAndArmTrim",torso,
+   Vector3.new(chord.length,shape.trimThickness,depth+Geometry.TrimDepthMargin),
+   CFrame.new(chord.x,chord.y,0)*CFrame.Angles(0,0,chord.angle),ink)
  end
  -- Number centered on the chest; username appears only on the back.
  local printHeight=height*.64

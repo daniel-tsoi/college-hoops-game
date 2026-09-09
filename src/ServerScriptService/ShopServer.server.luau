@@ -21,14 +21,25 @@ revealEvent.Name = "HoopsRareReveal"
 revealEvent.Parent = ReplicatedStorage
 local rollRandom = Random.new()
 local validPositions = { PG=true, SG=true, SF=true, PF=true, C=true }
-local preview = RunService:IsStudio()
+local StudioSaving = require(script.Parent.Config.StudioSaving)
+local inStudio = RunService:IsStudio()
+-- Opting in makes Studio persist to a separate key namespace; see the config.
+local studioSaving = inStudio and StudioSaving.enabled == true
+-- `preview` means a disposable profile that is never read from or written to.
+local preview = inStudio and not studioSaving
 local store = not preview and DataStoreService:GetDataStore("CollegeHoopsShop_v1") or nil
+-- Stated once at startup, because a silent disposable profile reads as lost progress.
+print(preview and "[Hoops] Studio: disposable profile, progress will NOT be saved (see Config/StudioSaving)"
+	or studioSaving and "[Hoops] Studio: saving to the real DataStore under key prefix '" .. StudioSaving.keyPrefix .. "'"
+	or "[Hoops] Live: saving to CollegeHoopsShop_v1")
 local profiles, busy, lastRequest, sessions = {}, {}, {}, {}
 local remote = Instance.new("RemoteFunction")
 remote.Name = "HoopsShop"
 local questsById = {}
 for _, quest in ipairs(Quests) do questsById[quest.id] = quest end
-local function key(player) return "player_" .. player.UserId end
+local function key(player) return (studioSaving and StudioSaving.keyPrefix or "") .. "player_" .. player.UserId end
+-- Studio profiles start funded so features can be exercised without grinding.
+local function startingBalance() return inStudio and StudioSaving.startingBalance or 0 end
 local function elapsed(player)
 	local session = sessions[player]
 	return session and math.max(0, math.floor(os.clock() - session.started)) or 0
@@ -113,10 +124,10 @@ local function load(player)
 	local loginAt = os.time()
 	local profile
 	if preview then
-		profile = Transactions.startSession(Transactions.newProfile(1000000), sessionId, loginAt)
+		profile = Transactions.startSession(Transactions.newProfile(startingBalance()), sessionId, loginAt)
 	else
 		profile = store:UpdateAsync(key(player), function(current)
-			return Transactions.startSession(Transactions.migrateShopOwnership(current or Transactions.newProfile(0), Catalog.ById), sessionId, loginAt)
+			return Transactions.startSession(Transactions.migrateShopOwnership(current or Transactions.newProfile(startingBalance()), Catalog.ById), sessionId, loginAt)
 		end)
 	end
 	profiles[player] = profile
@@ -143,7 +154,7 @@ local function commit(player, mutate)
 		profiles[player] = transform(profiles[player])
 	else
 		profiles[player] = store:UpdateAsync(key(player), function(current)
-			return transform(current or Transactions.startSession(Transactions.newProfile(0), session.id, startedAt))
+			return transform(current or Transactions.startSession(Transactions.newProfile(startingBalance()), session.id, startedAt))
 		end)
 	end
 	publish(player)
