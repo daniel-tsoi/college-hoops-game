@@ -7,6 +7,7 @@ local Catalog = require(ReplicatedStorage.Shared.ShopCatalog)
 local Quests = require(ReplicatedStorage.QuestConfig)
 local Transactions = require(script.Parent.Shop.Transactions)
 local BestTeam = require(script.Parent.Shop.BestTeam)
+local TeamChemistry = require(ReplicatedStorage.Shared.TeamChemistry)
 local Database = require(ReplicatedStorage.Shared.PlayerDatabase)
 local rosterById = Database.ById
 local RollPool = require(script.Parent.Roll.Pool)
@@ -14,6 +15,10 @@ local SummonConfig = require(script.Parent.Config.SummonConfig)
 local pools = RollPool.build(Database, SummonConfig)
 local RareWheel = require(script.Parent.Roll.RareWheel)
 local rarePools = RareWheel.build(Database)
+local RareReveal = require(script.Parent.Roll.RareReveal)
+local revealEvent = Instance.new("RemoteEvent")
+revealEvent.Name = "HoopsRareReveal"
+revealEvent.Parent = ReplicatedStorage
 local rollRandom = Random.new()
 local validPositions = { PG=true, SG=true, SF=true, PF=true, C=true }
 local preview = RunService:IsStudio()
@@ -69,13 +74,14 @@ local function rollState(profile)
 	for _,field in ipairs({"candidates","squad","rare"}) do
 		for pos,entry in pairs(draft[field] or {}) do
 			local card=rosterById[entry.id]
-			if card then
+			if card and (field ~= "rare" or (profile.shopUnlocked or {})[card.id] == true) then
 				local gold=Transactions.isGoldRoll(entry.goldRoll)
 				result[field][pos]={id=card.id,prospectNumber=entry.prospectNumber,name=card.name,position=card.position,school=card.school,
 					season=card.season,overall=BestTeam.overall(card,gold),gold=gold,rarity=card.rarity}
 			end
 		end
 	end
+	result.chemistry = TeamChemistry.evaluate(result.squad)
 	return result
 end
 local function response(player, code)
@@ -156,10 +162,16 @@ remote.OnServerInvoke = function(player, action, id)
      draft and draft.team and draft.team.key,action=="RefreshRoll",draft and draft.candidates,action=="RerollPlayer")
 			end
 			if action=="NextRoll" or action=="RestartRoll" or action=="RollState" or action=="RerollPlayer" then
-    rare=RareWheel.draw(rarePools,rollRandom)
+    rare=RareWheel.draw(rarePools,rollRandom,profiles[player].shopUnlocked)
    end
    if action=="ChooseRare" and id~="HOF" and id~="NonCollege" then return response(player,"INVALID") end
+   local beforeSerial=profiles[player].rollDraft and profiles[player].rollDraft.rareRoll or 0
    code=commit(player,function(profile) return Transactions.rollAction(profile,action,id,draws,team,rare) end)
+   for _,hit in ipairs(RareReveal.events(beforeSerial,profiles[player],rosterById)) do
+    hit.userId=player.UserId
+    hit.playerName=player.DisplayName
+    revealEvent:FireAllClients(hit)
+   end
 		elseif action == "Equip" then
 			if type(id) ~= "string" or not rosterById[id] then return response(player, "INVALID") end
 			code = commit(player, function(profile) return Transactions.equip(profile, id) end)

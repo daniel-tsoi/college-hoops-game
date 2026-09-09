@@ -25,7 +25,7 @@ local function render(player)
 	if not card then return end
 	local isGold = player:GetAttribute("EquippedCardGold") == true
 	local gui = make("BillboardGui", playerGui, { Name = "EquippedPlayerCard", Adornee = head, ResetOnSpawn = false,
-		Size = UDim2.fromOffset(150, 180), StudsOffsetWorldSpace = Vector3.new(0, 3.5, 0),
+		Size = UDim2.fromOffset(150, 180), StudsOffsetWorldSpace = Vector3.new(0, 2.5, 0), SizeOffset = Vector2.new(0, 0.72),
 		MaxDistance = 80, AlwaysOnTop = false, LightInfluence = 0 })
 	cards[player] = gui
 	local frame = make("Frame", gui, { Size = UDim2.fromScale(1, 1), BackgroundColor3 = isGold and Color3.fromRGB(255, 210, 82) or Color3.fromRGB(135, 207, 224), BorderSizePixel = 0 })

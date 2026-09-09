@@ -43,6 +43,21 @@ cash. Their old equipped selection is cleared. Only subsequent rolled cards
 enter Best Team. The leaderboard uses `HoopsRolledTeamOVR_v2` so old purchased
 team scores do not appear. Eligible rolled teams register on next join.
 
+## Squad chemistry
+
+The active draft gives each player chemistry for matching schools and eras.
+Era currently means the season printed on the card. Groups of 2/3/4/5 give
++1/+2/+3/+4 era OVR and +2/+4/+6/+7 school OVR. These stack on matching
+players, after gold, without changing stored base ratings. Missing metadata
+never forms a matching group. Team OVR averages the boosted lineup ratings.
+
+Squad, candidate, and rare-hit cards show base OVR + chemistry. Hover or focus
+a card to see the school/era breakdown and the projected team OVR, base change,
+and chemistry change. Comparisons use the card's position and recalculate all
+teammates; hovering never accepts a card. A filled regular slot is comparison
+only; existing pick rules still apply. Collection Best Team remains its separate
+highest-base-rating ownership summary.
+
 ## Gold, Collection, and Best Team
 
 Every generated roll independently has 5% gold odds and a +5 OVR bonus, up to
@@ -58,6 +73,21 @@ do not touch live data stores; global read caching refreshes every 30 seconds.
 
 Playtime and activity quest cash, rerolls and refreshes remain saved. Only new
 rolled ownership advances unique-player quests; eligibility purchases do not.
+
+## Overhead titles
+
+A colored title appears above each Roblox username: Top 1 gold, Top 2 silver,
+Top 3 bronze, and Top 50 light blue for ranks 4–50. The same colored title
+appears next to the player name in chat, e.g. `[Top 1] Player1`. Titles follow
+the existing global best-team leaderboard and
+refresh automatically even while the leaderboard panel is closed. Studio uses
+session rankings only. Failed global reads preserve the last successful ranks.
+Creator (purple), Admin (red), and Tester (green) override rank titles, in that
+order. Configure numeric user IDs in `src/ServerScriptService/Config/TitleRoles.luau`;
+the experience owner receives Creator automatically. These are cosmetic labels,
+not administrative permissions. Equipped cards sit above the title and username.
+The legacy server card renderer is replaced with cleanup; only the client renders
+the card, preventing duplicate cards and broken server-side portraits.
 
 ## Verification and data
 

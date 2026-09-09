@@ -47,6 +47,7 @@ function View.mount(canvas, decorate, choose)
    if card then
     decorate(entry.button,card.position,card,true)
    else
+    decorate(entry.button,"",nil,true) -- Clear any previous hit's hover preview.
     for _,child in ipairs(entry.button:GetChildren()) do child:Destroy() end
     entry.button.Text=serial>0 and "NO HIT\n\nNext roll: new chance" or "ROLL TO\nREVEAL"
    end

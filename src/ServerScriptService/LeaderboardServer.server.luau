@@ -53,6 +53,13 @@ game:BindToClose(function()
 		task.wait(1)
 	until os.clock() >= deadline
 end)
+local function applyRanks(rows)
+	local ranks = {}
+	for _, row in ipairs(rows) do ranks[row.userId] = row.rank end
+	for _, player in ipairs(Players:GetPlayers()) do
+		player:SetAttribute("LeaderboardRank", ranks[player.UserId])
+	end
+end
 local function getRows()
 	if preview then
 		local entries = {}
@@ -60,9 +67,11 @@ local function getRows()
 			local score = Ranking.score(player:GetAttribute("BestTeamOverall"), player:GetAttribute("BestTeamCount"))
 			if score then table.insert(entries, { userId = player.UserId, username = player.Name, overall = score }) end
 		end
-		return { code = "READY", preview = true, rows = Ranking.top(entries) }
+		local rows = Ranking.top(entries)
+		applyRanks(rows)
+		return { code = "READY", preview = true, rows = rows }
 	end
-	if os.clock() - cachedAt < 30 then return { code = "READY", rows = cached } end
+	if os.clock() - cachedAt < 30 then applyRanks(cached); return { code = "READY", rows = cached } end
 	if refreshing then return { code = cached and "STALE" or "BUSY", rows = cached } end
 	refreshing = true
 	local ok, rows = pcall(function()
@@ -82,7 +91,7 @@ local function getRows()
 		return Ranking.top(entries)
 	end)
 	refreshing = false
-	if ok then cached, cachedAt = rows, os.clock() end
+	if ok then cached, cachedAt = rows, os.clock(); applyRanks(rows) end
 	return { code = ok and "READY" or (cached and "STALE" or "UNAVAILABLE"), rows = cached }
 end
 local remote = Instance.new("RemoteFunction")
@@ -93,3 +102,12 @@ remote.OnServerInvoke = function(player)
 	return getRows()
 end
 remote.Parent = ReplicatedStorage
+
+-- Titles must update even when nobody opens the leaderboard panel.
+Players.PlayerAdded:Connect(function() task.spawn(getRows) end)
+task.spawn(function()
+	while true do
+		getRows()
+		task.wait(preview and 3 or 30)
+	end
+end)

@@ -187,6 +187,7 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
   local candidate=draft.rare and draft.rare[position]
   if not candidate then return profile,"INVALID" end
+  if (profile.shopUnlocked or {})[candidate.id] ~= true then return profile,"LOCKED" end
   updated=Transactions.unlock(updated,candidate.id,candidate.goldRoll)
   updated.rollDraft.squad[candidate.position]=candidate
   updated.rollDraft.pickAvailable=false

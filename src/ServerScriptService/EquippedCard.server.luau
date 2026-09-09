@@ -1,0 +1,18 @@
+-- Migration: replace the old server renderer saved in the canonical place.
+-- ViewportFrame cards now render exclusively in each client's PlayerGui.
+local Players = game:GetService("Players")
+local function characterAdded(character)
+	local function removeLegacy(instance)
+		if instance:IsA("BillboardGui") and instance.Name == "EquippedPlayerCard" then
+			instance:Destroy()
+		end
+	end
+	character.DescendantAdded:Connect(removeLegacy)
+	for _, instance in ipairs(character:GetDescendants()) do removeLegacy(instance) end
+end
+local function joined(player)
+	player.CharacterAdded:Connect(characterAdded)
+	if player.Character then characterAdded(player.Character) end
+end
+Players.PlayerAdded:Connect(joined)
+for _, player in ipairs(Players:GetPlayers()) do joined(player) end

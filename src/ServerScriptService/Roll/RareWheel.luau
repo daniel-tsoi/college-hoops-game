@@ -1,9 +1,12 @@
--- Independent server-only draws. Exact odds, with no purchase prerequisite.
+-- Independent server-only draws. Exact odds; only shop-purchased players are eligible.
 local RareWheel = {}
+-- Test override disabled: HOF uses its normal 0.125% chance.
+RareWheel.HOFTest100 = false
 RareWheel.Denominator = 200000
 RareWheel.Tickets = { HOF = 250, NonCollege = 260 }
 function RareWheel.hit(kind, ticket)
  assert(RareWheel.Tickets[kind] and ticket >= 1 and ticket <= RareWheel.Denominator)
+ if kind == "HOF" and RareWheel.HOFTest100 then return true end
  return ticket <= RareWheel.Tickets[kind]
 end
 function RareWheel.build(database)
@@ -15,14 +18,16 @@ function RareWheel.build(database)
  for _,cards in pairs(pools) do table.sort(cards,function(a,b) return a.id < b.id end) end
  return pools
 end
-function RareWheel.draw(pools, random)
+function RareWheel.draw(pools, random, shopUnlocked)
  local result = {}
  -- Take both independent tickets before selecting cards or rolling gold.
  local tickets = {HOF=random:NextInteger(1,RareWheel.Denominator), NonCollege=random:NextInteger(1,RareWheel.Denominator)}
  for _,kind in ipairs({"HOF", "NonCollege"}) do
-  local cards = pools[kind]
-  assert(#cards > 0, "Missing rare player pool")
-  if RareWheel.hit(kind,tickets[kind]) then
+  local cards = {}
+  for _,card in ipairs(pools[kind]) do
+   if (shopUnlocked or {})[card.id] == true then table.insert(cards,card) end
+  end
+  if RareWheel.hit(kind,tickets[kind]) and #cards > 0 then
    local card = cards[random:NextInteger(1,#cards)]
    result[kind] = {id=card.id,position=card.position,goldRoll=random:NextInteger(1,100)}
   end

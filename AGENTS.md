@@ -27,3 +27,18 @@
 - Historical builds are stored in `staged-implementation/archive/` with the
   `.rbxlx.archive` extension so Studio will not offer them as openable projects.
   Never restore or target them unless the user explicitly requests recovery.
+
+# GitHub publishing preference
+
+- When the user says to put, save, sync, upload, or push this project's work to
+  GitHub, treat that request as authorization to commit the relevant project
+  changes and push them to the configured GitHub remote without asking for
+  another confirmation. The current repository is
+  `https://github.com/daniel-tsoi/college-hoops-game.git`.
+- Inspect the diff, exclude secrets and unrelated files, run checks appropriate
+  to the changes, and use a descriptive commit message. Respect any narrower
+  scope the user specifies. Do not force-push or discard existing work.
+- Publish when the user requests it; do not push after every edit by default.
+  Report the commit and push result, or the concrete blocker if publishing fails.
+- This preference covers project files in this workspace, not exporting private
+  Codex chat transcripts or work from other projects.

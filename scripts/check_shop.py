@@ -18,7 +18,11 @@ subprocess.run([args.luau, str(ROOT / 'tests/leaderboard.spec.luau')], check=Tru
 subprocess.run([args.luau, str(ROOT / 'tests/gold_cards.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/roll.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/rare_wheel.spec.luau')], check=True)
+subprocess.run([args.luau, str(ROOT / 'tests/rare_reveal.spec.luau')], check=True)
+subprocess.run([args.luau, str(ROOT / 'tests/chemistry.spec.luau')], check=True)
 paths = [ROOT / p for p in [
+    'src/ServerScriptService/Roll/RareReveal.luau',
+    'src/StarterPlayer/StarterPlayerScripts/RareRevealFX.client.luau',
     'src/ServerScriptService/Roll/RareWheel.luau',
     'src/StarterPlayer/StarterPlayerScripts/RareWheelView.luau',
     'src/shared/ShopCatalog.luau',
@@ -52,7 +56,7 @@ with tempfile.TemporaryDirectory(prefix='hoops-shop-check-') as directory:
         source = (ROOT / f'src/shared/PlayerData/{name}.luau').read_text()
         source = source.replace('require(script.Parent.Parent.PlayerTypes)', 'require("./PlayerTypes")')
         (temp / f'{name}.luau').write_text(source)
-    source = paths[0].read_text().replace('local data = script.Parent.PlayerData', '')
+    source = (ROOT / 'src/shared/ShopCatalog.luau').read_text().replace('local data = script.Parent.PlayerData', '')
     source = 'local Color3 = { fromRGB = function(r, g, b) return {r, g, b} end }\n' + source
     for name in ['GeneratedHOF001', 'GeneratedNonCollege001']:
         source = source.replace(f'require(data.{name})', f'require("./{name}")')
