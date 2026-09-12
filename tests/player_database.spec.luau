@@ -4,7 +4,7 @@ local schools = require("../src/shared/SchoolSeasonDatabase")
 local odds = require("../src/ServerScriptService/Config/SummonConfig")
 local store = require("../src/ServerScriptService/Config/NonCollegeCatalog")
 assert(#db.Players == 25393 and #schools.Entries == 1812)
-assert(#db.HOFPlayers == 8 and #db.NonCollegePlayers == 4)
+assert(#db.HOFPlayers == 8 and #db.NonCollegePlayers == 8)
 local tickets: { [string]: number } = { HOF = 0, NonCollege = 0, ["All-Star"] = 0, Ordinary = 0 }
 for ticket = 1, odds.Denominator do
     local matches = 0
@@ -34,7 +34,7 @@ for _, id in odds.HOFCardIds do
     assert(card ~= nil and card.rarity == db.Rarity.HOF and expectedHOF[card.name])
     assert(card.sourceStats ~= nil and card.sourceUrls ~= nil)
 end
-local expectedPurchase = { ["Kobe Bryant"] = true, ["LeBron James"] = true, ["Luka Doncic"] = true, ["Nikola Jokic"] = true }
+local expectedPurchase = { ["Kobe Bryant"] = true, ["LeBron James"] = true, ["Luka Doncic"] = true, ["Nikola Jokic"] = true, ["Kevin Garnett"] = true, ["Victor Wembanyama"] = true, ["Dirk Nowitzki"] = true, ["Giannis Antetokounmpo"] = true }
 local purchaseIds: { [string]: boolean } = {}
 for _, product in store.Products do
     local card = db.ById[product.cardId]
@@ -43,7 +43,7 @@ for _, product in store.Products do
     assert(product.productId == nil and card.schoolSeasonId == nil)
     purchaseIds[product.cardId] = true
 end
-assert(#store.Products == 4 and store.RequireVerifiedServerEntitlement)
+assert(#store.Products == 8 and store.RequireVerifiedServerEntitlement)
 for _, pool in { db.Players, db.AllStarPlayers, db.HOFPlayers } do
     for _, card in pool do assert(not purchaseIds[card.id], "Purchase card leaked into a summon pool") end
 end
@@ -74,4 +74,4 @@ for _, card in db.Players do
     assert(table.isfrozen(card) and table.isfrozen(card.attributes))
 end
 assert(not pcall(function() db.Players[1].attributes.shooting = 1000 end))
-print("PASS: 25,393 base cards, 1,812 school-seasons, exact 1/800 HOF, 1/750 non-college and 1/100 All-Star odds, eight HOF identities, four non-college identities, source spot checks, immutable data")
+print("PASS: 25,393 base cards, 1,812 school-seasons, exact 1/800 HOF, 1/750 non-college and 1/100 All-Star odds, eight HOF identities, eight non-college identities, source spot checks, immutable data")

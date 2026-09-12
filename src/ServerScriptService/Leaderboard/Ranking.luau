@@ -1,6 +1,6 @@
 local Ranking = {}
 function Ranking.score(overall, count)
-	if count ~= 5 or type(overall) ~= "number" or overall ~= overall or overall < 1 or overall > 115 then return nil end
+	if (count ~= 5 and count ~= 6) or type(overall) ~= "number" or overall ~= overall or overall < 1 or overall > 128 then return nil end
 	return math.floor(overall + 0.5)
 end
 function Ranking.top(entries)

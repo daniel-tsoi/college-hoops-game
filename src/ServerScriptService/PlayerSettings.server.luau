@@ -10,12 +10,18 @@ local Jersey=require(script.Parent.Customization.Jersey)
 local store=not preview and game:GetService("DataStoreService"):GetDataStore("HoopsPlayerSettings_v1") or nil
 local remote=Instance.new("RemoteFunction"); remote.Name="HoopsPlayerSettings"; remote.Parent=ReplicatedStorage
 local profiles,busy,last={}, {}, {}
+local characterReady,fitConnections,fitVersion={}, {}, {}
+local function disconnectFit(player)
+ for _,connection in ipairs(fitConnections[player] or {}) do connection:Disconnect() end
+ fitConnections[player]=nil; characterReady[player]=nil
+ fitVersion[player]=(fitVersion[player] or 0)+1
+end
 local function key(player) return (studioSaving and StudioSaving.keyPrefix or "")..tostring(player.UserId) end
 local function apply(player)
  local data=profiles[player]
  if not data then return end
  for key,value in pairs(data) do player:SetAttribute("HoopsSettings_"..key,value) end
- if player.Character then Jersey.apply(player,player.Character,data) end
+ if player.Character and characterReady[player]==player.Character then Jersey.apply(player,player.Character,data) end
 end
 local function load(player)
  local data=store and store:GetAsync(key(player)) or nil
@@ -43,12 +49,37 @@ remote.OnServerInvoke=function(player,value)
  return result
 end
 local function joined(player)
- player.CharacterAdded:Connect(function(character)
-  character:WaitForChild("Humanoid",10)
-  local torso=character:WaitForChild("HumanoidRootPart",10)
-  if torso and character==player.Character then apply(player) end
- end)
- player.CharacterAppearanceLoaded:Connect(function() apply(player) end)
+ local function characterAdded(character)
+  disconnectFit(player)
+  local connections={}; fitConnections[player]=connections
+  local function refit()
+   fitVersion[player]=(fitVersion[player] or 0)+1
+   local version=fitVersion[player]
+   task.delay(.5,function()
+    if fitVersion[player]~=version or player.Character~=character or not character.Parent then return end
+    if not player:HasAppearanceLoaded() then return end
+    local humanoid=character:FindFirstChildOfClass("Humanoid")
+    if not humanoid or not character:FindFirstChild("HumanoidRootPart") then return end
+    characterReady[player]=character
+    apply(player)
+   end)
+  end
+  local function watch(child)
+   if child:IsA("BasePart") then
+    table.insert(connections,child:GetPropertyChangedSignal("Size"):Connect(refit))
+   end
+   if child:IsA("BasePart") or child:IsA("Accessory") or child:IsA("Clothing") or child:IsA("ShirtGraphic") then refit() end
+  end
+  table.insert(connections,character.ChildAdded:Connect(watch))
+  table.insert(connections,player.CharacterAppearanceLoaded:Connect(function(loaded)
+   if loaded==character then refit() end
+  end))
+  for _,child in ipairs(character:GetChildren()) do watch(child) end
+  refit()
+ end
+ player.CharacterAdded:Connect(characterAdded)
+ player.CharacterRemoving:Connect(function() disconnectFit(player) end)
+ if player.Character then characterAdded(player.Character) end
  busy[player]=true
  local ok=pcall(load,player)
  busy[player]=nil
@@ -56,4 +87,4 @@ local function joined(player)
 end
 Players.PlayerAdded:Connect(joined)
 for _,player in ipairs(Players:GetPlayers()) do task.spawn(joined,player) end
-Players.PlayerRemoving:Connect(function(player) profiles[player]=nil; last[player]=nil end)
+Players.PlayerRemoving:Connect(function(player) disconnectFit(player); profiles[player]=nil; last[player]=nil; fitVersion[player]=nil end)

@@ -17,6 +17,10 @@ local special = {
  ["LeBron James"]={"23","552583","805038","fade","211713","FFC94A"},
  ["Luka Doncic"]={"77","00538C","E8BB94","swept","67432B","4CDBFF"},
  ["Nikola Jokic"]={"15","0E2240","F0C9A4","buzz","684A36","FFD36A"},
+ ["Kevin Garnett"]={"21","246849","805038","bald","171311","69FF9B"},
+ ["Victor Wembanyama"]={"1","8796A1","B8784F","curls","211713","9FEAFF"},
+ ["Dirk Nowitzki"]={"41","00538C","F0C9A4","swept","B89150","67C9FF"},
+ ["Giannis Antetokounmpo"]={"34","00471B","805038","fade","211713","B1FF75"},
 }
 local function hash(value)
  local h=17
@@ -42,6 +46,7 @@ function Appearance.get(card)
   end
  end
  result.gold=card.gold==true
+ result.extraTall=card.id=="non-college-victor-wembanyama"
  return result
 end
 return Appearance

@@ -24,6 +24,7 @@ export type Player = {
     schoolSeasonId: string?, school: string?, season: string?,
     eligiblePositions: { Position }, baseCardId: string?, eligibilityBasis: string?,
     defaultUnlocked: boolean?,
+    draftYear: number?, draftPick: number?, ratingRationale: string?,
 }
 export type SchoolSeason = {
     id: string, school: string, teamName: string, season: string, sourceTeamId: string,

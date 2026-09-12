@@ -1,10 +1,12 @@
 -- A sleeveless scoop-neck uniform, fitted and welded to R6/R15 body segments.
 local Palette=require(game:GetService("ReplicatedStorage").Shared.PlayerSettings)
 local Geometry=require(game:GetService("ReplicatedStorage").Shared.JerseyGeometry)
+local Clothing=require(script.Parent.UniformClothing)
 local Jersey={}
 function Jersey.apply(player, character, settings)
  local torso=character:FindFirstChild("UpperTorso") or character:FindFirstChild("Torso")
  if not torso or not torso:IsA("BasePart") then return end
+ Clothing.prepare(character)
  local old=character:FindFirstChild("HoopsJersey")
  if old then old:Destroy() end
  local model=Instance.new("Model"); model.Name="HoopsJersey"
@@ -18,7 +20,8 @@ function Jersey.apply(player, character, settings)
   local weld=Instance.new("WeldConstraint"); weld.Part0=body; weld.Part1=part; weld.Parent=part
   return part
  end
- local width,height,depth=torso.Size.X+.065,torso.Size.Y,torso.Size.Z+.085
+ local padding=math.max(.025,math.min(torso.Size.X,torso.Size.Z)*.065)
+ local width,height,depth=torso.Size.X+padding,torso.Size.Y,torso.Size.Z+padding
  -- Neck and armholes are actual openings, showing the avatar underneath.
  -- Slab tops sit on their chord's midpoint and the trim is at least as thick as
  -- a slab is wide, which covers the fabric corners at every slope. See

@@ -43,6 +43,12 @@ function Portrait.mount(parent,card,position,size)
  local world=make("WorldModel",view,{Name="PortraitWorld"})
  local model=make("Model",world,{Name="SmilingRobloxPlayer"})
  local function part(name,pos,dimensions,tint,shape)
+  -- Wemby's elongated body rises beyond the fixed portrait camera. Keep the
+  -- actual head intact above the crop, so every shared card view gets the joke.
+  if art.extraTall then
+   pos=Vector3.new(pos.X*.82,(pos.Y+.64)*2.9-.64,pos.Z)
+   dimensions=Vector3.new(dimensions.X*.82,dimensions.Y*2.9,dimensions.Z)
+  end
   return make("Part",model,{Name=name,Position=pos,Size=dimensions,Color=tint,Material=Enum.Material.SmoothPlastic,
    Anchored=true,CanCollide=false,CanTouch=false,CanQuery=false,CastShadow=false,Shape=shape or Enum.PartType.Block})
  end

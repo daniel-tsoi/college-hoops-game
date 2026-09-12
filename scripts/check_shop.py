@@ -21,8 +21,12 @@ subprocess.run([args.luau, str(ROOT / 'tests/rare_wheel.spec.luau')], check=True
 subprocess.run([args.luau, str(ROOT / 'tests/rare_reveal.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/chemistry.spec.luau')], check=True)
 subprocess.run([args.luau, str(ROOT / 'tests/auto_finish.spec.luau')], check=True)
+subprocess.run([args.luau, str(ROOT / 'tests/sixth_man.spec.luau')], check=True)
 paths = [ROOT / p for p in [
     'src/StarterPlayer/StarterPlayerScripts/RollSounds.luau',
+    'src/StarterPlayer/StarterPlayerScripts/SixthManView.luau',
+    'src/StarterPlayer/StarterPlayerScripts/SquadCompletion.luau',
+    'src/ServerScriptService/Roll/SixthMan.luau',
     'src/ServerScriptService/Roll/RareReveal.luau',
     'src/StarterPlayer/StarterPlayerScripts/RareRevealFX.client.luau',
     'src/ServerScriptService/Roll/RareWheel.luau',
@@ -65,7 +69,7 @@ with tempfile.TemporaryDirectory(prefix='hoops-shop-check-') as directory:
     (temp / 'ShopCatalog.luau').write_text(source)
     (temp / 'check.luau').write_text('''
 local catalog = require("./ShopCatalog")
-assert(#catalog.Offers == 12)
+assert(#catalog.Offers == 16)
 local groups = { HOF = 0, ["NON-COLLEGE"] = 0 }
 local seen = {}
 for _, offer in ipairs(catalog.Offers) do
@@ -80,9 +84,9 @@ for _, offer in ipairs(catalog.Offers) do
     end
     groups[offer.group] += 1
 end
-assert(groups.HOF == 8 and groups["NON-COLLEGE"] == 4)
+assert(groups.HOF == 8 and groups["NON-COLLEGE"] == 8)
 assert(catalog.ById["hof-shaquille-oneal-1991-92"].price == 400000)
-print("Shop catalog: 8 HOF + 4 non-college, unique IDs, stats, icons, prices, and Shaq anchor passed")
+print("Shop catalog: 8 HOF + 8 non-college, unique IDs, stats, icons, prices, and Shaq anchor passed")
 ''')
     subprocess.run([args.luau, str(temp / 'check.luau')], check=True)
 print('All shop scripts compiled. Studio rendering and live DataStore testing remain separate.')

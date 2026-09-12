@@ -1,3 +1,4 @@
+local CardMotion = require(script.Parent:WaitForChild("CardMotion"))
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MenuFocus = require(script.Parent:WaitForChild("MenuFocus"))
@@ -61,6 +62,7 @@ local function createCard(card)
 	label(tile, "School", card.school and (card.school .. " · " .. card.season) or "NON-COLLEGE", UDim2.fromOffset(10, 183), UDim2.new(1, -20, 0, 35), 13, muted)
 	local badge = label(tile, "GoldBadge", "", UDim2.fromOffset(10, 218), UDim2.new(1, -20, 0, 22), 13, gold)
 	local equip = label(tile, "Equip", "CLICK TO EQUIP", UDim2.fromOffset(10, 242), UDim2.new(1, -20, 0, 30), 16, blue)
+	CardMotion.attach(tile, false)
 	local item = { tile = tile, equip = equip, rating = rating, badge = badge }
 	tile.Activated:Connect(function()
 		if pending or state.owned[card.id] ~= true or state.equippedCardId == card.id then return end

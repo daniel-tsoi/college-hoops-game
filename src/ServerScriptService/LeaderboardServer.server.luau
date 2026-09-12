@@ -3,7 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local Ranking = require(script.Parent.Leaderboard.Ranking)
 local preview = RunService:IsStudio()
-local store = not preview and game:GetService("DataStoreService"):GetOrderedDataStore("HoopsRolledTeamOVR_v2") or nil
+local store = not preview and game:GetService("DataStoreService"):GetOrderedDataStore("HoopsCompletedTeamOVR_v3") or nil
 local dirty, saving, submitted, names, lastRequest = {}, {}, {}, {}, {}
 local cached, cachedAt, refreshing = nil, -math.huge, false
 local function save(userId)
@@ -12,7 +12,7 @@ local function save(userId)
 	local score = dirty[userId]
 	local ok = pcall(function()
 		store:UpdateAsync(tostring(userId), function(previous)
-			-- Owned cards are permanent; a complete best five can only improve.
+			-- Only complete single-run records qualify; their saved score can only improve.
 			return math.max(previous or 0, score)
 		end)
 	end)

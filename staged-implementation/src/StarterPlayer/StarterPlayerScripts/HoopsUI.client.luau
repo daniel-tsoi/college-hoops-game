@@ -1,6 +1,5 @@
 -- Existing UI bootstrap; server-backed roll behavior lives in root RollController.
 local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
 local GuiService = game:GetService("GuiService")
 local UserInputService = game:GetService("UserInputService")
 
@@ -8,7 +7,6 @@ local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
 if playerGui:FindFirstChild("CollegeHoopsUI") then
 	return -- Prevent duplicate copies of this interface.
 end
-local preview = RunService:IsStudio()
 local colors = {
 	background = Color3.fromRGB(15, 20, 29),
 	panel = Color3.fromRGB(25, 33, 46),
@@ -103,8 +101,6 @@ local function outline(object, color)
 	})
 end
 textAt(canvas, "Title", "BUILD YOUR\nSQUAD", 24, 18, 280, 100, 38)
-textAt(canvas, "Mode", preview and "STUDIO TEST · DISPOSABLE SAVES" or "ROLL YOUR SQUAD", 24, 120, 280, 24, 14, colors.accent)
-local counters = textAt(canvas, "Counters", "", 24, 147, 280, 40, 15)
 local actions = create("Frame", canvas, {
 	Name = "Actions",
 	Position = UDim2.fromOffset(44, 202),
@@ -197,6 +193,6 @@ status.BorderSizePixel = 0
 
 require(script.Parent:WaitForChild("RollController")).attach({
  gui=gui, background=background, build=build, buttons=buttons, slots=slots,
- candidates=candidateButtons, counters=counters, lineup=lineup, reveal=reveal,
+ candidates=candidateButtons, lineup=lineup, reveal=reveal,
  status=status, canvas=canvas, resizeConnection=resizeConnection,
 })

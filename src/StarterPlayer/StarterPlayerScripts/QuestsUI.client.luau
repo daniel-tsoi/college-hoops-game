@@ -47,7 +47,7 @@ local page = make("Frame", gui, { Name = "QuestsPage", Size = UDim2.fromScale(1,
 text(page, "QUESTS", UDim2.fromOffset(18, 14), UDim2.new(1, -100, 0, 40), 25, red)
 local close = button(page, "Close", "X", UDim2.new(1, -62, 0, 12), UDim2.fromOffset(44, 44), muted)
 local timer = text(page, "Loading playtime…", UDim2.fromOffset(18, 61), UDim2.new(1, -36, 0, 27), 18, gold)
-text(page, "Every reward resets each login. Play the hours again to re-earn them.", UDim2.fromOffset(18, 88), UDim2.new(1, -36, 0, 22), 13)
+text(page, "Buy 2× to receive all doubled rewards instantly — no progress needed.", UDim2.fromOffset(18, 88), UDim2.new(1, -36, 0, 22), 13)
 local balances = text(page, "", UDim2.fromOffset(18, 112), UDim2.new(1, -36, 0, 22), 14, green)
 local summary = text(page, "", UDim2.fromOffset(18, 136), UDim2.new(1, -36, 0, 36), 13, gold)
 local scroll = make("ScrollingFrame", page, { Name = "Milestones", Position = UDim2.fromOffset(18, 176),
@@ -85,7 +85,18 @@ local function render()
 		local claimed = (state.sessionClaimed or {})[quest.id] == true
 		local progress = timeQuest and sessionSeconds or (state[quest.metric] or 0)
 		local target = quest.target
-		local ready = state.ready and progress >= target
+		local doubled = ((state.questDoubleCredits or {})[quest.id] or 0) > 0 or (state.sessionDoubled or {})[quest.id] == true
+  local multiplier = doubled and 2 or 1
+  item.rewardLabels[1].Text = cash(quest.cash * multiplier) .. "\nCASH"
+  if quest.rerolls > 0 then
+   item.rewardLabels[2].Text = quest.rerolls * multiplier .. "\nREROLLS"
+   item.rewardLabels[3].Text = quest.refreshes * multiplier .. "\nREFRESHES"
+  end
+  item.double.Text = "2× NOW · " .. quest.doublePrice .. " Robux"
+  item.double.Active = state.ready and not pending
+  item.double.Selectable = item.double.Active
+  item.double.AutoButtonColor = item.double.Active
+  local ready = state.ready and progress >= target
 		item.fill.Size = UDim2.fromScale(math.clamp(progress / target, 0, 1), 1)
 		local remaining = timeQuest and (duration(math.max(0, target - progress)) .. " left this login")
 			or string.format("%d / %d this login", math.min(progress, target), target)
@@ -98,22 +109,33 @@ local function render()
 	end
 end
 for index, quest in ipairs(Quests) do
-	local card = make("Frame", scroll, { Name = quest.id, LayoutOrder = index, Size = UDim2.new(1, 0, 0, 182),
+	local card = make("Frame", scroll, { Name = quest.id, LayoutOrder = index, Size = UDim2.new(1, 0, 0, 234),
 		BackgroundColor3 = Color3.fromRGB(22, 30, 44), BorderSizePixel = 0 })
 	outline(card, red)
 	text(card, (quest.title or string.format("PLAY %d %s", quest.hours or 0, quest.hours == 1 and "HOUR" or "HOURS")), UDim2.fromOffset(12, 8), UDim2.new(1, -24, 0, 30), 21, Color3.new(1, 1, 1))
 	local rewards = quest.rerolls > 0
 		and { cash(quest.cash) .. "\nCASH", quest.rerolls .. "\nREROLLS", quest.refreshes .. "\nREFRESHES" }
 		or { cash(quest.cash) .. "\nCASH", "RESETS EACH\nLOGIN", "CLAIM ONCE\nPER LOGIN" }
+	local rewardLabels = {}
 	for col, reward in ipairs(rewards) do
-		text(card, reward, UDim2.new((col - 1) / 3, 4, 0, 46), UDim2.new(1 / 3, -8, 0, 48), 16, col == 1 and gold or green)
+		rewardLabels[col] = text(card, reward, UDim2.new((col - 1) / 3, 4, 0, 46), UDim2.new(1 / 3, -8, 0, 48), 16, col == 1 and gold or green)
 	end
 	local track = make("Frame", card, { Position = UDim2.new(0, 12, 0, 104), Size = UDim2.new(1, -24, 0, 8),
 		BackgroundColor3 = Color3.fromRGB(47, 58, 74), BorderSizePixel = 0, ClipsDescendants = true })
 	local fill = make("Frame", track, { Size = UDim2.fromScale(0, 1), BackgroundColor3 = green, BorderSizePixel = 0 })
-	local progress = text(card, "", UDim2.fromOffset(12, 124), UDim2.new(1, -136, 0, 42), 13)
-	local claim = button(card, "Claim", "LOCKED", UDim2.new(1, -116, 0, 126), UDim2.fromOffset(104, 38), green)
-	table.insert(cards, { quest = quest, fill = fill, progress = progress, claim = claim })
+	local progress = text(card, "", UDim2.fromOffset(12, 116), UDim2.new(1, -24, 0, 30), 13)
+	local claim = button(card, "Claim", "LOCKED", UDim2.new(0.6, 6, 0, 154), UDim2.new(0.4, -18, 0, 57), green)
+	local double = button(card, "DoubleRewards", "2× · " .. quest.doublePrice .. " Robux", UDim2.fromOffset(12, 154), UDim2.new(0.6, -18, 0, 57), gold)
+ double.TextSize = 21
+ claim.TextSize = 24
+ for _,b in ipairs({double,claim}) do
+  b.TextScaled = true
+  local limit = make("UITextSizeConstraint", b, {MinTextSize=12,MaxTextSize=b.TextSize})
+ end
+ double.Activated:Connect(function()
+  if double.Active and not pending then request("PurchaseQuestDouble", quest.id) end
+ end)
+ table.insert(cards, { quest = quest, fill = fill, progress = progress, claim = claim, double = double, rewardLabels = rewardLabels })
 	claim.Activated:Connect(function()
 		if not claim.Active or pending then return end
 		request("ClaimQuest", quest.id)
@@ -170,6 +192,9 @@ request = function(action, id)
 		local messages = {
 			READY = result.preview and "Studio trial: real-time timer; progress resets when Play stops." or "Cards and cash are saved forever. Every reward resets each login.",
 			REWARDED = "Reward claimed and added to your balance!",
+   PURCHASE_PROMPTED = "Complete the Roblox purchase to receive all doubled rewards instantly.",
+   DOUBLE_READY = "2× is ready. Complete this quest and claim all doubled rewards.",
+   PRODUCT_UNCONFIGURED = "This 2× purchase is not available yet.",
 			CLAIMED = "Already collected this login. Rejoin to earn it again.", NOT_READY = "Keep playing! This reward is not ready yet.",
 			STALE_SESSION = "A newer login is active. Rejoin to continue here.",
 			BUSY = "Please wait a moment, then try again.", INVALID = "This quest is unavailable.",
@@ -184,6 +209,17 @@ request = function(action, id)
 	end
 	render()
 end
+local grantedConnection
+ task.spawn(function()
+  local event = ReplicatedStorage:WaitForChild("HoopsPurchaseGranted", 30)
+  if not event or not gui.Parent then return end
+  grantedConnection = event.OnClientEvent:Connect(function()
+   task.wait(0.5)
+   while pending and gui.Parent do task.wait(0.1) end
+   if gui.Parent then request("State") end
+  end)
+ end)
+ gui.Destroying:Connect(function() if grantedConnection then grantedConnection:Disconnect() end end)
 -- Stack lobby controls on narrow screens so they do not cover Build or Shop.
 local function fitLobby()
 	entry.Position = UDim2.new(1, -208, 1, -236)

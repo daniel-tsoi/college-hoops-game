@@ -6,7 +6,7 @@ September 5, 2026 UTC · Prepared for the game developer
 
 The game data now contains **25,393 real player-school-season base cards** across
 **1,812 school-seasons**, plus **1,077 All-Star season variants**,
-the exact eight HOF cards, and four purchase-only non-college cards. Every base
+the exact eight HOF cards, and eight purchase-only non-college cards. Every base
 card has a name, stable identity, school-season, position, Overall, five attributes,
 underlying recorded statistics, and rating confidence. Transfers remain separate
 school-season cards. This is a broad sourced import with sampled verification;
@@ -185,3 +185,14 @@ Luau **0.737 strict static analysis passed** for every new data/config module an
 Runtime checks passed for all cards and school-seasons and the exhaustive 800-ticket
 odds check. Rojo **7.6.1 built successfully**, with 146 ModuleScripts, including
 the player database and both server configurations. No Studio playtest was run.
+
+## Added non-college archetypes
+
+September 9, 2026: Garnett 104, Wembanyama 104, Nowitzki 103, Giannis 104 OVR.
+These are manual game-balance appraisals combining signature skill and draft
+upside, anchored below Kobe/LeBron (105), near Jokic (104) and Luka (103).
+Draft stock informs potential; draft pick is not a direct rating formula.
+Garnett emphasizes defense/stamina, Dirk shooting, Giannis speed/defense, and
+Wembanyama rim protection/perimeter upside with lower stamina.
+
+Draft provenance is stored per card in `special_players.json`: [Garnett, #5 in 1995](https://www.nba.com/watch/video/kevin-garnett-drafted-by-the-minnesota-timberwolves-at-the-1995-nba-draft), [Wembanyama, 2023 prospect](https://www.nba.com/draft/2023/prospects/victor-wembanyama), [Nowitzki, #9 in 1998](https://www.nba.com/news/dirk-nowitzki-hall-of-fame-profile), [Giannis, #15 in 2013](https://www.nba.com/watch/video/channels/draft/2013/06/27/20130627-nba-draft-pick15-giannis.nba).

@@ -1,5 +1,8 @@
 local Rare=require("../src/ServerScriptService/Roll/RareWheel")
 local T=require("../src/ServerScriptService/Shop/Transactions")
+local nonCollegeOverride=Rare.NonCollegeTest100
+if nonCollegeOverride then assert(Rare.hit("NonCollege",Rare.Denominator)) end
+Rare.NonCollegeTest100=false
 local testOverride=Rare.HOFTest100
 if testOverride then assert(Rare.hit("HOF",Rare.Denominator)) end
 Rare.HOFTest100=false -- Verify the baseline odds independently of the temporary test override.
@@ -30,8 +33,12 @@ assert(onlyHOF.HOF.id=="h" and onlyHOF.NonCollege==nil)
 local onlyNon=Rare.draw(pools,rng(1,1),{n=true})
 assert(onlyNon.HOF==nil and onlyNon.NonCollege.id=="n")
 Rare.HOFTest100=true
+Rare.NonCollegeTest100=true
+local guaranteed=Rare.draw(pools,rng(200000,200000),{h=true,n=true})
+assert(guaranteed.HOF.id=="h" and guaranteed.NonCollege.id=="n", "Both test wheels guarantee eligible hits")
 assert(next(Rare.draw(pools,rng(200000,200000),{}))==nil, "100% test does not bypass purchases")
 Rare.HOFTest100=false
+Rare.NonCollegeTest100=false
 local goldCounts={HOF=0,NonCollege=0}
 for goldTicket=1,100 do
  local count=0

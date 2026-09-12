@@ -1,3 +1,4 @@
+local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MenuFocus = require(script.Parent:WaitForChild("MenuFocus"))
@@ -46,26 +47,27 @@ local page = make("Frame", gui, { Name = "ShopPage", Size = UDim2.fromScale(1, 1
 label(page, "Title", "SHOP", UDim2.fromOffset(18, 12), UDim2.fromOffset(115, 44), 30, gold)
 local wallet = label(page, "Wallet", "—", UDim2.new(1, -226, 0, 12), UDim2.fromOffset(150, 44), 21, gold)
 local close = button(page, "Close", "X", UDim2.new(1, -62, 0, 12), UDim2.fromOffset(44, 44), muted)
-local hofTab = button(page, "HOF", "HOF  ·  8", UDim2.fromOffset(18, 70), UDim2.new(0.5, -27, 0, 42), gold)
-local nonTab = button(page, "NonCollege", "NON-COLLEGE  ·  4", UDim2.new(0.5, 9, 0, 70), UDim2.new(0.5, -27, 0, 42), blue)
-local subtitle = label(page, "Subtitle", "", UDim2.fromOffset(18, 120), UDim2.new(1, -36, 0, 38), 14, muted)
-local scroll = make("ScrollingFrame", page, { Name = "PlayerCards", Position = UDim2.fromOffset(18, 168),
-	Size = UDim2.new(1, -36, 1, -246), BackgroundTransparency = 1, BorderSizePixel = 0,
+local hofTab = button(page, "HOF", "HOF  ·  8", UDim2.fromOffset(18, 70), UDim2.new(0.5, -27, 0, 63), gold)
+local nonTab = button(page, "NonCollege", "NON-COLLEGE  ·  8", UDim2.new(0.5, 9, 0, 70), UDim2.new(0.5, -27, 0, 63), blue)
+local subtitle = label(page, "Subtitle", "", UDim2.fromOffset(18, 141), UDim2.new(1, -36, 0, 38), 14, muted)
+local scroll = make("ScrollingFrame", page, { Name = "PlayerCards", Position = UDim2.fromOffset(18, 189),
+	Size = UDim2.new(1, -36, 1, -267), BackgroundTransparency = 1, BorderSizePixel = 0,
 	AutomaticCanvasSize = Enum.AutomaticSize.Y, CanvasSize = UDim2.new(), ScrollBarThickness = 5,
 	ScrollBarImageColor3 = gold, ScrollingDirection = Enum.ScrollingDirection.Y })
 make("UIPadding", scroll, { PaddingTop = UDim.new(0, 4), PaddingBottom = UDim.new(0, 8),
 	PaddingLeft = UDim.new(0, 4), PaddingRight = UDim.new(0, 12) })
 local grid = make("UIGridLayout", scroll, { CellPadding = UDim2.fromOffset(16, 16),
-	CellSize = UDim2.fromOffset(260, 408), SortOrder = Enum.SortOrder.LayoutOrder })
+	CellSize = UDim2.fromOffset(260, 427), SortOrder = Enum.SortOrder.LayoutOrder })
 local status = label(page, "Status", "Loading wallet…", UDim2.new(0, 18, 1, -68), UDim2.new(1, -36, 0, 56), 15, muted)
 local state = { ready = false, balance = 0, owned = {}, shopUnlocked = {}, preview = false }
 local selectedGroup, pending = "HOF", false
 local cards = {}
+local pendingRobuxCard, promptOpen = nil, false
 local request
 local function render()
 	wallet.Text = money(state.balance)
 	lobbyMoney.Text = state.ready and money(state.balance) or "—"
-	subtitle.Text = selectedGroup == "HOF" and "HOF roll eligibility · 1/800 tier chance for eligible positions" or "Non-college roll eligibility · 1/750 tier chance for eligible positions"
+	subtitle.Text = selectedGroup == "HOF" and "Unlock with cash or 400 Robux · HOF roll chance: 0.125%" or "Unlock with cash or 400 Robux · Non-college roll chance: 0.13%"
 	hofTab.TextColor3 = selectedGroup == "HOF" and gold or muted
 	nonTab.TextColor3 = selectedGroup == "NON-COLLEGE" and blue or muted
 	for _, item in ipairs(cards) do
@@ -75,9 +77,15 @@ local function render()
 		local enough = state.balance >= offer.price
 		buy.Text = owned and "ROLL UNLOCKED" or ("BUY  ·  " .. money(offer.price))
 		buy.TextColor3 = owned and green or (enough and gold or muted)
-		buy.Active = state.ready and not pending and not owned and enough
+		buy.Active = state.ready and not pending and not promptOpen and not owned and enough
 		buy.Selectable = buy.Active
 		buy.AutoButtonColor = buy.Active
+  local robux=item.robux
+  local credit=(state.shopUnlockCredits or 0)>0
+  robux.Text=owned and "UNLOCKED" or credit and "USE UNLOCK" or "400 Robux"
+  robux.TextColor3=owned and green or gold
+  robux.Active=state.ready and not pending and not promptOpen and not owned
+  robux.Selectable=robux.Active;robux.AutoButtonColor=robux.Active
 		local isGold = state.owned[offer.id] == true and state.goldOwned and state.goldOwned[offer.id] == true
 		item.frame.Overall.Text = tostring(offer.player.overall + (isGold and 5 or 0))
 		item.lock.Text = isGold and "★ GOLD · +5 OVR" or (owned and "ELIGIBLE TO ROLL · NOT A CARD PURCHASE" or "BUY TO ADD TO ROLL POOL")
@@ -97,7 +105,8 @@ for index, offer in ipairs(Catalog.Offers) do
 	label(frame, "Position", player.position, UDim2.new(1, -70, 0, 12), UDim2.fromOffset(58, 28), 22, accent)
 	Portrait.mount(frame, player, UDim2.new(0.5, 0, 0, 9), UDim2.fromOffset(124, 100))
 	label(frame, "PlayerName", player.name, UDim2.fromOffset(8, 111), UDim2.new(1, -16, 0, 43), 20)
-	label(frame, "SchoolSeason", player.school and (player.school .. " · " .. player.season) or "NON-COLLEGE EXCLUSIVE",
+	label(frame, "SchoolSeason", player.school and (player.school .. " · " .. player.season)
+		or (player.draftYear and string.format("NON-COLLEGE · %d PICK #%d", player.draftYear, player.draftPick) or "NON-COLLEGE EXCLUSIVE"),
 		UDim2.fromOffset(8, 157), UDim2.new(1, -16, 0, 26), 12, accent)
 	for row, attribute in ipairs(attributes) do
 		local y = 194 + (row - 1) * 27
@@ -107,8 +116,18 @@ for index, offer in ipairs(Catalog.Offers) do
 			UDim2.new(1, -62, 0, y), UDim2.fromOffset(46, 21), 17)
 	end
 	local lock = label(frame, "Ownership", "LOCKED", UDim2.fromOffset(12, 331), UDim2.new(1, -24, 0, 19), 11, muted)
-	local buy = button(frame, "Buy", "BUY", UDim2.new(0, 12, 1, -49), UDim2.new(1, -24, 0, 38), accent)
-	table.insert(cards, { offer = offer, frame = frame, buy = buy, lock = lock })
+	local buy = button(frame, "Buy", "BUY", UDim2.new(0, 12, 1, -68), UDim2.new(0.5, -18, 0, 57), accent)
+	local robux = button(frame, "BuyRobux", "400 Robux", UDim2.new(0.5, 6, 1, -68), UDim2.new(0.5, -18, 0, 57), accent)
+ for _,b in ipairs({buy,robux}) do
+  b.TextScaled=true
+  make("UITextSizeConstraint",b,{MinTextSize=12,MaxTextSize=24})
+ end
+ table.insert(cards, { offer = offer, frame = frame, buy = buy, robux = robux, lock = lock })
+ robux.Activated:Connect(function()
+  if not robux.Active then return end
+  pendingRobuxCard=offer.id;promptOpen=true
+  request("PurchaseShopPlayer",offer.id,player.name)
+ end)
 	buy.Activated:Connect(function()
 		if pending or not state.ready or (state.shopUnlocked and state.shopUnlocked[offer.id]) or state.balance < offer.price then return end
 		request("Buy", offer.id, player.name)
@@ -117,36 +136,68 @@ end
 request = function(action, id, name)
 	if pending then return end
 	pending = true
-	status.Text = action == "Buy" and "Unlocking roll eligibility…" or "Loading wallet…"
+	status.Text = (action == "Buy" or action == "RedeemShopUnlock") and "Unlocking roll eligibility…" or action=="PurchaseShopPlayer" and "Opening Roblox purchase…" or "Loading wallet…"
 	render()
 	local ok, result = pcall(function()
 		local remote = ReplicatedStorage:WaitForChild("HoopsShop", 10)
 		if not remote then error("Shop server unavailable") end
-		return remote:InvokeServer(action, id)
+		local result
+  for _=1,5 do
+   result=remote:InvokeServer(action,id)
+   if result.code~="BUSY" then break end
+   task.wait(.5)
+  end
+  return result
 	end)
 	pending = false
 	if ok and type(result) == "table" then
 		state = result
-		local messages = {
-			READY = result.preview and "Studio trial: $1,000,000 test money. Purchases reset when you stop Play." or "Buy roll eligibility with cash. Only rolled cards enter your collection.",
+  if action=="PurchaseShopPlayer" then
+   if result.code~="PURCHASE_PROMPTED" then promptOpen=false;pendingRobuxCard=nil end
+  end
+  local messages = {
+			READY = result.preview and "Studio trial: $1,000,000 test money. Purchases reset when you stop Play." or "Unlock with cash or Robux. You still need to roll the player to collect their card.",
 			PURCHASED = (name or "Player") .. " can now appear in rolls! Roll them to own their card.",
 			ELIGIBLE = "This player is already eligible to roll. No money spent.",
 			INSUFFICIENT = "Not enough cash. Save up to unlock this player.",
 			BUSY = "Please wait a moment, then try again.",
 			UNAVAILABLE = "Shop unavailable. Reopen the shop to check your balance and unlocks.",
 			INVALID = "This player is unavailable.",
+   PURCHASE_PROMPTED="Complete or cancel the Roblox purchase prompt.",
+   PRODUCT_UNCONFIGURED="Robux purchases are not configured yet.",
+   NO_CREDIT="No saved unlock credit yet. If you paid, it will appear after Roblox confirms the purchase.",
 		}
 		status.Text = messages[result.code] or "Reopen the shop to check your unlocks."
 	else
 		state.ready = false
+  if action=="PurchaseShopPlayer" then promptOpen=false;pendingRobuxCard=nil end
 		status.Text = "Could not reach the shop. Reopen it to check your balance and unlocks."
 	end
 	render()
 end
+local granted=ReplicatedStorage:WaitForChild("HoopsPurchaseGranted").OnClientEvent:Connect(function(productId)
+ while pending do task.wait(.1) end
+ local product=state.products and state.products.ShopPlayer
+ local target=product and productId==product.id and pendingRobuxCard
+ if target then
+  pendingRobuxCard=nil;promptOpen=false
+  -- Only spend an already saved receipt credit; this action NEVER opens a purchase.
+  request("RedeemShopUnlock",target,Catalog.ById[target].player.name)
+ else
+  request("State")
+ end
+end)
+local closed=MarketplaceService.PromptProductPurchaseFinished:Connect(function(userId,productId,purchased)
+ local product=state.products and state.products.ShopPlayer
+ if userId~=Players.LocalPlayer.UserId or not product or productId~=product.id then return end
+ if not purchased then promptOpen=false;pendingRobuxCard=nil end
+ render()
+end)
+gui.Destroying:Connect(function() granted:Disconnect();closed:Disconnect() end)
 local function fit()
 	local width = math.max(1, scroll.AbsoluteSize.X - 16)
 	local columns = math.clamp(math.floor((width + 16) / 256), 1, 4)
-	grid.CellSize = UDim2.fromOffset(math.floor((width - (columns - 1) * 16) / columns), 408)
+	grid.CellSize = UDim2.fromOffset(math.floor((width - (columns - 1) * 16) / columns), 427)
 end
 scroll:GetPropertyChangedSignal("AbsoluteSize"):Connect(fit)
 fit()

@@ -46,16 +46,25 @@ function Pool.build(database, config)
  pools.numbers=numbers
  return pools
 end
-function Pool.tier(ticket, config)
+function Pool.tier(ticket, config, luck)
+ if luck and luck > 1 then
+  local ceiling = 0
+  for _, tier in ipairs({"HOF", "NonCollege", "All-Star"}) do
+   ceiling += math.floor(config.Tickets[tier].count * math.clamp(luck, 1, 3))
+   if ticket >= 1 and ticket <= ceiling then return tier end
+  end
+  if ticket >= 1 and ticket <= config.Denominator then return "Ordinary" end
+  error("Invalid roll ticket")
+ end
  for _, tier in ipairs({"HOF","NonCollege","All-Star","Ordinary"}) do
   local range=config.Tickets[tier]
   if ticket >= range.first and ticket <= range.last then return tier end
  end
  error("Invalid roll ticket")
 end
-function Pool.draw(pools, unlocked, position, random, config)
+function Pool.draw(pools, unlocked, position, random, config, luck)
  assert(pools.ordinary[position] and #pools.ordinary[position]>0,"Position has no college players")
- local tier=Pool.tier(random:NextInteger(1,config.Denominator),config)
+ local tier=Pool.tier(random:NextInteger(1,config.Denominator),config,luck)
  local source=tier=="HOF" and pools.hof[position] or (tier=="NonCollege" and pools.nonCollege[position]
   or (tier=="All-Star" and pools.allStar[position] or pools.ordinary[position]))
  local available={}
@@ -64,10 +73,10 @@ function Pool.draw(pools, unlocked, position, random, config)
  end
  if #available==0 then available=pools.ordinary[position] end
  local card=available[random:NextInteger(1,#available)]
- return { id=card.id, prospectNumber=pools.numbers[position][card.id], goldRoll=random:NextInteger(1,100) }
+ return { id=card.id, prospectNumber=pools.numbers[position][card.id], goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100) }
 end
 -- Team rolls keep every offered player in the displayed college season.
-function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, previous, changeSchoolAndYear)
+function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, previous, changeSchoolAndYear, luck)
  local choices={}
  local current
  for _,team in ipairs(pools.teams) do
@@ -91,7 +100,7 @@ function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, pr
    if not used[card.playerId or card.id] and (card.rarity~="HOF" or unlocked[card.id]) then table.insert(available,card) end
   end
   assert(#available>0,"Team roster needs five distinct players")
-  local tier=Pool.tier(random:NextInteger(1,config.Denominator),config)
+  local tier=Pool.tier(random:NextInteger(1,config.Denominator),config,luck)
   local tierCards,ordinary={},{}
   for _,card in ipairs(available) do
    if card.rarity~="HOF" and card.rarity~="All-Star" then table.insert(ordinary,card) end
@@ -105,7 +114,7 @@ function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, pr
   if #alternatives>0 then available=alternatives end
   local card=available[random:NextInteger(1,#available)]
   used[card.playerId or card.id]=true
-  draws[pos]={id=card.id,prospectNumber=pools.numbers[pos][card.id],goldRoll=random:NextInteger(1,100)}
+  draws[pos]={id=card.id,prospectNumber=pools.numbers[pos][card.id],goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100)}
  end
  return draws,{key=team.key,school=team.school,season=team.season}
 end

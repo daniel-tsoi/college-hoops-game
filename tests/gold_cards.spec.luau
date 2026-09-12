@@ -27,17 +27,6 @@ local migrated = Transactions.migrate({ owned = { old = true }, balance = 10 })
 assert(not migrated.goldOwned.old and migrated.owned.old)
 local college = Transactions.unlock(profile, "college-any-player", 1)
 assert(college.goldOwned["college-any-player"], "Gold supports any card ID, not just shop offers")
-local cards, owned = {}, {}
-for i=1,6 do
- local id="c"..i
- cards[id]={id=id,playerId=id,overall=100+i,name=id,position="PG",rarity="HOF"}
- owned[id]=true
-end
-local before = BestTeam.select(owned, cards)
-local after = BestTeam.select(owned, cards, { c1 = true })
-assert(before.players[5].id == "c2" and after.players[1].id == "c1", "Bonus must affect top-five selection")
-assert(after.players[1].gold and after.players[1].overall == 106 and cards.c1.overall == 101)
-assert(after.overall == 105 and before.overall == 104)
 assert(BestTeam.overall({overall=110}, true) == 115)
-assert(Ranking.score(115,5)==115 and Ranking.score(116,5)==nil)
-print("Gold cards: exact 5%, boundaries, purchases, retry safety, duplicate protection, migration, persistence, any-card unlock, boosted selection and 115 OVR passed")
+assert(Ranking.score(128,6)==128 and Ranking.score(129,6)==nil)
+print("Gold cards: exact 5%, boundaries, purchases, retry safety, duplicate protection, migration, persistence and any-card unlock passed")

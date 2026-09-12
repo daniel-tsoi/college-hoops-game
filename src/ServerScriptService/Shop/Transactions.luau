@@ -70,6 +70,8 @@ function Transactions.migrate(profile)
 	updated.refreshes = profile.refreshes or 0
 	updated.claimedQuests = table.clone(profile.claimedQuests or {})
 	updated.sessionClaimed = table.clone(profile.sessionClaimed or {})
+	updated.questDoubleCredits = table.clone(profile.questDoubleCredits or {})
+	updated.sessionDoubled = table.clone(profile.sessionDoubled or {})
 	updated.sessionUnlocks = profile.sessionUnlocks or 0
 	updated.sessionRerolls = profile.sessionRerolls or 0
 	updated.previewFreeRerolls = profile.previewFreeRerolls or 0
@@ -114,6 +116,7 @@ function Transactions.startSession(profile, sessionId, at)
 	updated.clockSession = sessionId
 	updated.sessionSeconds = 0
 	updated.sessionClaimed = {}
+	updated.sessionDoubled = {}
 	updated.sessionUnlocks = 0
 	updated.sessionRerolls = 0
 	updated.sessionCash = 0
@@ -136,10 +139,16 @@ function Transactions.claim(profile, quest)
 	local target = quest.scope == "SESSION" and quest.target or quest.seconds
 	if claimed[quest.id] then return updated, "CLAIMED" end
 	if progress < target then return updated, "NOT_READY" end
-	updated.balance += quest.cash
-	updated.rerolls += quest.rerolls
-	updated.refreshes += quest.refreshes
-	updated.sessionCash += quest.cash
+	local doubled = (updated.questDoubleCredits[quest.id] or 0) > 0
+ local multiplier = doubled and 2 or 1
+ updated.balance += quest.cash * multiplier
+ updated.rerolls += quest.rerolls * multiplier
+ updated.refreshes += quest.refreshes * multiplier
+ updated.sessionCash += quest.cash * multiplier
+ if doubled then
+  updated.questDoubleCredits[quest.id] -= 1
+  updated.sessionDoubled[quest.id] = true
+ end
 	claimed[quest.id] = true
 	return updated, "REWARDED"
 end
@@ -174,16 +183,28 @@ function Transactions.equip(profile, id)
 	return updated, "EQUIPPED"
 end
 -- Roll state and ownership are saved atomically. Draws are supplied by trusted server code.
-local function finishIfFull(profile)
+local function finishIfFull(profile, sixthOffers)
  for _,pos in ipairs({"PG","SG","SF","PF","C"}) do
   if not profile.rollDraft.squad[pos] then return profile,"ROLLED" end
  end
  profile.rollDraft.finished=true
+ profile.rollDraft.sixthOffers=sixthOffers or {}
  profile.rollDraft.pickAvailable=false
  return profile,"FINISHED"
 end
-function Transactions.rollAction(profile, action, position, draws, team, rare)
+function Transactions.rollAction(profile, action, position, draws, team, rare, sixthOffers)
 	local draft = profile.rollDraft
+ if draft and draft.sixthAccepted and not draft.squad.SIXTH and not draft.sixthDeclined
+  and (action == "RestartRoll" or action == "NextRoll") then return profile, "CHOOSE_SIXTH" end
+ if action == "AcceptSixth" then
+  if not draft or not draft.finished then return profile, "INCOMPLETE" end
+  if draft.squad.SIXTH or draft.sixthDeclined then return profile, "SIXTH_TAKEN" end
+  if not next(draft.sixthOffers or {}) then return profile, "NO_SIXTH" end
+  local updated = table.clone(profile)
+  updated.rollDraft = table.clone(draft)
+  updated.rollDraft.sixthAccepted = true
+  return updated, "SIXTH_ACCEPTED"
+ end
 	if action == "RollState" and draft and draft.team then return profile, "READY" end
 	if action == "RollState" or action == "RestartRoll" then
 		local updated = table.clone(profile)
@@ -202,6 +223,50 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
 		updated.rollDraft.finished=true
 		return updated,"FINISHED"
 	end
+ if action=="DeclineSixth" then
+  if not draft.finished then return profile,"INCOMPLETE" end
+  if draft.squad.SIXTH then return profile,"SIXTH_TAKEN" end
+  if draft.sixthDeclined then return profile,"SIXTH_DECLINED" end
+  local updated=table.clone(profile)
+  updated.rollDraft=table.clone(draft)
+  updated.rollDraft.sixthDeclined=true
+  updated.rollDraft.sixthOffers={}
+  return updated,"SIXTH_DECLINED"
+ end
+ if action=="ChooseSixth" then
+  if draft.sixthDeclined then return profile,"SIXTH_DECLINED" end
+  if not draft.finished then return profile,"INCOMPLETE" end
+  local paidPick=draft.squad.SIXTH~=nil
+  if paidPick and (profile.sixthCredits or 0)<1 then return profile,"SIXTH_TAKEN" end
+  if type(position)~="number" or position%1~=0 or position<1 or position>3 then return profile,"INVALID" end
+  if (draft.sixthRevealed or {})[position] or draft.sixthChoice==position then return profile,"SIXTH_TAKEN" end
+  local candidate=(draft.sixthOffers or {})[position]
+  if not candidate then return profile,"NO_SIXTH" end
+  local updated=Transactions.migrate(profile)
+  updated.rollDraft=table.clone(draft)
+  updated.rollDraft.squad=table.clone(draft.squad)
+  -- Only revoke ownership granted by this draft; independently owned copies survive.
+  local previous=draft.sixthGrant
+  if paidPick and previous then
+   updated.owned=table.clone(updated.owned)
+   updated.owned[previous.id]=previous.owned or nil
+   updated.goldOwned[previous.id]=previous.gold or nil
+   if not previous.owned and updated.equippedCardId==previous.id then updated.equippedCardId=nil end
+  end
+  updated.rollDraft.sixthGrant={id=candidate.id,owned=updated.owned[candidate.id]==true,gold=updated.goldOwned[candidate.id]==true}
+  updated=Transactions.unlock(updated,candidate.id,candidate.goldRoll)
+  updated.rollDraft.bestTeamRecordedCount=nil
+  updated.rollDraft.squad.SIXTH=candidate
+  updated.rollDraft.sixthChoice=position
+  updated.rollDraft.sixthRevealed={}
+  for i=1,3 do updated.rollDraft.sixthRevealed[i]=(draft.sixthRevealed or {})[i] or false end
+  if draft.sixthChoice and draft.squad.SIXTH then updated.rollDraft.sixthRevealed[draft.sixthChoice]=draft.squad.SIXTH end
+  updated.rollDraft.sixthRevealed[position]=candidate
+  if paidPick then updated.sixthCredits-=1 end
+  updated.rollDraft.finished=true
+  updated.rollDraft.pickAvailable=false
+  return updated,"SIXTH_ADDED"
+ end
 	if draft.finished then return profile,"FINISHED" end
 	local updated=Transactions.migrate(profile)
 	updated.rollDraft=table.clone(draft)
@@ -224,7 +289,8 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
  if action=="RefreshRoll" then
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
 		if updated.freeRollRefreshes>0 then updated.freeRollRefreshes-=1
-		elseif updated.refreshes>0 then updated.refreshes-=1 else return profile,"EMPTY" end
+		elseif updated.refreshes>0 then updated.refreshes-=1
+  elseif (updated.paidRefreshes or 0)>0 then updated.paidRefreshes-=1 else return profile,"EMPTY" end
 		updated.rollDraft.candidates=draws
 		return updated,"REFRESHED"
 	end
@@ -236,12 +302,13 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
   updated=Transactions.unlock(updated,candidate.id,candidate.goldRoll)
   updated.rollDraft.squad[candidate.position]=candidate
   updated.rollDraft.pickAvailable=false
-  return finishIfFull(updated)
+  return finishIfFull(updated, sixthOffers)
  end
  if action=="RerollPlayer" then
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
   if updated.freeRollRerolls>0 then updated.freeRollRerolls-=1
-  elseif updated.rerolls>0 then updated.rerolls-=1 else return profile,"EMPTY" end
+  elseif updated.rerolls>0 then updated.rerolls-=1
+  elseif (updated.paidRerolls or 0)>0 then updated.paidRerolls-=1 else return profile,"EMPTY" end
   updated.sessionRerolls+=1
   updated.rollDraft.candidates=draws
   updated.rollDraft.team=team
@@ -256,6 +323,6 @@ function Transactions.rollAction(profile, action, position, draws, team, rare)
 	updated = Transactions.unlock(updated,candidate.id,candidate.goldRoll)
 	updated.rollDraft.squad[position]=candidate
  if action=="RollPlayer" then updated.rollDraft.pickAvailable=false end
-	return finishIfFull(updated)
+	return finishIfFull(updated, sixthOffers)
 end
 return Transactions

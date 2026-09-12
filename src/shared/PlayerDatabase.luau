@@ -47,7 +47,7 @@ local Players = collect(Data.College)
 local AllStarPlayers = collect(Data.AllStar)
 local HOFPlayers = collect(Data.HOF)
 local NonCollegePlayers = collect(Data.NonCollege)
-assert(#HOFPlayers == 8 and #NonCollegePlayers == 4, "Special pools must contain exactly eight HOF and four purchase cards")
+assert(#HOFPlayers == 8 and #NonCollegePlayers == 8, "Special pools must contain exactly eight HOF and eight purchase cards")
 for _, card in AllStarPlayers do
     local base = if card.baseCardId then ById[card.baseCardId] else nil
     assert(base ~= nil and base.sourceType == "COLLEGE" and base.variant == "BASE", "Missing All-Star base card")

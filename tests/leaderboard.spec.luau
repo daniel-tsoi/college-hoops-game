@@ -2,8 +2,10 @@ local Ranking = require("../src/ServerScriptService/Leaderboard/Ranking")
 assert(Ranking.score(99, 4) == nil)
 assert(Ranking.score(0, 5) == nil)
 assert(Ranking.score(0/0, 5) == nil)
-assert(Ranking.score(116, 5) == nil)
+assert(Ranking.score(129, 5) == nil)
 assert(Ranking.score(104.5, 5) == 105)
+assert(Ranking.score(128, 6) == 128)
+assert(Ranking.score(99, 7) == nil)
 local entries = {}
 for i = 1, 65 do table.insert(entries, { userId = i, username = "Test" .. i, overall = i }) end
 local rows = Ranking.top(entries)
