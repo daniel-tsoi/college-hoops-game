@@ -18,8 +18,13 @@ function Daily.grant(profile,now,reward,index,card)
   updated.sessionCash=(profile.sessionCash or 0)+reward.cash
  else
   updated.owned=table.clone(profile.owned or {})
+  updated.shopUnlocked=table.clone(profile.shopUnlocked or {})
   if not updated.owned[card.id] then updated.sessionUnlocks=(profile.sessionUnlocks or 0)+1 end
   updated.owned[card.id]=true
+  -- A HOF or non-college prize is claimed in the Shop as well as owned. Without
+  -- this the card stays for sale, cash could buy what was already won, and the
+  -- rare wheel still would not offer it, since eligibility reads shopUnlocked.
+  updated.shopUnlocked[card.id]=true
  end
  updated.dailyReward={id=reward.id,index=index,cash=reward.cash,cardId=card and card.id,name=card and card.name,at=now}
  return updated,"DAILY_SPUN"

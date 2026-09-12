@@ -12,7 +12,15 @@ for i,reward in ipairs(C.Rewards) do
  local result,code=D.grant(profile,100,reward,i,card)
  assert(code=="DAILY_SPUN" and result.nextDailySpinAt==43300 and profile.nextDailySpinAt==nil)
  if reward.cash then assert(result.balance==reward.cash and result.sessionCash==reward.cash)
- else assert(result.owned[card.id] and result.sessionUnlocks==1 and not profile.owned[card.id]) end
+ else
+  assert(result.owned[card.id] and result.sessionUnlocks==1 and not profile.owned[card.id])
+  -- A rare prize is claimed in the Shop too, so it counts as permanent roll
+  -- eligibility and cannot be sold back to the player for cash.
+  assert(result.shopUnlocked[card.id],"HOF and non-college prizes claim their Shop unlock")
+  assert(not profile.shopUnlocked[card.id],"Claiming must not mutate the stored profile")
+  local resold,resoldCode=T.purchase(result,{id=card.id,price=1000000})
+  assert(resoldCode=="ELIGIBLE" and resold.balance==result.balance,"An already-won card is never charged for again")
+ end
  assert(not D.available(result,43299) and D.available(result,43300))
  local retry,retryCode=D.grant(result,100,reward,i,card)
  assert(retry==result and retryCode=="DAILY_COOLDOWN")
@@ -25,4 +33,4 @@ end
 local empty=T.newProfile(0)
 assert(select(2,D.grant(empty,10,C.Rewards[1],1,nil))=="DAILY_UNAVAILABLE" and D.available(empty,10))
 for _,ticket in ipairs({0,1001,1.5}) do assert(not pcall(D.index,ticket)) end
-print("Daily spin: exact exhaustive odds, all rewards, first login, 12-hour boundary, receipt/save retries, rejoin, no accumulation, missing rewards and duplicate ownership passed")
+print("Daily spin: exact exhaustive odds, all rewards, first login, 12-hour boundary, receipt/save retries, rejoin, no accumulation, missing rewards, duplicate ownership and HOF/non-college Shop claiming passed")
