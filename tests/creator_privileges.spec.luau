@@ -44,7 +44,9 @@ for ticket=1,10000 do
  assert(draw.HOF and draw.NonCollege)
  if T.isGoldRoll(draw.HOF.goldRoll) and T.isGoldRoll(draw.NonCollege.goldRoll) then gold+=1 end
 end
-assert(gold==10000,'50x caps gold at 100%')
+-- Gold is the one 50x perk that stays capped at the public 3x rate, so a
+-- creator's pulls are not every one of them gold.
+assert(gold==1500,'50x luck still caps gold at the 3x rate of 15%')
 local strong=0
 for ticket=1,51000 do
  local card=P.chooseOverall({{id='weak',overall=60},{id='strong',overall=90}},{NextInteger=function(_,a,b) assert(a==1 and b==51000);return ticket end},50)
@@ -52,7 +54,7 @@ for ticket=1,51000 do
 end
 assert(strong==50000,'50x must not silently clamp to the normal 3x maximum')
 for _,file in ipairs({'src/ServerScriptService/ShopServer.server.luau','src/StarterPlayer/StarterPlayerScripts/ShopUI.client.luau','src/StarterPlayer/StarterPlayerScripts/LuckView.luau'}) do luau.compile(fs.readFile(file)) end
-print('Creator: exact user ID authorization, unlimited cash spending, rejoin, normal account isolation, credit preservation, 50x tier/rare/OVR odds, 100% gold and UI compilation passed')
+print('Creator: exact user ID authorization, unlimited cash spending, rejoin, normal account isolation, credit preservation, 50x tier/rare/OVR odds, gold capped at the 3x rate and UI compilation passed')
 -- Guaranteed rare tickets use authenticated identity, not the luck multiplier.
 for _,kind in ipairs({'HOF','NonCollege'}) do
  for ticket=1,W.Denominator do

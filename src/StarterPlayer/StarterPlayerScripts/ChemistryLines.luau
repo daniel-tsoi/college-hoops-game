@@ -6,6 +6,11 @@ local colors = {
 	School = Color3.fromRGB(88, 205, 127),
 	Year = Color3.fromRGB(237, 207, 86),
 	Both = Color3.fromRGB(94, 176, 255),
+	-- Rare tiers: purple between Hall of Famers, red between non-college
+	-- players, and amber where the two meet.
+	HOF = Color3.fromRGB(178, 124, 255),
+	NonCollege = Color3.fromRGB(247, 111, 124),
+	Cross = Color3.fromRGB(255, 164, 86),
 }
 -- Both lineup canvases use fixed design coordinates and a parent UIScale.
 function Lines.mount(parent, cards, blockers)
@@ -53,7 +58,7 @@ function Lines.mount(parent, cards, blockers)
 		for _, blocker in ipairs(blockers or {}) do table.insert(rectangles, rectangle(blocker, 4)) end
 		for i = 1, #cards - 1 do
 			for j = i + 1, #cards do
-				local kind = Chemistry.connection(players[i], players[j])
+				local kind = Chemistry.link(players[i], players[j])
 				if kind then
 					local a, b = centers[i], centers[j]
 					local delta = b - a
@@ -86,6 +91,7 @@ function Lines.legend(parent, position, size)
 	label.TextSize = 12
 	label.RichText = true
 	label.Text = '<font color="#58CD7F">School</font>  ·  <font color="#EDCF56">Year</font>  ·  <font color="#5EB0FF">Both</font>'
+		.. '  ·  <font color="#B27CFF">HOF</font>  ·  <font color="#F76F7C">Non-college</font>  ·  <font color="#FFA456">Mixed</font>'
 	label.Parent = parent
 	return label
 end
