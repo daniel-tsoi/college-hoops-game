@@ -38,7 +38,9 @@ function Lines.mount(parent, cards, blockers)
 			table.insert(rectangles, r)
 			centers[i] = Vector2.new(r.x + r.w / 2, r.y + r.h / 2)
 		end
-  if #cards == 5 and Chemistry.isFull(players) then
+  -- Best Team mounts a sixth frame for the sixth man, so this counts at least
+  -- five rather than exactly five. isFull only ever inspects the starters.
+  if #cards >= 5 and Chemistry.isFull(players) then
    local center = Vector2.zero
    for _, point in ipairs(centers) do center += point end
    center /= 5

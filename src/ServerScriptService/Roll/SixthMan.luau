@@ -32,7 +32,7 @@ function SixthMan.draw(database, draft, random, luck)
  local offers={}
  for i=1,math.min(3,#available) do
   local card=table.remove(available,random:NextInteger(1,#available))
-  offers[i]={id=card.id,goldRoll=luck and (random:NextInteger(1,10000)<=500*math.clamp(luck,1,3) and 1 or 100) or random:NextInteger(1,100)}
+  offers[i]={id=card.id,goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100)}
  end
  return offers
 end

@@ -73,7 +73,7 @@ function Pool.draw(pools, unlocked, position, random, config, luck)
  end
  if #available==0 then available=pools.ordinary[position] end
  local card=available[random:NextInteger(1,#available)]
- return { id=card.id, prospectNumber=pools.numbers[position][card.id], goldRoll=luck and (random:NextInteger(1,10000)<=500*math.clamp(luck,1,3) and 1 or 100) or random:NextInteger(1,100) }
+ return { id=card.id, prospectNumber=pools.numbers[position][card.id], goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100) }
 end
 -- Team rolls keep every offered player in the displayed college season.
 -- At 1x selection is uniform. Higher luck gives higher OVR cards more
@@ -136,7 +136,7 @@ function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, pr
   if #alternatives>0 then available=alternatives end
   local card=Pool.chooseOverall(available,random,luck)
   used[card.playerId or card.id]=true
-  draws[pos]={id=card.id,prospectNumber=pools.numbers[pos][card.id],goldRoll=luck and (random:NextInteger(1,10000)<=500*math.clamp(luck,1,3) and 1 or 100) or random:NextInteger(1,100)}
+  draws[pos]={id=card.id,prospectNumber=pools.numbers[pos][card.id],goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100)}
  end
  return draws,{key=team.key,school=team.school,season=team.season}
 end

@@ -33,7 +33,7 @@ function RareWheel.draw(pools, random, shopUnlocked, luck, userId)
   end
   if RareWheel.hit(kind,tickets[kind],luck,userId) and #cards > 0 then
    local card = cards[random:NextInteger(1,#cards)]
-   result[kind] = {id=card.id,position=card.position,goldRoll=luck and (random:NextInteger(1,10000)<=500*math.clamp(luck,1,3) and 1 or 100) or random:NextInteger(1,100)}
+   result[kind] = {id=card.id,position=card.position,goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100)}
   end
  end
  return result

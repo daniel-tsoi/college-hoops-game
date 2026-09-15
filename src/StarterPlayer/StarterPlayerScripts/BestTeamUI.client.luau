@@ -49,9 +49,14 @@ local close = button(canvas, "Close", "X", UDim2.fromOffset(826, 12), UDim2.from
 local status = label(canvas, "Status", "", 30, 624, 840, 44, 17, muted)
 local points = { Vector2.new(450, 166), Vector2.new(725, 312), Vector2.new(690, 534),
 	Vector2.new(210, 534), Vector2.new(175, 312), Vector2.new(450, 534) }
-local overall = label(canvas, "TeamOverall", "—", 340, 300, 220, 72, 58, blue)
-label(canvas, "OverallCaption", "TEAM OVR", 340, 373, 220, 28, 18, muted)
-local count = label(canvas, "PlayerCount", "0 / 5 PLAYERS", 330, 405, 240, 26, 15, muted)
+-- Under the title rather than mid-canvas: the centre is where the FULL CHEM
+-- badge is drawn, and the two used to sit on top of each other.
+local overall = label(canvas, "TeamOverall", "—", 24, 54, 220, 58, 46, blue)
+overall.TextXAlignment = Enum.TextXAlignment.Left
+local caption = label(canvas, "OverallCaption", "TEAM OVR", 24, 110, 220, 22, 14, muted)
+caption.TextXAlignment = Enum.TextXAlignment.Left
+local count = label(canvas, "PlayerCount", "0 / 5 PLAYERS", 24, 132, 260, 22, 14, muted)
+count.TextXAlignment = Enum.TextXAlignment.Left
 local slots = {}
 for index, point in ipairs(points) do
 	local card = make("Frame", canvas, { Name = "Player" .. index, AnchorPoint = Vector2.new(0.5, 0.5),
