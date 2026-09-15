@@ -97,3 +97,17 @@ assert(Chemistry.isFull(rareFive), "Every pair links by tier or crossover")
 local broken = { hof("a"), hof("b"), nc("c"), nc("d"), plain("e") }
 assert(not Chemistry.isFull(broken), "A plain card with no school or year breaks full chem")
 print('Rare chemistry: tiers, links, school/year precedence, +2 same-tier and +1 crossover stacking, team average and full chem passed')
+
+-- The badge replaces every line, and notes a sixth man when the run carries one.
+-- Full chem must leave no connection lines behind, in the six-frame Best Team
+-- canvas as well as the five-frame squad builder.
+local full = { { school = "Duke", season = "1990-91" }, { school = "Duke", season = "1990-91" },
+ { school = "Duke", season = "1990-91" }, { school = "Duke", season = "1990-91" },
+ { school = "Duke", season = "1990-91" } }
+assert(Chemistry.isFull(full), "Five identical school/season cards are full chem")
+full[6] = { school = "Kansas", season = "2024-25" }
+assert(Chemistry.isFull(full), "A sixth man never breaks the starters' full chem")
+assert(full[6] ~= nil, "The sixth slot is what the badge reads for its +1 suffix")
+full[6] = nil
+assert(Chemistry.isFull(full) and full[6] == nil, "Without a sixth the badge stays plain")
+print("Full-chem badge: starters-only rule, sixth-man tolerance and the +1 signal passed")

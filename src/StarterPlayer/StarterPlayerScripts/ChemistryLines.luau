@@ -49,7 +49,10 @@ function Lines.mount(parent, cards, blockers)
    badge.Position = UDim2.fromOffset(center.X,center.Y)
    badge.Size = UDim2.fromOffset(112,112)
    badge.BackgroundColor3 = Color3.fromRGB(12,35,26)
-   badge.TextColor3 = colors.School; badge.Text = "FULL\nCHEM"
+   -- A saved run with a sixth man reads FULL CHEM +1. The sixth is still outside
+   -- the rule itself; the badge only notes that the lineup carries one.
+   badge.TextColor3 = colors.School
+   badge.Text = players[6] and "FULL\nCHEM +1" or "FULL\nCHEM"
    badge.Font = Enum.Font.GothamBlack; badge.TextSize = 22
    badge.BorderSizePixel = 0; badge.Parent = layer
    local corner = Instance.new("UICorner"); corner.CornerRadius = UDim.new(1,0); corner.Parent = badge
