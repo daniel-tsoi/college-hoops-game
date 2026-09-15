@@ -62,7 +62,6 @@ local state = { ready = false, playSeconds = 0, sessionSeconds = 0, claimedQuest
 local receivedAt, pending = os.clock(), false
 local cards = {}
 local request
-local renderHistory
 local function render()
 	-- Both clocks tick locally between server checkpoints.
 	local drift = state.ready and os.clock() - receivedAt or 0
@@ -72,12 +71,11 @@ local function render()
 		or "Loading playtime…"
 	balances.Text = string.format("Quest rewards left: %d rerolls  ·  %d refreshes", state.rerolls, state.refreshes)
 	if state.ready then
-		summary.Text = string.format("Login #%d  ·  this login: %s earned, %d cards, %d rerolls used",
-			state.logins or 0, cash(state.sessionCash or 0), state.sessionUnlocks or 0, state.sessionRerolls or 0)
+		summary.Text = string.format("This login: %s earned  ·  %d cards  ·  %d rolls (Roll + Restart)",
+			cash(state.sessionCash or 0), state.sessionUnlocks or 0, state.sessionRolls or 0)
 	else
 		summary.Text = ""
 	end
-	renderHistory()
 	for _, item in ipairs(cards) do
 		local quest = item.quest
 		-- Every quest is per-login now; time quests read the session clock.
@@ -140,41 +138,6 @@ for index, quest in ipairs(Quests) do
 		if not claim.Active or pending then return end
 		request("ClaimQuest", quest.id)
 	end)
-end
--- The saved record of recent logins: what the player did in each past session.
-local historyPanel = make("Frame", scroll, { Name = "History", LayoutOrder = 100,
-	Size = UDim2.new(1, 0, 0, 40), BackgroundTransparency = 1, AutomaticSize = Enum.AutomaticSize.Y })
-make("UIListLayout", historyPanel, { Padding = UDim.new(0, 6), SortOrder = Enum.SortOrder.LayoutOrder })
-local historyTitle = text(historyPanel, "RECENT LOGINS", UDim2.new(), UDim2.new(1, 0, 0, 30), 18, red)
-historyTitle.LayoutOrder = 1
-historyTitle.TextXAlignment = Enum.TextXAlignment.Left
-local historyRows, historySignature = {}, nil
-local function historyRow(value, order, color)
-	local row = text(historyPanel, value, UDim2.new(), UDim2.new(1, 0, 0, 26), 13, color)
-	row.LayoutOrder = order
-	row.TextXAlignment = Enum.TextXAlignment.Left
-	-- Grow instead of clipping when the line wraps on a narrow screen.
-	row.AutomaticSize = Enum.AutomaticSize.Y
-	table.insert(historyRows, row)
-end
--- Rebuilt only when the saved history actually changes, not every render tick.
-renderHistory = function()
-	local entries = state.sessionHistory or {}
-	local signature = string.format("%d:%s:%s", #entries, tostring(entries[1] and entries[1].startedAt), tostring(state.logins))
-	if signature == historySignature then return end
-	historySignature = signature
-	for _, row in ipairs(historyRows) do row:Destroy() end
-	historyRows = {}
-	if #entries == 0 then
-		historyRow(state.ready and "No earlier sessions saved yet — this is your first login." or "", 2)
-		return
-	end
-	for index, entry in ipairs(entries) do
-		local when = entry.startedAt and os.date("!%b %d  %H:%M", entry.startedAt) or "earlier session"
-		historyRow(string.format("%s   ·   %s played   ·   %d cards   ·   %d rerolls   ·   %s earned",
-			when, duration(entry.seconds or 0), entry.unlocks or 0, entry.rerolls or 0, cash(entry.cash or 0)),
-			index + 1, index == 1 and green or muted)
-	end
 end
 request = function(action, id)
 	if pending then return end

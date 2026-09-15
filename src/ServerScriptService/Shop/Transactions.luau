@@ -31,11 +31,11 @@ function Transactions.unlock(profile, id, roll)
 end
 function Transactions.purchase(profile, offer)
 	if (profile.shopUnlocked or {})[offer.id] then return profile, "ELIGIBLE" end
-	if profile.balance < offer.price then return profile, "INSUFFICIENT" end
+	if not profile.infiniteMoney and profile.balance < offer.price then return profile, "INSUFFICIENT" end
 	local updated = table.clone(profile)
 	updated.shopUnlocked = table.clone(profile.shopUnlocked or {})
 	updated.shopUnlocked[offer.id] = true
-	updated.balance -= offer.price
+	if not profile.infiniteMoney then updated.balance -= offer.price end
 	return updated, "PURCHASED"
 end
 -- One-time conversion: old Shop ownership becomes roll eligibility, not a rolled card.
@@ -63,6 +63,7 @@ end
 function Transactions.migrate(profile)
 	local updated = table.clone(profile)
 	updated.version = 6
+	updated.tutorialDone = profile.tutorialDone == true
 	updated.shopUnlocked = table.clone(profile.shopUnlocked or {})
 	updated.goldOwned = table.clone(profile.goldOwned or {})
 	updated.playSeconds = profile.playSeconds or 0
@@ -74,6 +75,8 @@ function Transactions.migrate(profile)
 	updated.sessionDoubled = table.clone(profile.sessionDoubled or {})
 	updated.sessionUnlocks = profile.sessionUnlocks or 0
 	updated.sessionRerolls = profile.sessionRerolls or 0
+	-- Preserve existing quest progress once when upgrading the saved profile.
+	updated.sessionRolls = profile.sessionRolls or profile.sessionRerolls or 0
 	updated.previewFreeRerolls = profile.previewFreeRerolls or 0
 	updated.freeRollRerolls = profile.freeRollRerolls == nil and 1 or profile.freeRollRerolls
 	updated.freeRollRefreshes = profile.freeRollRefreshes == nil and 1 or profile.freeRollRefreshes
@@ -119,6 +122,7 @@ function Transactions.startSession(profile, sessionId, at)
 	updated.sessionDoubled = {}
 	updated.sessionUnlocks = 0
 	updated.sessionRerolls = 0
+	updated.sessionRolls = 0
 	updated.sessionCash = 0
 	updated.previewFreeRerolls = 1
 	return updated
@@ -131,6 +135,12 @@ function Transactions.advanceSession(profile, sessionId, elapsed)
 	updated.playSeconds += seconds - (updated.sessionSeconds or 0)
 	updated.sessionSeconds = seconds
 	return updated
+end
+-- Permanent, pure and safe to retry inside UpdateAsync.
+function Transactions.completeTutorial(profile)
+	local updated = Transactions.migrate(profile)
+	updated.tutorialDone = true
+	return updated, "TUTORIAL_COMPLETED"
 end
 function Transactions.claim(profile, quest)
 	local updated = Transactions.migrate(profile)
@@ -209,6 +219,7 @@ function Transactions.rollAction(profile, action, position, draws, team, rare, s
 	if action == "RollState" or action == "RestartRoll" then
 		local updated = table.clone(profile)
 		if action == "RestartRoll" then
+			updated.sessionRolls = (profile.sessionRolls or profile.sessionRerolls or 0) + 1
 			updated.freeRollRerolls = 1
 			updated.freeRollRefreshes = 1
 		end
@@ -276,6 +287,7 @@ function Transactions.rollAction(profile, action, position, draws, team, rare, s
   if draft.pickAvailable then return profile,"CHOOSE_FIRST" end
   for _,pos in ipairs({"PG","SG","SF","PF","C"}) do
    if not draft.squad[pos] then
+    updated.sessionRolls+=1
     updated.rollDraft.candidates=draws
     updated.rollDraft.team=team
     updated.rollDraft.pickAvailable=true
@@ -288,7 +300,8 @@ function Transactions.rollAction(profile, action, position, draws, team, rare, s
  end
  if action=="RefreshRoll" then
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
-		if updated.freeRollRefreshes>0 then updated.freeRollRefreshes-=1
+		if updated.unlimitedActions then -- Creator actions never consume saved rewards.
+  elseif updated.freeRollRefreshes>0 then updated.freeRollRefreshes-=1
 		elseif updated.refreshes>0 then updated.refreshes-=1
   elseif (updated.paidRefreshes or 0)>0 then updated.paidRefreshes-=1 else return profile,"EMPTY" end
 		updated.rollDraft.candidates=draws
@@ -298,6 +311,7 @@ function Transactions.rollAction(profile, action, position, draws, team, rare, s
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
   local candidate=draft.rare and draft.rare[position]
   if not candidate then return profile,"INVALID" end
+  if draft.squad[candidate.position] then return profile,"FILLED" end
   if (profile.shopUnlocked or {})[candidate.id] ~= true then return profile,"LOCKED" end
   updated=Transactions.unlock(updated,candidate.id,candidate.goldRoll)
   updated.rollDraft.squad[candidate.position]=candidate
@@ -306,7 +320,8 @@ function Transactions.rollAction(profile, action, position, draws, team, rare, s
  end
  if action=="RerollPlayer" then
   if not draft.pickAvailable then return profile,"ROLL_REQUIRED" end
-  if updated.freeRollRerolls>0 then updated.freeRollRerolls-=1
+  if updated.unlimitedActions then -- Creator actions never consume saved rewards.
+  elseif updated.freeRollRerolls>0 then updated.freeRollRerolls-=1
   elseif updated.rerolls>0 then updated.rerolls-=1
   elseif (updated.paidRerolls or 0)>0 then updated.paidRerolls-=1 else return profile,"EMPTY" end
   updated.sessionRerolls+=1

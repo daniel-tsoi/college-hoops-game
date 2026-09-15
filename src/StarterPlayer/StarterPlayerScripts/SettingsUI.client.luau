@@ -37,7 +37,7 @@ local scale=make("UIScale",page,{Scale=1})
 local function fit() scale.Scale=math.min(1,(overlay.AbsoluteSize.X-24)/720,(overlay.AbsoluteSize.Y-24)/510) end
 overlay:GetPropertyChangedSignal("AbsoluteSize"):Connect(fit); fit()
 label(page,"SETTINGS",26,20,600,36,28).TextXAlignment=Enum.TextXAlignment.Left
-label(page,"Your look. Your game.",26,60,550,24,14,muted).TextXAlignment=Enum.TextXAlignment.Left
+label(page,"Your look. Your game.",26,60,360,24,14,muted).TextXAlignment=Enum.TextXAlignment.Left
 local close=button(page,"Close","×",650,22,44,44)
 local function row(name,x,y)
  local frame=make("Frame",page,{Name=name,Position=UDim2.fromOffset(x,y),Size=UDim2.fromOffset(322,62),BackgroundColor3=Color3.fromRGB(29,37,48),BorderSizePixel=0}); round(frame,20); return frame
@@ -121,6 +121,11 @@ local function closePage()
  overlay.Visible=false; if main and main.Parent then main.Enabled=wasEnabled end
  playerGui:SetAttribute("HoopsPanel",nil); MenuFocus.select(entry)
 end
+local replay=button(page,"ReplayTutorial","Replay tutorial",440,62,190,32)
+replay.Activated:Connect(function()
+ closePage()
+ playerGui:SetAttribute("HoopsTutorialReplay",(playerGui:GetAttribute("HoopsTutorialReplay") or 0)+1)
+end)
 close.Activated:Connect(closePage)
 UserInputService.InputBegan:Connect(function(input,processed)
  if not processed and (input.KeyCode==Enum.KeyCode.Escape or input.KeyCode==Enum.KeyCode.ButtonB) then closePage() end

@@ -14,9 +14,10 @@ local viewModule=luau.load(fs.readFile("src/StarterPlayer/StarterPlayerScripts/S
  require=function() return {select=function() end} end,
 }})()
 local ui={canvas={FindFirstChild=function() return {} end},buttons={Roll={}},background={Visible=true},build={Visible=false}}
+local finishedEvents=0
 local draft,pending,view,action
 local function redraw() return view.render(draft,pending) end
-view=viewModule.mount(ui,function(value) action=value; if value=="AcceptSixth" then draft.sixthAccepted=true end end,redraw)
+view=viewModule.mount(ui,function(value) action=value; if value=="AcceptSixth" then draft.sixthAccepted=true end end,redraw,function() finishedEvents+=1 end)
 local function find(name)
  for _,object in ipairs(objects) do if object.Name==name then return object end end
  error(name)
@@ -26,7 +27,7 @@ local function expect(modal,pick)
  assert(actualModal==modal and not not actualPick==pick,"Unexpected completion state")
 end
 draft={finished=false,rareRoll=1,squad={}}
-expect(false,false);view.finish();expect(false,false)
+expect(false,false);view.finish();expect(false,false);assert(finishedEvents==0)
 draft={finished=true,rareRoll=5,squad={},sixthAvailable={true,true,false}}
 expect(false,false) -- Filling five alone must never open a screen.
 view.finish();expect(true,false)
@@ -40,12 +41,13 @@ ui.background.Visible=true;ui.build.Visible=false
 draft={finished=false,rareRoll=6,squad={}};expect(false,false)
 draft={finished=true,rareRoll=10,squad={},sixthAvailable={true}};expect(false,false)
 view.finish();find("KeepTeam").Activated.fire()
-assert(action=="DeclineSixth");expect(true,false)
+assert(action=="DeclineSixth");expect(true,false);assert(finishedEvents==1,"Failed decline cannot finish tutorial")
 draft.sixthDeclined=true;expect(false,false)
 assert(not ui.background.Visible and ui.build.Visible)
 -- Legacy/empty offers finish without trapping the player.
 ui.background.Visible=true;draft={finished=true,rareRoll=11,squad={},sixthAvailable={}}
 redraw();view.finish();assert(not ui.background.Visible)
+assert(finishedEvents==3,"Only explicit completed closes notify tutorial")
 for _,path in ipairs({"RollController.luau","SixthManView.luau","SquadCompletion.luau"}) do
  luau.compile(fs.readFile("src/StarterPlayer/StarterPlayerScripts/"..path))
 end

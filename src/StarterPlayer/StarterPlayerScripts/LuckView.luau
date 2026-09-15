@@ -34,17 +34,18 @@ function View.mount(ui, request)
  local robux=button("BuyLuckRobux",254)
  cash.Activated:Connect(function() if cash.Active then request("UpgradeLuck") end end)
  robux.Activated:Connect(function() if robux.Active then request("PurchaseLuck") end end)
- label("Permanent · boosts future rare and gold rolls",12,173,472,16,11)
+ label("Permanent · boosts gold, HOF, non-college & higher OVR odds",12,173,472,16,11)
  local view={}
  function view.render(state,pending)
-  local level=state and state.luckLevel or 1
+  local creator=state and state.luckMultiplier == 50
+  local level=creator and #Luck.Tiers or (state and state.luckLevel or 1)
   local nextTier=Luck.Tiers[level+1]
   title.Text="LUCK · "..tostring(state and state.luckMultiplier or 1).."×"
   fill.Size=UDim2.fromScale((level-1)/4,1)
   local credit=state and (state.luckCredit or 0)>0
   local prices={[2]="250K",[3]="1M",[4]="5M",[5]="10M"}
-  cash.Text=not state and "Loading…" or not nextTier and "MAX LUCK" or credit and "ACTIVATE UPGRADE" or tostring(nextTier.multiplier).."× · $"..prices[level+1]
-  robux.Text=not nextTier and "3× UNLOCKED" or credit and "UPGRADE OWNED" or tostring(nextTier.multiplier).."× · "..nextTier.robux.." Robux"
+  cash.Text=creator and "CREATOR · 50×" or not state and "Loading…" or not nextTier and "MAX LUCK" or credit and "ACTIVATE UPGRADE" or tostring(nextTier.multiplier).."× · $"..prices[level+1]
+  robux.Text=creator and "50× ACTIVE" or not nextTier and "3× UNLOCKED" or credit and "UPGRADE OWNED" or tostring(nextTier.multiplier).."× · "..nextTier.robux.." Robux"
   cash.Active=state~=nil and nextTier~=nil and not pending and (not credit or state.paidAllowed==true)
   robux.Active=cash.Active and state.paidAllowed==true
   for _,b in ipairs({cash,robux}) do b.Selectable=b.Active;b.AutoButtonColor=b.Active;b.BackgroundTransparency=b.Active and 0 or .65 end

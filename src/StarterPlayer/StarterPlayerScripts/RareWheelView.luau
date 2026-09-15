@@ -36,7 +36,7 @@ function View.mount(canvas, decorate, choose)
   for _,kind in ipairs({"HOF","NonCollege"}) do
    local entry=entries[kind]
    local multiplier=state and state.luckMultiplier or 1
-   entry.odds.Text=(kind=="HOF" and "HOF" or "NON-COL").."\n"..string.format("%.3g%%",(kind=="HOF" and .125 or .13)*multiplier)
+   entry.odds.Text=(kind=="HOF" and "HOF" or "NON-COL").."\n"..string.format("%.3g%%",state and state.guaranteedRare and 100 or (kind=="HOF" and .125 or .13)*multiplier)
    if serial~=view.serial then
     if view.tweens[kind] then view.tweens[kind]:Cancel() end
     entry.rotor.Rotation=0
@@ -55,7 +55,17 @@ function View.mount(canvas, decorate, choose)
     end
     entry.button.Text=serial>0 and "NO HIT\nTry another roll" or "ROLL TO\nREVEAL"
    end
-   local enabled=card~=nil and draft and draft.pickAvailable and not draft.finished and not pending
+   local occupied=card and draft and draft.squad and draft.squad[card.position] ~= nil
+   if card then
+    local blocked=entry.button:FindFirstChild("PositionTaken")
+    if not blocked then
+     blocked=label(entry.button,"POSITION TAKEN",0,0,72,98,12)
+     blocked.Name="PositionTaken";blocked.ZIndex=25
+     blocked.BackgroundColor3=Color3.fromRGB(12,16,24);blocked.BackgroundTransparency=.15
+    end
+    blocked.Visible=occupied==true
+   end
+   local enabled=not occupied and card~=nil and draft and draft.pickAvailable and not draft.finished and not pending
    entry.button.Active=enabled==true; entry.button.Selectable=enabled==true; entry.button.AutoButtonColor=enabled==true
   end
   view.serial=serial

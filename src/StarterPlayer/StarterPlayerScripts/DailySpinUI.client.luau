@@ -146,7 +146,7 @@ local function showWin(result)
  local rare=reward.chance<=2.5
  local accent=accents[index]
  highlights[index].Transparency=0
- revealTitle.Text=rare and "RARE PULL · "..reward.label or "REWARD COLLECTED"
+ revealTitle.Text=result.collectionComplete and "COLLECTION COMPLETE · "..reward.label or rare and "RARE PULL · "..reward.label or "REWARD COLLECTED"
  revealTitle.TextColor3=accent
  revealName.Text=result.name or reward.label
  revealTextLimit.MaxTextSize=rare and 30 or 26
@@ -243,6 +243,8 @@ task.spawn(function()
   state=fetch("State");receivedAt=os.clock()
   if not state or not state.ready then task.wait(2) end
  end
+ -- New players land in the tutorial first; completion/skip releases Daily.
+ while gui.Parent and state and not state.tutorialDone and not playerGui:GetAttribute("HoopsTutorialDone") do task.wait(1) end
  -- Once per login, including when today's spin has already been used.
  while gui.Parent and not open() do task.wait(1) end
  while gui.Parent do task.wait(1);if overlay.Visible then render() end end

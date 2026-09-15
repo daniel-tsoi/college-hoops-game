@@ -18,11 +18,25 @@ assert(titles.forRank(nil) == nil)
 for _, role in {'Creator', 'Admin', 'Tester'} do assert(titles.resolve(role, 1) == role) end
 assert(titles.resolve('Unknown', 2) == 'Top 2')
 assert(titles.resolve(nil, nil) == nil)
-print('PASS: seven scripts compile; rank boundaries and role precedence pass')
+-- badges() keeps both, where resolve() shows only the role.
+for _, role in {'Creator', 'Admin', 'Tester'} do
+ local both = titles.badges(role, 1)
+ assert(#both == 2 and both[1] == role and both[2] == 'Top 1', 'role and rank are both kept, role first')
+ assert(#titles.badges(role, nil) == 1 and titles.badges(role, nil)[1] == role)
+ assert(#titles.badges(role, 0) == 1, 'an out-of-range rank contributes nothing')
+end
+assert(#titles.badges(nil, 4) == 1 and titles.badges(nil, 4)[1] == 'Top 50')
+assert(#titles.badges('Unknown', 2) == 1 and titles.badges('Unknown', 2)[1] == 'Top 2')
+assert(#titles.badges(nil, nil) == 0)
+print('PASS: seven scripts compile; rank boundaries, role precedence and combined badges pass')
 
 local chat = {}
-local title = 'Top 1'
-local player = {GetAttribute = function() return title end}
+local role, rank = nil, nil
+local player = {GetAttribute = function(_, name)
+ if name == 'HoopsRole' then return role end
+ if name == 'LeaderboardRank' then return rank end
+ return nil
+end}
 local players = {GetPlayerByUserId = function(_, id) return id == 7 and player or nil end}
 local replicated = {Shared = {PlayerTitles = {}}}
 local services = {Players = players, TextChatService = chat, ReplicatedStorage = replicated}
@@ -33,13 +47,38 @@ luau.load(fs.readFile(root .. 'src/StarterPlayer/StarterPlayerScripts/ChatTitles
   Instance = {new = function() return {} end},
  }
 })()
-for _, value in {'Top 1', 'Top 2', 'Top 3', 'Top 50', 'Creator', 'Admin', 'Tester'} do
- title = value
- local prefix = chat.OnIncomingMessage({TextSource = {UserId = 7}, PrefixText = 'Player1:'}).PrefixText
- assert(prefix == '<font color="#' .. titles.Colors[value]:ToHex() .. '">[' .. value .. ']</font> Player1:')
+local function tag(value)
+ return '<font color="#' .. titles.Colors[value]:ToHex() .. '">[' .. value .. ']</font>'
 end
-title = nil
+local function prefixNow()
+ local result = chat.OnIncomingMessage({TextSource = {UserId = 7}, PrefixText = 'Player1:'})
+ return result and result.PrefixText
+end
+-- Rank alone.
+role = nil
+for value, at in {['Top 1'] = 1, ['Top 2'] = 2, ['Top 3'] = 3, ['Top 50'] = 4} do
+ rank = at
+ assert(prefixNow() == tag(value) .. ' Player1:')
+end
+-- Role alone.
+rank = nil
+for _, value in {'Creator', 'Admin', 'Tester'} do
+ role = value
+ assert(prefixNow() == tag(value) .. ' Player1:')
+end
+-- Both, role first and each in its own colour: [Creator][Top 1] Player1:
+for _, value in {'Creator', 'Admin', 'Tester'} do
+ role = value
+ for named, at in {['Top 1'] = 1, ['Top 3'] = 3, ['Top 50'] = 50} do
+  rank = at
+  assert(prefixNow() == tag(value) .. tag(named) .. ' Player1:')
+ end
+end
+-- An out-of-range rank leaves the role standing alone.
+role, rank = 'Creator', 51
+assert(prefixNow() == tag('Creator') .. ' Player1:')
+role, rank = nil, nil
 assert(chat.OnIncomingMessage({TextSource = {UserId = 7}, PrefixText = 'Player1:'}) == nil)
 assert(chat.OnIncomingMessage({PrefixText = 'System:'}) == nil)
 assert(chat.OnIncomingMessage({TextSource = {UserId = 99}, PrefixText = 'Departed:'}) == nil)
-print('PASS: all seven colored chat tags; unranked, system, and departed-player messages remain unchanged')
+print('PASS: rank-only, role-only and combined [role][rank] chat tags; unranked, system, and departed-player messages remain unchanged')

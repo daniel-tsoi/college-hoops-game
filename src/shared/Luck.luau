@@ -11,11 +11,13 @@ function Luck.level(profile)
  return math.clamp(math.floor(tonumber(profile.luckLevel) or 1), 1, #Luck.Tiers)
 end
 function Luck.multiplier(profile, paidAllowed)
+ if profile.creatorLuck == 50 then return 50 end
  local level = Luck.level(profile)
  if paidAllowed == false then level = math.min(level, profile.cashLuckLevel or 1) end
  return Luck.Tiers[level].multiplier
 end
 function Luck.upgrade(profile, payment)
+ if profile.creatorLuck == 50 then return profile, "LUCK_MAX" end
  local nextLevel = Luck.level(profile) + 1
  local tier = Luck.Tiers[nextLevel]
  if not tier then return profile, "LUCK_MAX" end
@@ -34,6 +36,7 @@ function Luck.upgrade(profile, payment)
  return updated, "LUCK_UPGRADED"
 end
 function Luck.redeemAvailable(profile)
+ if profile.creatorLuck == 50 then return profile end
  local updated=profile
  while Luck.level(updated)<#Luck.Tiers and (updated["luckCredit"..(Luck.level(updated)+1)] or 0)>0 do
   updated=Luck.upgrade(updated,"Credit")

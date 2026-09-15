@@ -10,8 +10,12 @@ local function roleFor(player)
 	return nil
 end
 local function refresh(player)
-	local title = Titles.resolve(roleFor(player), player:GetAttribute("LeaderboardRank"))
+	local role = roleFor(player)
+	local title = Titles.resolve(role, player:GetAttribute("LeaderboardRank"))
 	player:SetAttribute("HoopsTitle", title)
+	-- Published so clients can show the role and the rank together; the
+	-- nameplate below still shows only the single resolved title.
+	player:SetAttribute("HoopsRole", role)
 	local character = player.Character
 	local head = character and character:FindFirstChild("Head")
 	local gui = head and head:FindFirstChild("HoopsNameplate")

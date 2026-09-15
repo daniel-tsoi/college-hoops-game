@@ -2,10 +2,14 @@
 local playerGui=game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 local rows={Shop={0,0},Quests={1,0},Collection={0,1},GoldCards={1,1},BestTeam={0,2},Leaderboard={1,2}}
 local tracked=setmetatable({},{__mode="k"})
+-- The lobby cash label rides above the top-left button. It used to be pinned at
+-- a fixed offset in ShopUI while the buttons moved with the viewport, so the two
+-- collided between roughly half and full scale -- half-screen and tablet sizes.
 local function attach(button)
- if not button:IsA("TextButton") or not button.Parent:IsA("ScreenGui") or tracked[button] then return end
+ local isCash=button:IsA("TextLabel") and button.Name=="Cash"
+ if not (button:IsA("TextButton") or isCash) or not button.Parent:IsA("ScreenGui") or tracked[button] then return end
  local row=rows[button.Name]
- if not row and button.Name~="Build" and button.Name~="Settings" then return end
+ if not row and not isCash and button.Name~="Build" and button.Name~="Settings" and button.Name~="Tutorial" then return end
  tracked[button]=true
  local updating=false
  local function fit()
@@ -19,12 +23,21 @@ local function attach(button)
   -- half-screen window, a phone or a tablet. Everything shrinks together now.
   local scale=math.clamp(math.min(viewport.X/1280,viewport.Y/720),.5,1)
   local pad=math.round(20*scale)
-  if row then
-   local width=math.max(72,math.min(math.round(276*scale),(viewport.X-3*pad)/2))
-   -- Floor first, so a very short viewport cannot invert the clamp.
-   local tallest=math.max(34,(viewport.Y-math.round(190*scale))/4)
-   local height=math.clamp(math.round(78*scale),34,tallest)
-   local gap=math.round(10*scale)
+  -- Shared with the cash label so it cannot drift out of step with the grid.
+  local width=math.max(72,math.min(math.round(276*scale),(viewport.X-3*pad)/2))
+  -- Floor first, so a very short viewport cannot invert the clamp.
+  local tallest=math.max(34,(viewport.Y-math.round(190*scale))/4)
+  local height=math.clamp(math.round(78*scale),34,tallest)
+  local gap=math.round(10*scale)
+  -- Top edge of the top row, measured up from the bottom of the screen.
+  local topRow=math.round(120*scale)+3*(height+gap)
+  if isCash then
+   local cashHeight=math.round(36*scale)
+   button.Size=UDim2.fromOffset(width,cashHeight)
+   -- Sits one gap clear of the top row, so it tracks the buttons at every size.
+   button.Position=UDim2.new(0,pad,1,-(topRow+gap+cashHeight))
+   button.TextSize=math.max(13,math.round(27*scale))
+  elseif row then
    button.Size=UDim2.fromOffset(width,height)
    button.Position=UDim2.new(row[1],row[1]==0 and pad or -width-pad,1,-math.round(120*scale)-(3-row[2])*(height+gap))
    button.TextScaled=true
@@ -35,7 +48,12 @@ local function attach(button)
    button.Size=UDim2.new(1,-2*pad,0,height);button.TextSize=math.max(15,math.round(30*scale))
    local limit=button:FindFirstChildOfClass("UISizeConstraint")
    if limit then limit.MaxSize=Vector2.new(math.round(480*scale),height) end
+  elseif button.Name=="Tutorial" then
+   button.Size=UDim2.fromOffset(math.round(150*scale),math.round(44*scale))
+   button.Position=UDim2.fromOffset(pad,pad)
+   button.TextSize=math.round(18*scale)
   else
+   button.Position=UDim2.fromOffset(pad,pad+math.round(54*scale))
    local size=math.round(81*scale)
    button.Size=UDim2.fromOffset(size,size);button.TextSize=math.max(18,math.round(46*scale))
   end

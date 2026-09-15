@@ -50,7 +50,7 @@ function Pool.tier(ticket, config, luck)
  if luck and luck > 1 then
   local ceiling = 0
   for _, tier in ipairs({"HOF", "NonCollege", "All-Star"}) do
-   ceiling += math.floor(config.Tickets[tier].count * math.clamp(luck, 1, 3))
+   ceiling += math.floor(config.Tickets[tier].count * math.clamp(luck, 1, 50))
    if ticket >= 1 and ticket <= ceiling then return tier end
   end
   if ticket >= 1 and ticket <= config.Denominator then return "Ordinary" end
@@ -76,6 +76,28 @@ function Pool.draw(pools, unlocked, position, random, config, luck)
  return { id=card.id, prospectNumber=pools.numbers[position][card.id], goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100) }
 end
 -- Team rolls keep every offered player in the displayed college season.
+-- At 1x selection is uniform. Higher luck gives higher OVR cards more
+-- tickets, up to luck:1 for the strongest versus weakest eligible candidate.
+function Pool.chooseOverall(cards, random, luck)
+ local multiplier=math.clamp(luck or 1,1,50)
+ local low,high=math.huge,-math.huge
+ for _,card in ipairs(cards) do
+  local overall=card.overall or 0
+  low=math.min(low,overall); high=math.max(high,overall)
+ end
+ if multiplier==1 or low==high then return cards[random:NextInteger(1,#cards)] end
+ local weights,total={},0
+ for i,card in ipairs(cards) do
+  weights[i]=1000+math.floor(1000*(multiplier-1)*((card.overall or 0)-low)/(high-low))
+  total+=weights[i]
+ end
+ local ticket=random:NextInteger(1,total)
+ for i,card in ipairs(cards) do
+  ticket-=weights[i]
+  if ticket<=0 then return card end
+ end
+ error("Invalid overall ticket")
+end
 function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, previous, changeSchoolAndYear, luck)
  local choices={}
  local current
@@ -112,7 +134,7 @@ function Pool.drawTeam(pools, unlocked, random, config, currentKey, keepTeam, pr
    if not previous or not previous[pos] or previous[pos].id~=card.id then table.insert(alternatives,card) end
   end
   if #alternatives>0 then available=alternatives end
-  local card=available[random:NextInteger(1,#available)]
+  local card=Pool.chooseOverall(available,random,luck)
   used[card.playerId or card.id]=true
   draws[pos]={id=card.id,prospectNumber=pools.numbers[pos][card.id],goldRoll=luck and (random:NextInteger(1,10000)<=500*luck and 1 or 100) or random:NextInteger(1,100)}
  end

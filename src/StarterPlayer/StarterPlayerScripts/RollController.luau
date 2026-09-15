@@ -138,7 +138,12 @@ function Controller.attach(ui)
   else request("ChooseSixth",index) end
  end,function() request("DeclineSixth") end)
  local render
- local completion=require(script.Parent:WaitForChild("SquadCompletion")).mount(ui,function(action) request(action) end,function() render() end)
+ local confirm=require(script.Parent:WaitForChild("RareActionConfirm")).mount(ui,function() return state and state.rollState end,function() if render then render() end end)
+ local completion=require(script.Parent:WaitForChild("SquadCompletion")).mount(ui,function(action) request(action) end,function() render() end,function(draft)
+  local tutorial=ui.gui.Parent:FindFirstChild("HoopsTutorialUI")
+  local event=tutorial and tutorial:FindFirstChild("SquadResponse")
+  if event then event:Fire("TutorialRunFinished",{ready=true,rollState=draft}) end
+ end)
  local luckView=require(script.Parent:WaitForChild("LuckView")).mount(ui,function(action) request(action) end)
  local choosingSixth=false
  render=function()
@@ -155,7 +160,7 @@ function Controller.attach(ui)
    ui.candidates[i].TextSize=15
    ui.candidates[i].TextColor3=candidate and candidate.gold and Color3.fromRGB(255,207,89) or Color3.fromRGB(241,244,249)
    ui.candidates[i].BackgroundColor3=selected==pos and Color3.fromRGB(43,56,74) or Color3.fromRGB(25,33,46)
-   local canPick=not pending and draft~=nil and draft.pickAvailable and not draft.finished and not draft.squad[pos]
+   local canPick=not pending and not confirm.isOpen() and draft~=nil and draft.pickAvailable and not draft.finished and not draft.squad[pos]
    ui.candidates[i].PositionUsedX.Visible=card~=nil
    ui.candidates[i].Active=canPick == true
    ui.candidates[i].Selectable=canPick == true
@@ -171,16 +176,24 @@ function Controller.attach(ui)
   ui.lineup.Text=string.format("ROLLED SQUAD  |  %d / 5%s",filled,draft and draft.squad.SIXTH and " + 6TH MAN" or "")
   local rerolls=state and (state.freeRollRerolls+state.rerolls+(state.paidRerolls or 0)) or 0
   local refreshes=state and (state.freeRollRefreshes+state.refreshes+(state.paidRefreshes or 0)) or 0
-  ui.buttons.Reroll.Text=state and rerolls==0 and "10 rerolls · 49 Robux" or state and string.format("%d %s",rerolls,rerolls==1 and "reroll" or "rerolls") or "Loading…"
-  ui.buttons.Refresh.Text=state and refreshes==0 and "10 refreshes · 49 Robux" or state and string.format("%d %s",refreshes,refreshes==1 and "refresh" or "refreshes") or "Loading…"
+  ui.buttons.Reroll.Text=state and state.unlimitedActions and "∞ rerolls" or state and rerolls==0 and "10 rerolls · 49 Robux" or state and string.format("%d %s",rerolls,rerolls==1 and "reroll" or "rerolls") or "Loading…"
+  ui.buttons.Refresh.Text=state and state.unlimitedActions and "∞ refreshes" or state and refreshes==0 and "10 refreshes · 49 Robux" or state and string.format("%d %s",refreshes,refreshes==1 and "refresh" or "refreshes") or "Loading…"
   local card=draft and selected and (draft.squad[selected] or draft.candidates[selected])
   ui.reveal.Text=card and (card.name.."\n"..(card.school or "Non-college").." "..(card.season or "")) or "Select a prospect"
   ui.status.Text=message
+  if draft and draft.pickAvailable and not draft.finished then
+   for _,rare in pairs(draft.rare or {}) do
+    if draft.squad[rare.position] then
+     ui.status.Text="Rare position already filled. Choose a normal player for an open position before pressing Roll."
+     break
+    end
+   end
+  end
   local connectedPlayers={}
   for i,pos in ipairs(positions) do connectedPlayers[i]=draft and draft.squad[pos] end
   connections.render(connectedPlayers)
-  wheel.render(draft,pending,state)
-  local modal,allowSixth=completion.render(draft,pending)
+  wheel.render(draft,pending or confirm.isOpen(),state)
+  local modal,allowSixth=completion.render(draft,pending or confirm.isOpen())
   luckView.render(state,pending or modal)
   choosingSixth=allowSixth
   ui.buttons.Roll.Text=filled==5 and not allowSixth and "FINISH" or "ROLL"
@@ -192,19 +205,20 @@ function Controller.attach(ui)
     button.Active=not pending and draft~=nil and draft.pickAvailable and not draft.finished
 
    elseif name=="Roll" then
-    button.Active=not pending
+    button.Active=not pending and (not draft or draft.finished or not draft.pickAvailable)
    elseif name=="Refresh" then
     button.Active=not pending and draft~=nil and draft.pickAvailable and not draft.finished
 
    end
-   if modal or (allowSixth and (name=="Roll" or name=="Restart")) then button.Active=false end
+   if confirm.isOpen() or modal or (allowSixth and (name=="Roll" or name=="Restart")) then button.Active=false end
    button.BackgroundTransparency=button.Active and 0.12 or 0.65
    button.Selectable=button.Active
    button.AutoButtonColor=button.Active
   end
  end
- request=function(action,pos)
-  if pending then return end
+ request=function(action,pos,confirmed)
+  if pending or confirm.isOpen() then return end
+  if not confirmed and confirm.ask(action,function() request(action,pos,true) end) then return end
   local hadDraft=state and state.rollState
   pending=true
   message="Rolling / saving…"
@@ -263,6 +277,10 @@ function Controller.attach(ui)
   end
   pending=false
   render()
+  -- Tutorial observes confirmed responses, never infers saves from clicks.
+  local tutorial=ui.gui.Parent:FindFirstChild("HoopsTutorialUI")
+  local event=tutorial and tutorial:FindFirstChild("SquadResponse")
+  if event and ok and result.ready then event:Fire(action,result) end
  end
  buy=function(kind)
   if not pending then request("PurchaseProduct",kind) end
@@ -306,7 +324,7 @@ function Controller.attach(ui)
  end)
  ui.buttons.Reroll.Activated:Connect(function()
   if not ui.buttons.Reroll.Active then return end
-  if state and state.freeRollRerolls+state.rerolls+(state.paidRerolls or 0)==0 then buy("Rerolls"); return end
+  if state and not state.unlimitedActions and state.freeRollRerolls+state.rerolls+(state.paidRerolls or 0)==0 then buy("Rerolls"); return end
   local draft=state and state.rollState
   if not draft then return end
   local filled=0
@@ -317,11 +335,14 @@ function Controller.attach(ui)
  end)
  ui.buttons.Refresh.Activated:Connect(function()
   if not ui.buttons.Refresh.Active then return end
-  if state and state.freeRollRefreshes+state.refreshes+(state.paidRefreshes or 0)==0 then buy("Refreshes")
+  if state and not state.unlimitedActions and state.freeRollRefreshes+state.refreshes+(state.paidRefreshes or 0)==0 then buy("Refreshes")
   else request("RefreshRoll") end
  end)
  ui.buttons.Restart.Activated:Connect(function() if not ui.buttons.Restart.Active then return end; selected=nil; sixthPurchase=nil; request("RestartRoll") end)
  ui.gui.Destroying:Connect(function() ui.resizeConnection:Disconnect() end)
+ local disconnectBalances=require(script.Parent:WaitForChild("QuestBalanceSync")).bind(
+  game:GetService("Players").LocalPlayer,function() return state end,render)
+ ui.gui.Destroying:Connect(disconnectBalances)
  render()
  if ui.background.Visible then request("RollState") end
 end

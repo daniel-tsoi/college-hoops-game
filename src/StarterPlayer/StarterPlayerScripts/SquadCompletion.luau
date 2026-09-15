@@ -1,6 +1,6 @@
 local Focus=require(script.Parent:WaitForChild("MenuFocus"))
 local View={}
-function View.mount(ui,request,redraw)
+function View.mount(ui,request,redraw,onFinished)
  local overlay=Instance.new("Frame")
  overlay.Name="SquadCompletion";overlay.Size=UDim2.fromScale(1,1)
  overlay.BackgroundColor3=Color3.fromRGB(0,0,0);overlay.BackgroundTransparency=.55
@@ -28,6 +28,7 @@ function View.mount(ui,request,redraw)
  local function closeBuilder()
   promptOpen=false;overlay.Visible=false
   ui.background.Visible=false;ui.build.Visible=true;Focus.select(ui.build)
+  if onFinished then onFinished(currentDraft) end
  end
  yes.Activated:Connect(function()
   if not yes.Active then return end

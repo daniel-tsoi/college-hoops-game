@@ -17,6 +17,7 @@ local Luck = require(ReplicatedStorage.Shared.Luck)
 local Daily = require(script.Parent.Shop.DailySpin)
 local DailyConfig = require(ReplicatedStorage.Shared.DailySpinConfig)
 local Transactions = require(script.Parent.Shop.Transactions)
+local CreatorPrivileges = require(script.Parent.Shop.CreatorPrivileges)
 local BestTeam = require(script.Parent.Shop.BestTeam)
 local TeamChemistry = require(ReplicatedStorage.Shared.TeamChemistry)
 local Database = require(ReplicatedStorage.Shared.PlayerDatabase)
@@ -69,6 +70,7 @@ local function publish(player)
 	for _, unlocked in pairs(profile.owned) do if unlocked == true then ownedCount += 1 end end
 	player:SetAttribute("HoopsOwnedCount", ownedCount)
 	player:SetAttribute("HoopsCash", profile.balance)
+	player:SetAttribute("HoopsInfiniteMoney", profile.infiniteMoney == true)
 	player:SetAttribute("QuestRerolls", profile.rerolls)
 	player:SetAttribute("QuestRefreshes", profile.refreshes)
 end
@@ -100,7 +102,7 @@ local function rollState(profile)
 			if card and (field ~= "rare" or (profile.shopUnlocked or {})[card.id] == true) then
 				local gold=Transactions.isGoldRoll(entry.goldRoll)
 				result[field][pos]={id=card.id,prospectNumber=entry.prospectNumber,name=card.name,position=card.position,school=card.school,
-					season=card.season,overall=BestTeam.overall(card,gold),gold=gold,rarity=card.rarity}
+					season=card.season,overall=BestTeam.overall(card,gold),gold=gold,rarity=card.rarity,sourceType=card.sourceType}
 			end
 		end
 	end
@@ -110,7 +112,7 @@ local function rollState(profile)
   if card then
    local gold=Transactions.isGoldRoll(entry.goldRoll)
    result.sixthRevealed[i]={id=card.id,name=card.name,position=card.position,school=card.school,
-    season=card.season,overall=BestTeam.overall(card,gold),gold=gold,rarity=card.rarity}
+    season=card.season,overall=BestTeam.overall(card,gold),gold=gold,rarity=card.rarity,sourceType=card.sourceType}
   end
   result.sixthAvailable[i]=draft.finished and not entry and (draft.sixthOffers or {})[i]~=nil
  end
@@ -135,6 +137,10 @@ local function response(player, code)
  offers.Luck = nextLuck and { id=nextLuck.id, price=nextLuck.price } or nil
  offers.ShopPlayer={id=Products.ShopPlayer.id,price=Products.ShopPlayer.price}
  return { serverTime=os.time(), dailySpins=profile and Daily.available(profile,os.time()) and 1 or 0, nextDailySpinAt=profile and profile.nextDailySpinAt or 0, dailyReward=profile and profile.dailyReward or nil, luckLevel=level, luckMultiplier=profile and Luck.multiplier(profile,paidAllowed[player]) or 1, luckCredit=profile and (profile["luckCredit"..(level+1)] or 0) or 0, shopUnlockCredits=profile and profile.shopUnlockCredits or 0, products=offers, paidAllowed=paidAllowed[player]==true,
+  guaranteedRare=player.UserId == CreatorPrivileges.UserId,
+  unlimitedActions=profile ~= nil and profile.unlimitedActions == true,
+  infiniteMoney=profile ~= nil and profile.infiniteMoney == true,
+  tutorialDone=profile ~= nil and profile.tutorialDone == true,
   sixthCredits=profile and profile.sixthCredits or 0,
   paidRerolls=profile and profile.paidRerolls or 0,paidRefreshes=profile and profile.paidRefreshes or 0, rollState = rollState(profile), freeRollRerolls = profile and profile.freeRollRerolls or 0, freeRollRefreshes = profile and profile.freeRollRefreshes or 0, shopUnlocked = profile and profile.shopUnlocked or {}, collection = collection(profile), goldOwned = profile and profile.goldOwned or {}, equippedCardId = profile and profile.equippedCardId or nil, code = code, ready = profile ~= nil, preview = preview,
 		bestTeam = profile and BestTeam.select(profile) or nil,
@@ -147,6 +153,7 @@ local function response(player, code)
 		sessionDoubled = profile and profile.sessionDoubled or {},
 		sessionUnlocks = profile and profile.sessionUnlocks or 0,
 		sessionRerolls = profile and profile.sessionRerolls or 0,
+		sessionRolls = profile and profile.sessionRolls or 0,
 		previewFreeRerolls = profile and profile.previewFreeRerolls or 0,
 		sessionSeconds = profile and profile.sessionSeconds or 0,
 		sessionCash = profile and profile.sessionCash or 0,
@@ -169,7 +176,7 @@ local function load(player)
 			return BestTeam.record(Transactions.startSession(Transactions.migrateShopOwnership(current or Transactions.newProfile(startingBalance()), Catalog.ById), sessionId, loginAt), rosterById, TeamChemistry)
 		end)
 	end
-	profiles[player] = profile
+	profiles[player] = CreatorPrivileges.apply(profile, player.UserId)
 	sessions[player] = { id = sessionId, started = os.clock(), startedAt = loginAt }
 	publish(player)
 end
@@ -185,6 +192,7 @@ local function commit(player, mutate)
 			code = "STALE_SESSION"
 			return current
 		end
+		current = CreatorPrivileges.apply(current, player.UserId)
 		local updated = BestTeam.record(Transactions.advanceSession(current, session.id, seconds), rosterById, TeamChemistry)
 		if mutate then updated, code = mutate(updated) end
 		return BestTeam.record(updated, rosterById, TeamChemistry)
@@ -199,8 +207,35 @@ local function commit(player, mutate)
 	publish(player)
 	return code
 end
+local CreatorGifts=require(script.Parent.Shop.CreatorGifts)
+local giftRemote=Instance.new("RemoteFunction")
+giftRemote.Name="HoopsCreatorGift"
+local lastGift={}
+giftRemote.OnServerInvoke=function(actor,request)
+ local valid,code=CreatorGifts.valid(actor.UserId,request)
+ if not valid then return {code=code} end
+ if busy[actor] or os.clock()-(lastGift[actor] or -math.huge)<1 then return {code="BUSY"} end
+ local target
+ for _,candidate in ipairs(Players:GetPlayers()) do
+  if string.lower(candidate.Name)==string.lower(request.username) then target=candidate;break end
+ end
+ if not target then return {code="NOT_HERE"} end
+ if busy[target] then return {code="BUSY"} end
+ busy[actor],busy[target]=true,true
+ lastGift[actor]=os.clock()
+ local ok,result=pcall(function()
+  if not profiles[target] then load(target) end
+  local saved=commit(target,function(profile) return CreatorGifts.grant(profile,actor.UserId,request) end)
+  return {code=saved,username=target.Name,preview=preview}
+ end)
+ busy[actor],busy[target]=nil,nil
+ if not ok then return {code="UNAVAILABLE"} end
+ return result
+end
+giftRemote.Parent=ReplicatedStorage
+Players.PlayerRemoving:Connect(function(player) lastGift[player]=nil end)
 local rollActions = { AcceptSixth=true, DeclineSixth=true, ChooseSixth=true, ChooseRare=true, NextRoll=true, RollState=true, RollPlayer=true, RerollPlayer=true, RefreshRoll=true, RestartRoll=true, FinishRoll=true }
-local allowed = { DailySpin=true, UpgradeLuck=true, PurchaseLuck=true, PurchaseQuestDouble=true, PurchaseProduct=true, PurchaseShopPlayer=true, RedeemShopUnlock=true, Equip = true, State = true, Buy = true, ClaimQuest = true }
+local allowed = { CompleteTutorial=true, DailySpin=true, UpgradeLuck=true, PurchaseLuck=true, PurchaseQuestDouble=true, PurchaseProduct=true, PurchaseShopPlayer=true, RedeemShopUnlock=true, Equip = true, State = true, Buy = true, ClaimQuest = true }
 for action in pairs(rollActions) do allowed[action]=true end
 remote.OnServerInvoke = function(player, action, id)
 	if type(action) ~= "string" or not allowed[action] then return response(player, "INVALID") end
@@ -215,20 +250,14 @@ remote.OnServerInvoke = function(player, action, id)
    if not Daily.available(profiles[player],now) then return response(player,"DAILY_COOLDOWN") end
    local index=Daily.index(rollRandom:NextInteger(1,DailyConfig.Denominator))
    local reward=DailyConfig.Rewards[index]
-   local card
-   if not reward.cash then
-    local pool=rarePools[reward.id]
-    local unowned={}
-    for _,candidate in ipairs(pool) do if not profiles[player].owned[candidate.id] then table.insert(unowned,candidate) end end
-    local choices=#unowned>0 and unowned or pool
-    if #choices>0 then card=choices[rollRandom:NextInteger(1,#choices)] end
-   end
-   code=commit(player,function(profile) return Daily.grant(profile,now,reward,index,card) end)
+   local pool=not reward.cash and rarePools[reward.id] or nil
+   local choice=rollRandom:NextNumber()
+   code=commit(player,function(profile) return Daily.grant(profile,now,reward,index,nil,pool,choice) end)
   elseif action=="UpgradeLuck" or action=="PurchaseLuck" then
    local profile=profiles[player]
    local nextLevel=Luck.level(profile)+1
    local product=Products["Luck_"..nextLevel]
-   if not product then return response(player,"LUCK_MAX") end
+   if profile.creatorLuck or not product then return response(player,"LUCK_MAX") end
    local credit=(profile["luckCredit"..nextLevel] or 0)>0
    if (credit or action=="PurchaseLuck") and not paidAllowed[player] then return response(player,"PAID_RESTRICTED") end
    if action=="UpgradeLuck" or credit then
@@ -267,8 +296,8 @@ remote.OnServerInvoke = function(player, action, id)
   elseif rollActions[action] then
    local profile=profiles[player]
    if not paidAllowed[player] and (
-    (action=="RerollPlayer" and profile.freeRollRerolls+profile.rerolls<=0 and (profile.paidRerolls or 0)>0)
-    or (action=="RefreshRoll" and profile.freeRollRefreshes+profile.refreshes<=0 and (profile.paidRefreshes or 0)>0)
+    (action=="RerollPlayer" and not profile.unlimitedActions and profile.freeRollRerolls+profile.rerolls<=0 and (profile.paidRerolls or 0)>0)
+    or (action=="RefreshRoll" and not profile.unlimitedActions and profile.freeRollRefreshes+profile.refreshes<=0 and (profile.paidRefreshes or 0)>0)
     or (action=="ChooseSixth" and profile.rollDraft and profile.rollDraft.squad.SIXTH)
    ) then return response(player,"PAID_RESTRICTED") end
 			if action=="RollPlayer" and (type(id)~="string" or not validPositions[id]) then return response(player,"INVALID") end
@@ -281,7 +310,7 @@ remote.OnServerInvoke = function(player, action, id)
      draft and draft.team and draft.team.key,action=="RefreshRoll",draft and draft.candidates,action=="RerollPlayer",Luck.multiplier(profile,paidAllowed[player]))
 			end
 			if action=="NextRoll" or action=="RestartRoll" or action=="RollState" or action=="RerollPlayer" then
-    rare=RareWheel.draw(rarePools,rollRandom,profiles[player].shopUnlocked,Luck.multiplier(profile,paidAllowed[player]))
+    rare=RareWheel.draw(rarePools,rollRandom,profiles[player].shopUnlocked,Luck.multiplier(profile,paidAllowed[player]),player.UserId)
    end
    if action=="ChooseRare" and id~="HOF" and id~="NonCollege" then return response(player,"INVALID") end
    local beforeSerial=profiles[player].rollDraft and profiles[player].rollDraft.rareRoll or 0
@@ -302,6 +331,8 @@ remote.OnServerInvoke = function(player, action, id)
 			local offer = type(id) == "string" and Catalog.ById[id]
 			if not offer then return response(player, "INVALID") end
 			code = commit(player, function(profile) return Transactions.purchase(profile, offer) end)
+		elseif action == "CompleteTutorial" then
+			code = commit(player, Transactions.completeTutorial)
 		elseif action == "ClaimQuest" then
 			local quest = type(id) == "string" and questsById[id]
 			if not quest then return response(player, "INVALID") end

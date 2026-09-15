@@ -81,7 +81,7 @@ assert(many.playSeconds == 840, "All 14 played minutes still count toward lifeti
 -- Every quest in the config is claimable in one session and resets on the next.
 local full = T.startSession(T.newProfile(0), "f1", 1)
 full = T.advanceSession(full, "f1", 14400)
-full.sessionUnlocks, full.sessionRerolls = 10, 200
+full.sessionUnlocks, full.sessionRolls = 10, 200
 local total = 0
 for _, quest in ipairs(quests) do
 	local claimed, code = T.claim(full, quest)

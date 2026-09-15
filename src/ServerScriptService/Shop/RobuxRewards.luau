@@ -23,6 +23,7 @@ function Rewards.grant(profile, purchaseId, product, quest)
  return updated, "GRANTED"
 end
 function Rewards.canOffer(profile, kind)
+ if profile.unlimitedActions and (kind == "Rerolls" or kind == "Refreshes") then return false end
  local draft = profile.rollDraft
  if kind == "Rerolls" then
   return (profile.freeRollRerolls or 0)+(profile.rerolls or 0)+(profile.paidRerolls or 0)==0

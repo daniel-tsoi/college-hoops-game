@@ -65,8 +65,8 @@ local cards = {}
 local pendingRobuxCard, promptOpen = nil, false
 local request
 local function render()
-	wallet.Text = money(state.balance)
-	lobbyMoney.Text = state.ready and money(state.balance) or "—"
+	wallet.Text = state.infiniteMoney and "∞ CASH" or money(state.balance)
+	lobbyMoney.Text = state.ready and (state.infiniteMoney and "∞ CASH" or money(state.balance)) or "—"
 	subtitle.Text = selectedGroup == "HOF" and "Unlock with cash or 400 Robux · HOF roll chance: 0.125%" or "Unlock with cash or 400 Robux · Non-college roll chance: 0.13%"
 	hofTab.TextColor3 = selectedGroup == "HOF" and gold or muted
 	nonTab.TextColor3 = selectedGroup == "NON-COLLEGE" and blue or muted
@@ -74,7 +74,7 @@ local function render()
 		local offer, buy = item.offer, item.buy
 		item.frame.Visible = offer.group == selectedGroup
 		local owned = state.shopUnlocked and state.shopUnlocked[offer.id] == true
-		local enough = state.balance >= offer.price
+		local enough = state.infiniteMoney or state.balance >= offer.price
 		buy.Text = owned and "ROLL UNLOCKED" or ("BUY  ·  " .. money(offer.price))
 		buy.TextColor3 = owned and green or (enough and gold or muted)
 		buy.Active = state.ready and not pending and not promptOpen and not owned and enough
@@ -129,7 +129,7 @@ for index, offer in ipairs(Catalog.Offers) do
   request("PurchaseShopPlayer",offer.id,player.name)
  end)
 	buy.Activated:Connect(function()
-		if pending or not state.ready or (state.shopUnlocked and state.shopUnlocked[offer.id]) or state.balance < offer.price then return end
+		if pending or not state.ready or (state.shopUnlocked and state.shopUnlocked[offer.id]) or (not state.infiniteMoney and state.balance < offer.price) then return end
 		request("Buy", offer.id, player.name)
 	end)
 end
@@ -246,6 +246,10 @@ gui.Destroying:Connect(function() input:Disconnect() end)
 Players.LocalPlayer:GetAttributeChangedSignal("HoopsCash"):Connect(function()
 	state.balance = Players.LocalPlayer:GetAttribute("HoopsCash") or state.balance
 	render()
+end)
+Players.LocalPlayer:GetAttributeChangedSignal("HoopsInfiniteMoney"):Connect(function()
+ state.infiniteMoney = Players.LocalPlayer:GetAttribute("HoopsInfiniteMoney") == true
+ render()
 end)
 render()
 task.spawn(request, "State")
